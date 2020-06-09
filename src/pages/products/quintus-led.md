@@ -69,8 +69,11 @@ allSpecifications:
 specificationDescription: ' .'
 textAndImages:
   - button:
-      text: Customized for fish farming
+      text: ''
     description: >-
+      ## Customized for fish farming
+
+
       The 5 separate LED lights can be controlled and dimmed between 0-100%. To
       avoid stressing the fish, the light is slowly dimmed towards full
       strength. The design and positioning relative to the camera facilitate the
@@ -80,6 +83,9 @@ textAndImages:
   - button:
       text: Many application areas
     description: >-
+      ## Many application areas
+
+
       Quintus LED is suitable for many application areas. If you need to carry
       out an installation or a reparation in the dark, for example on an
       underwater pier construction, Quintus LED can provide great working light.
