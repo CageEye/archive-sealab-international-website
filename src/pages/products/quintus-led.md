@@ -66,7 +66,7 @@ allSpecifications:
       1m pre-terminated
       (other lengths can be ordered)
     heading: Cable Length
-specificationDescription: ' Quintus LED can advantageously be used together with our underwater camera, sCAM. Together they make it possible to get exceptionally good night pictures below the surface. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.'
+specificationDescription: ' .'
 textAndImages:
   - button:
       text: Customized for fish farming
@@ -85,4 +85,4 @@ textAndImages:
       underwater pier construction, Quintus LED can provide great working light.
     featuredimage: /img/Quintus_Installed_under_a_Pier.jpg
 ---
-   .
+Quintus LED can advantageously be used together with our underwater camera, sCAM. Together they make it possible to get exceptionally good night pictures below the surface. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.
