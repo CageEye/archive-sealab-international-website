@@ -44,6 +44,8 @@ menuPaths:
           title: sCAM
         - path: /products/bluethink-go/
           title: BlueThink™ GO
+        - path: /products/quintus-led/
+          title: Underwater light
     path: '#'
     title: Products
   - dropdown:
