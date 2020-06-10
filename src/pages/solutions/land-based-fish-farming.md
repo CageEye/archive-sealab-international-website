@@ -65,7 +65,7 @@ scamSection:
   secondButtonLink: /products/subsea-cam/
   secondButtonTxt: Camera technology/edge computing
   sideImage: /img/sCAM-highlighted.png
-middleImage: /img/land-based-fish-farming-middle.jpg
+middleImage: /img/SEALAB_Control_room_indoor.png
 controlSection:
   content: >-
     Continuous monitoring is the best decision support available. With our
