@@ -15,7 +15,7 @@ const DynamicFooter = ({ props }) => {
             }
           }
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/innstillinger/footer/" } }
+            filter: { fileAbsolutePath: { regex: "/settings/footer/" } }
           ) {
             edges {
               node {

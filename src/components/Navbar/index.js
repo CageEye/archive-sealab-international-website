@@ -15,7 +15,7 @@ const DynamicNavbar = ({ props }) => {
             }
           }
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/innstillinger/navbar/" } }
+            filter: { fileAbsolutePath: { regex: "/settings/navbar/" } }
           ) {
             edges {
               node {

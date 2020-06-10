@@ -8,806 +8,1630 @@ public_folder: /img
 
 logo_url: /img/sealab-blue.svg
 
-display_url:  https://www.sealab.no/
-site_url:  https://www.sealab.no/
+display_url: https://www.sealab.no/
+site_url: https://www.sealab.no/
 publish_mode: editorial_workflow
 collections:
-
-#### SOLUTION PAGES TEMPLATES ####
-  - name: "solution-page-secondary"
-    label: "Industries (Short)"
+  #### SOLUTION PAGES TEMPLATES ####
+  - name: 'solution-page-secondary'
+    label: 'Industries (Short)'
     label_singular: 'Industry (Short)'
-    folder: "src/pages/solutions/"
+    folder: 'src/pages/solutions/'
     create: true
-    description: "You can create/edit/delete Industries here. This is the short version. New pages will be added at top-level of the pages, under www.sealab.blue/solutions/name-of-your-page/. Remember to also add link to the page in Navbar or Footer. "
-    filter: {field: "templateKey", value: "solution-page-secondary"}
+    description: 'You can create/edit/delete Industries here. This is the short version. New pages will be added at top-level of the pages, under www.sealab.blue/solutions/name-of-your-page/. Remember to also add link to the page in Navbar or Footer. '
+    filter: { field: 'templateKey', value: 'solution-page-secondary' }
     identifier_field: name
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "solution-page-secondary"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Priority - How important", name: "priority", widget: "number", hint: "How important is this solution? 1 is the highest priority. This is used to sort solutions on the front page and investor page", default: 9}
-      - {label: "Heading", name: "heading", widget: "string", hint: "This is shown with the section image"}
-      
-      - {label: "Description", name: "description", widget: "text", hint: "This is shown with the section image"}
-      - {label: "Image", name: "featuredimage", widget: "image", hint: "First section image."}
-      - label: "Sections"
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'solution-page-secondary',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - {
+          label: 'Priority - How important',
+          name: 'priority',
+          widget: 'number',
+          hint: 'How important is this solution? 1 is the highest priority. This is used to sort solutions on the front page and investor page',
+          default: 9,
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'This is shown with the section image',
+        }
+
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'text',
+          hint: 'This is shown with the section image',
+        }
+      - {
+          label: 'Image',
+          name: 'featuredimage',
+          widget: 'image',
+          hint: 'First section image.',
+        }
+      - label: 'Sections'
         hint: Create as many you like
         name: splitSections
         required: false
         widget: list
         fields:
-            - {label: "Subheading", name: "subheading", widget: "string", required: false }
-            - {label: "Heading", name: "heading", widget: "string", required: false}
-            - {label: "Content on the right", name: "content", widget: "markdown", }
-            - {label: "Image", name: "featuredimage", widget: "image", hint: "Image", required: false}
-      - {label: "Content", name: "body", widget: "markdown", required: false,}
+          - {
+              label: 'Subheading',
+              name: 'subheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Content on the right',
+              name: 'content',
+              widget: 'markdown',
+            }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image',
+              required: false,
+            }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
 
-  - name: "solution-page-primary"
-    label: "Industries (Long)"
+  - name: 'solution-page-primary'
+    label: 'Industries (Long)'
     label_singular: 'Industry (Long)'
-    folder: "src/pages/solutions/"
+    folder: 'src/pages/solutions/'
     create: true
-    description: "You can create/edit/delete Industries here. This is the long version where you also can add large image in last section."
-    filter: {field: "templateKey", value: "solution-page-primary"}
+    description: 'You can create/edit/delete Industries here. This is the long version where you also can add large image in last section.'
+    filter: { field: 'templateKey', value: 'solution-page-primary' }
     identifier_field: name
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "solution-page-primary"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Priority - How important", name: "priority", widget: "number", hint: "How important is this solution? 1 is the highest priority. This is used to sort solutions on the front page and investor page", default: 9}
-      - {label: "Heading", name: "heading", widget: "string", hint: "This is shown with the section image"}
-      - {label: "Description", name: "description", widget: "text", hint: "This is shown with the section image"}
-      - {label: "Image", name: "featuredimage", widget: "image", hint: "First section image."}
-      - label: "Sections"
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'solution-page-primary',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - {
+          label: 'Priority - How important',
+          name: 'priority',
+          widget: 'number',
+          hint: 'How important is this solution? 1 is the highest priority. This is used to sort solutions on the front page and investor page',
+          default: 9,
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'This is shown with the section image',
+        }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'text',
+          hint: 'This is shown with the section image',
+        }
+      - {
+          label: 'Image',
+          name: 'featuredimage',
+          widget: 'image',
+          hint: 'First section image.',
+        }
+      - label: 'Sections'
         hint: Create as many you like
         name: splitSections
         widget: list
         fields:
-            - {label: "Subheading", name: "subheading", widget: "string", required: false }
-            - {label: "Heading", name: "heading", widget: "string", required: false}
-            - {label: "Content on the right", name: "content", widget: "markdown", }
-            - {label: "Image", name: "featuredimage", widget: "image", hint: "Image", required: false}
-      - label: "Bordered section"
+          - {
+              label: 'Subheading',
+              name: 'subheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Content on the right',
+              name: 'content',
+              widget: 'markdown',
+            }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image',
+              required: false,
+            }
+      - label: 'Bordered section'
         name: btgo
         widget: object
-        hint: "If image, heading or description is missing the section will not be displayed."
+        hint: 'If image, heading or description is missing the section will not be displayed.'
         required: false
         fields:
-          - {label: Subheading, name: subheading, widget: string, required: false}
-          - {label: "H2 Title", name: heading, widget: string, required: false}
-          - {label: "Description", name: description, widget: markdown, required: false}
-          - {label: "Image", name: "featuredimage", widget: image, required: false}
-      - label: "Large image section"
+          - {
+              label: Subheading,
+              name: subheading,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: 'H2 Title',
+              name: heading,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: 'Description',
+              name: description,
+              widget: markdown,
+              required: false,
+            }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: image,
+              required: false,
+            }
+      - label: 'Large image section'
         name: imageSection
         widget: object
         required: false
         fields:
-            - {label: "Image", name: "featuredimage", widget: "image", hint: "Image", required: false}
-            - {label: "Content - left", name: "left", widget: "markdown", required: false}
-            - {label: "Content - right", name: "right", widget: "markdown", required: false }
-      - label: "Splitted section bottom of page"
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image',
+              required: false,
+            }
+          - {
+              label: 'Content - left',
+              name: 'left',
+              widget: 'markdown',
+              required: false,
+            }
+          - {
+              label: 'Content - right',
+              name: 'right',
+              widget: 'markdown',
+              required: false,
+            }
+      - label: 'Splitted section bottom of page'
         name: splitSection
         widget: object
         required: false
         fields:
-            - {label: "Heading", name: "heading", widget: "string", required: false}
-            - {label: "Content - left", name: "left", widget: "markdown", required: false }
-            - {label: "Content - right", name: "right", widget: "markdown", required: false }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Content - left',
+              name: 'left',
+              widget: 'markdown',
+              required: false,
+            }
+          - {
+              label: 'Content - right',
+              name: 'right',
+              widget: 'markdown',
+              required: false,
+            }
 
-#### PROJECT PAGE TEMPLATE 1 ####
+  #### PROJECT PAGE TEMPLATE 1 ####
 
-  - name: "project-page-primary"
-    label: "Projects (Advanced)"
-    folder: "src/pages/projects/"
+  - name: 'project-page-primary'
+    label: 'Projects (Advanced)'
+    folder: 'src/pages/projects/'
     create: true
-    description: "This is the primary project page template. Include your key numbers here. New pages will be added at top-level of the pages, under www.sealab.blue/projects/name-of-your-page/"
-    filter: {field: "templateKey", value: "project-page-primary"}
+    description: 'This is the primary project page template. Include your key numbers here. New pages will be added at top-level of the pages, under www.sealab.blue/projects/name-of-your-page/'
+    filter: { field: 'templateKey', value: 'project-page-primary' }
     identifier_field: projects-primary
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-page-primary"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "Heading", name: "heading", widget: "string", hint: "Dette er overskriften man først ser på toppen av siden."}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured image", name: "featuredImage", widget: image }
-      - {label: "Featured image caption", name: "featuredImageCaption", widget: "text", required: false }
-      - label: "Key factors"
-        name: "keyFactors"
-        widget: "object"
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'project-page-primary',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'Dette er overskriften man først ser på toppen av siden.',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured image', name: 'featuredImage', widget: image }
+      - {
+          label: 'Featured image caption',
+          name: 'featuredImageCaption',
+          widget: 'text',
+          required: false,
+        }
+      - label: 'Key factors'
+        name: 'keyFactors'
+        widget: 'object'
         fields:
-          - {label: "Key features heading", name: "heading", widget: "string", hint: "Dette er overskriften i key factors-boksen"}
-          - label: "Key features"
-            name: "factorItems"
+          - {
+              label: 'Key features heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'Dette er overskriften i key factors-boksen',
+            }
+          - label: 'Key features'
+            name: 'factorItems'
             widget: list
             fields:
-              - {label: "Factor", name: "primaryInfo", widget: "text" }
-              - {label: "Factor description", name: "description", widget: "text" }
-      - {label: "Content", name: "body", widget: "markdown"}
-      - label: "Partners"
-        name: "partners"
-        widget: "object"
+              - { label: 'Factor', name: 'primaryInfo', widget: 'text' }
+              - {
+                  label: 'Factor description',
+                  name: 'description',
+                  widget: 'text',
+                }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+      - label: 'Partners'
+        name: 'partners'
+        widget: 'object'
         fields:
-          - {label: "Partners heading", name: "heading", widget: "string" }
-          - label: "Partners list"
-            name: "partnerItems"
+          - { label: 'Partners heading', name: 'heading', widget: 'string' }
+          - label: 'Partners list'
+            name: 'partnerItems'
             widget: list
             fields:
-              - {label: "Partner logo", name: "icon", widget: image }
-              - {label: "Partner description", name: "description", widget: "text", required: false }
+              - { label: 'Partner logo', name: 'icon', widget: image }
+              - {
+                  label: 'Partner description',
+                  name: 'description',
+                  widget: 'text',
+                  required: false,
+                }
 
-#### PROJECT PAGE TEMPLATE 2 ####
+  #### PROJECT PAGE TEMPLATE 2 ####
 
-  - name: "project-page-secondary"
-    label: "Projects (Simple)"
-    folder: "src/pages/projects/"
+  - name: 'project-page-secondary'
+    label: 'Projects (Simple)'
+    folder: 'src/pages/projects/'
     create: true
-    description: "This is the secondary project page template, which only contains bare minimum content. New pages will be added at top-level of the pages, under www.sealab.blue/projects/name-of-your-page/"
-    filter: {field: "templateKey", value: "project-page-secondary"}
+    description: 'This is the secondary project page template, which only contains bare minimum content. New pages will be added at top-level of the pages, under www.sealab.blue/projects/name-of-your-page/'
+    filter: { field: 'templateKey', value: 'project-page-secondary' }
     identifier_field: name
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-page-secondary"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-      - {label: "Description", name: "description", widget: "text", hint: "Text."}
-      - {label: "Image", name: "featuredimage", widget: "image", hint: "Image to use on the page."}
-      - {label: "Caption", name: "featuredimageCaption", widget: "text", hint: "Caption to use for the image.", required: false}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'project-page-secondary',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'This is the title you see on the top of a page.',
+        }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'text',
+          hint: 'Text.',
+        }
+      - {
+          label: 'Image',
+          name: 'featuredimage',
+          widget: 'image',
+          hint: 'Image to use on the page.',
+        }
+      - {
+          label: 'Caption',
+          name: 'featuredimageCaption',
+          widget: 'text',
+          hint: 'Caption to use for the image.',
+          required: false,
+        }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
       - label: Inspirational section
         name: splitSection
         widget: object
         required: false
-        fields: 
-          - {label: "Large image", name: "bgimage", widget: image }
-          - {label: "Content", name: "content", widget: "markdown"}
+        fields:
+          - { label: 'Large image', name: 'bgimage', widget: image }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
 
-            
-#### ABOUT PAGE TEMPLATE 1 ####
+  #### ABOUT PAGE TEMPLATE 1 ####
 
-  - name: "about-page-primary"
-    label: "About pages (Simple)"
-    folder: "src/pages/about/"
+  - name: 'about-page-primary'
+    label: 'About pages (Simple)'
+    folder: 'src/pages/about/'
     create: true
     description: "You can create/edit/delete About pages here. If you cannot find the page you're looking for, go to Regular pages.  New pages will be added at top-level of the pages, under www.sealab.blue/about/name-of-your-page/. Remember to also add link to the page in Navbar or Footer."
-    filter: {field: "templateKey", value: "about-page-primary"}
+    filter: { field: 'templateKey', value: 'about-page-primary' }
     identifier_field: name
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page-primary"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-      - {label: "Description", name: "description", widget: "text", hint: "Text."}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Image", name: "featuredimage", widget: "image", hint: "Image to use on the page."}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'about-page-primary',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'This is the title you see on the top of a page.',
+        }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'text',
+          hint: 'Text.',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - {
+          label: 'Image',
+          name: 'featuredimage',
+          widget: 'image',
+          hint: 'Image to use on the page.',
+        }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
 
+  #### PRODUCT PAGES ####
 
-#### PRODUCT PAGES #### 
-
-  - name: "product-template-hardware"
-    label: "Products - Hardware "
-    folder: "src/pages/products"
+  - name: 'product-template-hardware'
+    label: 'Products - Hardware '
+    folder: 'src/pages/products'
     create: true
-    description: "Hardware sider med tittel, bilde og beskrivende tekst. Her kan man lage, endre eller slette artikler. Alle disse sidene havner under sealab.no/apper/navn-på-side. NB! Mellomrom på tittel oversettes til bindestrek."
-    filter: {field: "templateKey", value: "product-template-hardware"}
+    description: 'Hardware sider med tittel, bilde og beskrivende tekst. Her kan man lage, endre eller slette artikler. Alle disse sidene havner under sealab.no/apper/navn-på-side. NB! Mellomrom på tittel oversettes til bindestrek.'
+    filter: { field: 'templateKey', value: 'product-template-hardware' }
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-template-hardware"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - label: "Bildekarusell"
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'product-template-hardware',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - label: 'Bildekarusell'
         name: featuredimages
         widget: list
         fields:
-          - {label: "Alt text", name: alt, widget: string, hint: "ALLE bilder må ha en text som beskriver hva bildet viser. Dette er krav for alt som ligger på nettet (søk WCAG på nett)"}
-          - {label: "Bilde", name: img, widget: image}
-      - {label: "Overskrift", name: "heading", widget: "string", hint: "H1 Overskrift"}
-      - {label: "Kort beskrivelse", name: "shortDescription", widget: "text"}
-      - label: "Fremhevet spesifikasjoner"
-        name: "highlightSpecifications"
-        widget: "list"
+          - {
+              label: 'Alt text',
+              name: alt,
+              widget: string,
+              hint: 'ALLE bilder må ha en text som beskriver hva bildet viser. Dette er krav for alt som ligger på nettet (søk WCAG på nett)',
+            }
+          - { label: 'Bilde', name: img, widget: image }
+      - {
+          label: 'Overskrift',
+          name: 'heading',
+          widget: 'string',
+          hint: 'H1 Overskrift',
+        }
+      - { label: 'Kort beskrivelse', name: 'shortDescription', widget: 'text' }
+      - label: 'Fremhevet spesifikasjoner'
+        name: 'highlightSpecifications'
+        widget: 'list'
         fields:
-          - {label: "Verdi", name: "heading", widget: "string"}
-          - {label: "Description", name: "description", widget: "string"}
-      - label: "Spesifikasjoner - resten"
+          - { label: 'Verdi', name: 'heading', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
+      - label: 'Spesifikasjoner - resten'
         name: allSpecifications
         widget: list
         fields:
-          - {label: "Tittel", name: heading, widget: string}
-          - {label: "Description", name: description, widget: text, required: false, hint: "Hvis denne er tom, legges det inn en checkmark"}
-      - {label: "Specifications description", name: "specificationDescription", widget: "string", hint: "Use this when describing all the specifications"}
-      - label: "Bilde og text - side om side"
+          - { label: 'Tittel', name: heading, widget: string }
+          - {
+              label: 'Description',
+              name: description,
+              widget: text,
+              required: false,
+              hint: 'Hvis denne er tom, legges det inn en checkmark',
+            }
+      - {
+          label: 'Specifications description',
+          name: 'specificationDescription',
+          widget: 'string',
+          hint: 'Use this when describing all the specifications',
+        }
+      - label: 'Bilde og text - side om side'
         name: textAndImages
-        hint: "Vises annenhver høyrestilt og venstrestilt bilde"
+        hint: 'Vises annenhver høyrestilt og venstrestilt bilde'
         widget: list
         fields:
-          - {label: "Description", name: description, widget: markdown}
-          - {label: "Bilde", name: featuredimage, widget: image}
-          - label: "Content Button"
-            name: "button"
-            hint: "Is placed right under Content text"
-            widget: "object"
+          - { label: 'Description', name: description, widget: markdown }
+          - { label: 'Bilde', name: featuredimage, widget: image }
+          - label: 'Content Button'
+            name: 'button'
+            hint: 'Is placed right under Content text'
+            widget: 'object'
             required: false
             fields:
-              - {label: Title, name: text, widget: string, required: false}
-              - {label: Link path, name: path, widget: string, required: false}
-      - {label: "Free text area centered", name: "body", widget: "markdown", }
-      
-      - {label: "Tags", name: "tags", required: false, widget: "list", hint: "Denne kan brukes til å la brukeren finne relaterte artikler. OBS! Denne kan stå tom."}
-  
+              - { label: Title, name: text, widget: string, required: false }
+              - {
+                  label: Link path,
+                  name: path,
+                  widget: string,
+                  required: false,
+                }
+      - { label: 'Free text area centered', name: 'body', widget: 'markdown' }
 
-#### SIMPLE PAGES ####
+      - {
+          label: 'Tags',
+          name: 'tags',
+          required: false,
+          widget: 'list',
+          hint: 'Denne kan brukes til å la brukeren finne relaterte artikler. OBS! Denne kan stå tom.',
+        }
 
-  - name: "simple-pages"
-    label: "Simple pages"
-    folder: "src/pages/"
+  #### SIMPLE PAGES ####
+
+  - name: 'simple-pages'
+    label: 'Simple pages'
+    folder: 'src/pages/'
     create: true
     description: "These are simple pages with pure content. Create as many you'd like. They will be added at top-level of the pages: sealab.blue/name-of-your-page/. Fields: heading and content"
-    filter: {field: "templateKey", value: "simple-page"}
+    filter: { field: 'templateKey', value: 'simple-page' }
     identifier_field: name
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "simple-page"}
-      - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-      - {label: "Heading", name: "heading", widget: "string", hint: "Dette er overskriften man først ser på toppen av siden."}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'simple-page',
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seoDescription',
+          widget: 'text',
+          hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+        }
+      - {
+          label: 'Heading',
+          name: 'heading',
+          widget: 'string',
+          hint: 'Dette er overskriften man først ser på toppen av siden.',
+        }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
 
-  
-#### TECHNOLOGIES PAGES ####
-  - name: "technologies"
-    label: "Technologies"
-    description: "These are the products. Right now it is possible to create even more pages with the template for Edge Intelligence. New pages will be added at top-level of the pages, under www.sealab.blue/products/name-of-your-page/" 
+  #### TECHNOLOGIES PAGES ####
+  - name: 'technologies'
+    label: 'Technologies'
+    description: 'These are the products. Right now it is possible to create even more pages with the template for Edge Intelligence. New pages will be added at top-level of the pages, under www.sealab.blue/products/name-of-your-page/'
     files:
-      - file: "src/pages/technologies/edge-intelligence.md"
-        label: "Edge Intelligence"
+      - file: 'src/pages/technologies/edge-intelligence.md'
+        label: 'Edge Intelligence'
         name: technology-edge-intelligence-page
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "technology-edge-intelligence-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "Heading at the top of the page."}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Featured image", name: "featuredimage", widget: image }
-          - {label: "Featured image - Mobile", name: "featuredimageMobile", widget: image }
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'technology-edge-intelligence-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'Heading at the top of the page.',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Featured image', name: 'featuredimage', widget: image }
+          - {
+              label: 'Featured image - Mobile',
+              name: 'featuredimageMobile',
+              widget: image,
+            }
           - label: System on chip
             name: systemOnChip
             widget: object
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Subheading", name: "subheading", widget: "string"}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - {label: "Featured image", name: "featuredimage", widget: image }
+              - { label: 'Heading', name: 'heading', widget: 'string' }
+              - { label: 'Subheading', name: 'subheading', widget: 'string' }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - {
+                  label: 'Featured image',
+                  name: 'featuredimage',
+                  widget: image,
+                }
               - label: Sub sections
                 name: subsections
                 widget: list
                 fields:
-                  - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Subheading", name: "subheading", widget: "string"}
-                  - {label: "Content", name: "content", widget: "markdown"}
-                  - {label: "Featured image", name: "featuredimage", widget: image }
+                  - { label: 'Heading', name: 'heading', widget: 'string' }
+                  - {
+                      label: 'Subheading',
+                      name: 'subheading',
+                      widget: 'string',
+                    }
+                  - { label: 'Content', name: 'content', widget: 'markdown' }
+                  - {
+                      label: 'Featured image',
+                      name: 'featuredimage',
+                      widget: image,
+                    }
                   - label: Button
                     widget: list
                     name: buttons
                     fields:
-                      - {label: "Button text", name: text, widget: string, hint: "Keep it short"}
-                      - {label: "Button path", name: path, widget: string, hint: "Always end with /. Example: /technologies/edge-intelligence/"}
+                      - {
+                          label: 'Button text',
+                          name: text,
+                          widget: string,
+                          hint: 'Keep it short',
+                        }
+                      - {
+                          label: 'Button path',
+                          name: path,
+                          widget: string,
+                          hint: 'Always end with /. Example: /technologies/edge-intelligence/',
+                        }
           - label: Quote
             name: quote
             widget: object
             fields:
-              - {label: "Quote", name: "content", widget: "markdown"}
-              - {label: "Author", name: "author", widget: "text"}
-                  
+              - { label: 'Quote', name: 'content', widget: 'markdown' }
+              - { label: 'Author', name: 'author', widget: 'text' }
 
-          - label: "Example"
+          - label: 'Example'
             widget: object
             name: examples
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Content", name: "content", widget: "markdown"}
+              - { label: 'Heading', name: 'heading', widget: 'string' }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
               - label: Example items
                 name: items
                 widget: list
                 fields:
-                  - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Subheading", name: "subheading", widget: "string"}
-                  - {label: "Content", name: "content", widget: "markdown"}
-                  - {label: "Featured image", name: "featuredimage", widget: image }
+                  - { label: 'Heading', name: 'heading', widget: 'string' }
+                  - {
+                      label: 'Subheading',
+                      name: 'subheading',
+                      widget: 'string',
+                    }
+                  - { label: 'Content', name: 'content', widget: 'markdown' }
+                  - {
+                      label: 'Featured image',
+                      name: 'featuredimage',
+                      widget: image,
+                    }
 
-          - label: "Last section"
+          - label: 'Last section'
             widget: object
             name: thirdSection
             required: false
             fields:
-              - {label: "Left image", name: "featuredimage", widget: image, required: false }
-              - {label: "Right content", name: "content", widget: "markdown", required: false}
+              - {
+                  label: 'Left image',
+                  name: 'featuredimage',
+                  widget: image,
+                  required: false,
+                }
+              - {
+                  label: 'Right content',
+                  name: 'content',
+                  widget: 'markdown',
+                  required: false,
+                }
 
-      - file: "src/pages/technologies/software-platform.md"
-        label: "BlueThink Software platform"
-        name: "technology-page-secondary"
+      - file: 'src/pages/technologies/software-platform.md'
+        label: 'BlueThink Software platform'
+        name: 'technology-page-secondary'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "technology-page-secondary"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "Dette er overskriften man først ser på toppen av siden."}
-          - {label: "Description", name: "description", widget: "text"}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'technology-page-secondary',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'Dette er overskriften man først ser på toppen av siden.',
+            }
+          - { label: 'Description', name: 'description', widget: 'text' }
 
-          - label: "Section 1"
-            name: "sectionOne"
-            widget: "object"
+          - label: 'Section 1'
+            name: 'sectionOne'
+            widget: 'object'
             required: false
-            hint: "If one fields is missing, the entire section disappears"
+            hint: 'If one fields is missing, the entire section disappears'
             fields:
-              - {label: "Content - left", name: "left", widget: "markdown", required: false}
-              - {label: "Illustration figure", name: "featuredimage", widget: image, required: false }
-              - {label: "Content - right", name: "right", widget: "markdown", required: false}
-          - {label: "Section 2", name: "sectionTwo", widget: "markdown"}
-          - label: "Section 3"
-            name: "sectionThree"
-            widget: "object"
+              - {
+                  label: 'Content - left',
+                  name: 'left',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - {
+                  label: 'Illustration figure',
+                  name: 'featuredimage',
+                  widget: image,
+                  required: false,
+                }
+              - {
+                  label: 'Content - right',
+                  name: 'right',
+                  widget: 'markdown',
+                  required: false,
+                }
+          - { label: 'Section 2', name: 'sectionTwo', widget: 'markdown' }
+          - label: 'Section 3'
+            name: 'sectionThree'
+            widget: 'object'
             required: false
             fields:
-              - {label: "Illustration background", name: "backgroundImage", widget: image }
-              - {label: "Illustration figure", name: "featuredimage", widget: image }
-          - label: "Section 4"
-            name: "sectionFour"
-            widget: "object"
+              - {
+                  label: 'Illustration background',
+                  name: 'backgroundImage',
+                  widget: image,
+                }
+              - {
+                  label: 'Illustration figure',
+                  name: 'featuredimage',
+                  widget: image,
+                }
+          - label: 'Section 4'
+            name: 'sectionFour'
+            widget: 'object'
             required: false
             fields:
-              - {label: "Centered image", name: "featuredimage", widget: image }
-              - {label: "Left Title", name: "heading", widget: "string", hint: "Aligned left."}
-              - label: "Left Button"
-                name: "button"
-                widget: "object"
-                hint: "Aligned left."
+              - {
+                  label: 'Centered image',
+                  name: 'featuredimage',
+                  widget: image,
+                }
+              - {
+                  label: 'Left Title',
+                  name: 'heading',
+                  widget: 'string',
+                  hint: 'Aligned left.',
+                }
+              - label: 'Left Button'
+                name: 'button'
+                widget: 'object'
+                hint: 'Aligned left.'
                 required: false
                 fields:
-                  - {label: Title, name: text, required: false, widget: string}
-                  - {label: Link path, name: path, required: false, widget: string}
-              - label: "Right column"
-                name: "right"
-                widget: "markdown"
-          - label: "Alternating sections"
-            name: "alternatingSections"
-            widget: "list"
-            hint: "Images and text are mirrored on each section, for more dynamic look. Split in two"
+                  - {
+                      label: Title,
+                      name: text,
+                      required: false,
+                      widget: string,
+                    }
+                  - {
+                      label: Link path,
+                      name: path,
+                      required: false,
+                      widget: string,
+                    }
+              - label: 'Right column'
+                name: 'right'
+                widget: 'markdown'
+          - label: 'Alternating sections'
+            name: 'alternatingSections'
+            widget: 'list'
+            hint: 'Images and text are mirrored on each section, for more dynamic look. Split in two'
             required: false
             fields:
-              - {label: "Content text", name: "description", widget: "markdown", hint: "Every other section is left and right"}
-              - label: "Content Button"
-                name: "button"
-                hint: "Is placed right under Content text"
-                widget: "object"
+              - {
+                  label: 'Content text',
+                  name: 'description',
+                  widget: 'markdown',
+                  hint: 'Every other section is left and right',
+                }
+              - label: 'Content Button'
+                name: 'button'
+                hint: 'Is placed right under Content text'
+                widget: 'object'
                 required: false
                 fields:
-                  - {label: Title, name: text, widget: string, required: false}
-                  - {label: Link path, name: path, widget: string, required: false}
-              - {label: "Image", name: "featuredimage", widget: image, hint: "Is horizontal aligned with content" }
-          - label: "Centered section"
-            name: "centeredSection"
-            widget: "object"
+                  - {
+                      label: Title,
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: Link path,
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - {
+                  label: 'Image',
+                  name: 'featuredimage',
+                  widget: image,
+                  hint: 'Is horizontal aligned with content',
+                }
+          - label: 'Centered section'
+            name: 'centeredSection'
+            widget: 'object'
             required: false
             fields:
-              - {label: "Centered image", name: "featuredimage", widget: image }
-              - {label: "Left content", name: "left", widget: "markdown", hint: "Aligned left."}
-              - label: "Left Button"
-                name: "button"
-                widget: "object"
-                hint: "Aligned left."
+              - {
+                  label: 'Centered image',
+                  name: 'featuredimage',
+                  widget: image,
+                }
+              - {
+                  label: 'Left content',
+                  name: 'left',
+                  widget: 'markdown',
+                  hint: 'Aligned left.',
+                }
+              - label: 'Left Button'
+                name: 'button'
+                widget: 'object'
+                hint: 'Aligned left.'
                 required: false
                 fields:
-                  - {label: Title, name: text, required: false, widget: string}
-                  - {label: Link path, name: path, required: false, widget: string}
-              - label: "Right column"
-                name: "right"
-                widget: "markdown"
-      - file: "src/pages/technologies/what-is-edge-computing.md"
-        label: "What is Edge intelligence"
+                  - {
+                      label: Title,
+                      name: text,
+                      required: false,
+                      widget: string,
+                    }
+                  - {
+                      label: Link path,
+                      name: path,
+                      required: false,
+                      widget: string,
+                    }
+              - label: 'Right column'
+                name: 'right'
+                widget: 'markdown'
+      - file: 'src/pages/technologies/what-is-edge-computing.md'
+        label: 'What is Edge intelligence'
         name: technology-page-primary
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "technology-page-primary"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "The heading of the page. "}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'technology-page-primary',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'The heading of the page. ',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: 'Description', name: 'description', widget: 'text' }
           - label: Comparison
             name: item1vsitem2
             required: false
             widget: object
             fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Subheading", name: "subheading", widget: "string"}
-              - label: "Item 1"
+              - { label: 'Heading', name: 'heading', widget: 'string' }
+              - { label: 'Subheading', name: 'subheading', widget: 'string' }
+              - label: 'Item 1'
                 name: item1
                 widget: object
                 fields:
-                  - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Image", name: "featuredimage", widget: image }
-                  - {label: "Comparison list", name: "items", widget: "list"}
-              - label: "Item 2"
+                  - { label: 'Heading', name: 'heading', widget: 'string' }
+                  - { label: 'Image', name: 'featuredimage', widget: image }
+                  - { label: 'Comparison list', name: 'items', widget: 'list' }
+              - label: 'Item 2'
                 name: item2
                 widget: object
                 fields:
-                  - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Image", name: "featuredimage", widget: image }
-                  - {label: "Comparison list", name: "items", widget: "list"}
-                  
+                  - { label: 'Heading', name: 'heading', widget: 'string' }
+                  - { label: 'Image', name: 'featuredimage', widget: image }
+                  - { label: 'Comparison list', name: 'items', widget: 'list' }
 
-          - {label: "First section image", name: "featuredimageSecondary", widget: image }
-          - {label: "First section content", name: "body", widget: "markdown"}
+          - {
+              label: 'First section image',
+              name: 'featuredimageSecondary',
+              widget: image,
+            }
+          - { label: 'First section content', name: 'body', widget: 'markdown' }
 
-          - {label: "Centered text", name: "centeredText", widget: "markdown"}
+          - { label: 'Centered text', name: 'centeredText', widget: 'markdown' }
 
-          - label: "Last section"
+          - label: 'Last section'
             widget: object
             name: thirdSection
             required: false
             fields:
-              - {label: "Left image", name: "featuredimage", widget: image, required: false }
-              - {label: "Right content", name: "content", widget: "markdown", required: false}
+              - {
+                  label: 'Left image',
+                  name: 'featuredimage',
+                  widget: image,
+                  required: false,
+                }
+              - {
+                  label: 'Right content',
+                  name: 'content',
+                  widget: 'markdown',
+                  required: false,
+                }
 
+  #### SETTINGS ####
 
-#### SETTINGS ####
-
-  - name: "settings"
-    label: "Navigation & Footer"
-    description: "Her kan du endre på lenker i navigasjon og footer. Hvis du ønsker å legge til, fjerne eller fikse på rekkefølge, har du kommet til rett sted."
-    files: 
-      - file: "src/pages/innstillinger/navbar.md"
-        label: "Navigation"
-        name: "navbar"
-        fields: 
-          - label: "Links"
-            name: "menuPaths"
-            widget: "list"
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Link, name: path, widget: string, hint: "Hvis den har dropdown, så legg kun til: #", default: "#"}
+  - name: 'settings'
+    label: 'Navigation & Footer'
+    description: 'Her kan du endre på lenker i navigasjon og footer. Hvis du ønsker å legge til, fjerne eller fikse på rekkefølge, har du kommet til rett sted.'
+    files:
+      - file: 'src/pages/settings/navbar.md'
+        label: 'Navigation'
+        name: 'navbar'
+        fields:
+          - label: 'Links'
+            name: 'menuPaths'
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Link,
+                  name: path,
+                  widget: string,
+                  hint: 'Hvis den har dropdown, så legg kun til: #',
+                  default: '#',
+                }
               - label: Dropdown
                 name: dropdown
                 widget: object
-                hint: "Hvis tom, så vises det ingen dropdown eller pil."
-                fields: 
-                  - label: Highlighted links 
+                hint: 'Hvis tom, så vises det ingen dropdown eller pil.'
+                fields:
+                  - label: Highlighted links
                     name: highlighted
                     required: false
                     widget: list
-                    hint: "If error message, delete all items"
+                    hint: 'If error message, delete all items'
                     fields:
-                      - {label: Title, name: title, widget: string}
-                      - {label: Link, name: path, widget: string}
-                  - label: Regular links 
+                      - { label: Title, name: title, widget: string }
+                      - { label: Link, name: path, widget: string }
+                  - label: Regular links
                     name: regular
                     required: false
                     widget: list
-                    hint: "If error message, delete all items"
+                    hint: 'If error message, delete all items'
                     fields:
-                      - {label: Title, name: title, widget: string}
-                      - {label: Link, name: path, widget: string}
-      - file: "src/pages/innstillinger/footer.md"
-        label: "Footer"
-        name: "footer"
-        fields: 
-          - label: "Company offices"
-            name: "companyOffices"
-            widget: "list"
-            fields: 
-              - {label: Title, name: title, widget: string}
+                      - { label: Title, name: title, widget: string }
+                      - { label: Link, name: path, widget: string }
+      - file: 'src/pages/settings/footer.md'
+        label: 'Footer'
+        name: 'footer'
+        fields:
+          - label: 'Company offices'
+            name: 'companyOffices'
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
               - label: Addresselinjer
                 name: addressItems
                 widget: list
-                hint: "Separer ny linje med komma: adresselinje 1, adresselinje 2, postnummer, poststed"
-          - label: "Call to action"
-            name: "callToAction"
-            widget: "object"
+                hint: 'Separer ny linje med komma: adresselinje 1, adresselinje 2, postnummer, poststed'
+          - label: 'Call to action'
+            name: 'callToAction'
+            widget: 'object'
             fields:
-              - {label: "Tittel", name: "title", widget: "string"}
-              - {label: "Short description", name: "description", widget: "string"}
-              - {label: "Button text", name: "buttonText", widget: "string"}
-              - {label: "URL - CALL TO ACTION", name: "buttonPath", widget: "string"}
-          - label: "Main navigation"
-            name: "mainNavigation"
-            widget: "list"
+              - { label: 'Tittel', name: 'title', widget: 'string' }
+              - {
+                  label: 'Short description',
+                  name: 'description',
+                  widget: 'string',
+                }
+              - { label: 'Button text', name: 'buttonText', widget: 'string' }
+              - {
+                  label: 'URL - CALL TO ACTION',
+                  name: 'buttonPath',
+                  widget: 'string',
+                }
+          - label: 'Main navigation'
+            name: 'mainNavigation'
+            widget: 'list'
             required: false
-            hint: "This is currently hidden."
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Link, name: path, widget: string, hint: "Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden"}
-          - label: "Products"
-            name: "secondaryNavigation"
-            widget: "list"
+            hint: 'This is currently hidden.'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Link,
+                  name: path,
+                  widget: string,
+                  hint: 'Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden',
+                }
+          - label: 'Products'
+            name: 'secondaryNavigation'
+            widget: 'list'
             required: false
-            hint: "This is currently hidden."
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Link, name: path, widget: string, hint: "Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden"}
-          - label: "Projects"
-            name: "thirdNavigation"
-            widget: "list"
+            hint: 'This is currently hidden.'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Link,
+                  name: path,
+                  widget: string,
+                  hint: 'Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden',
+                }
+          - label: 'Projects'
+            name: 'thirdNavigation'
+            widget: 'list'
             required: false
-            hint: "This is currently hidden."
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Link, name: path, widget: string, hint: "Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden"}          
-          - label: "About"
-            name: "fourthNavigation"
-            widget: "list"
+            hint: 'This is currently hidden.'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Link,
+                  name: path,
+                  widget: string,
+                  hint: 'Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden',
+                }
+          - label: 'About'
+            name: 'fourthNavigation'
+            widget: 'list'
             required: false
-            hint: "This is currently hidden."
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Link, name: path, widget: string, hint: "Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden"}
+            hint: 'This is currently hidden.'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Link,
+                  name: path,
+                  widget: string,
+                  hint: 'Dette er linken. Husk å test denne. Dette vil være f.eks: /navn-på-siden',
+                }
 
-#### STATIC PAGES (FRONT PAGE for example) ####
+  #### STATIC PAGES (FRONT PAGE for example) ####
 
-  - name: "pages"
-    label: "Regular pages (Home, leadership, vision etc)"
-    description: "These are static pages, which means you cannot create more with the same layout. However, let Fredrik (or anyone at the software team) know if you want a similar page with similar layout."
+  - name: 'pages'
+    label: 'Regular pages (Home, leadership, vision etc)'
+    description: 'These are static pages, which means you cannot create more with the same layout. However, let Fredrik (or anyone at the software team) know if you want a similar page with similar layout.'
     files:
-      - file: "src/pages/index.md"
-        label: "Front page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Front page'
+        name: 'index'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Hero image", name: "bgimage", widget: image }
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: SEO Description,
+              name: seoDescription",
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: 'Hero image', name: 'bgimage', widget: image }
           - label: Facts
             widget: list
             name: items
             fields:
-              - {label: Number, name: keyNumber, widget: number, hint: "Try to keep it to one word"}
-              - {label: Pre Number, name: keyNumberBefore, widget: string, required: false, hint: "This will appear in title, before number."}
-              - {label: "After Number", name: keyNumberAfter, widget: string, required: false, hint: "This will appear in title, after number."}
-              - {label: Description, name: description, widget: text}
+              - {
+                  label: Number,
+                  name: keyNumber,
+                  widget: number,
+                  hint: 'Try to keep it to one word',
+                }
+              - {
+                  label: Pre Number,
+                  name: keyNumberBefore,
+                  widget: string,
+                  required: false,
+                  hint: 'This will appear in title, before number.',
+                }
+              - {
+                  label: 'After Number',
+                  name: keyNumberAfter,
+                  widget: string,
+                  required: false,
+                  hint: 'This will appear in title, after number.',
+                }
+              - { label: Description, name: description, widget: text }
           - label: Centered section
             widget: object
             name: centeredSection
             fields:
-              - {label: Subheading, name: subheading, widget: string, required: false}
-              - {label: Heading, name: heading, widget: string}
-              - {label: Description, name: description, widget: text}
+              - {
+                  label: Subheading,
+                  name: subheading,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Button
                 widget: object
                 name: button
                 fields:
-                  - {label: "Button text", name: text, widget: string, hint: "Keep it short"}
-                  - {label: "Button path", name: path, widget: string, hint: "Last part of url. Example: /technologies/edge-intelligence"}
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      hint: 'Keep it short',
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      hint: 'Last part of url. Example: /technologies/edge-intelligence',
+                    }
 
           - label: Product section
             widget: object
             name: productSection
             fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: "Product image", name: "featuredimage", widget: image }
-              - {label: "Product background image", name: "featuredimageBackground", widget: image, required: false }
-              - {label: Description, name: description, widget: text}
+              - { label: Heading, name: heading, widget: string }
+              - { label: 'Product image', name: 'featuredimage', widget: image }
+              - {
+                  label: 'Product background image',
+                  name: 'featuredimageBackground',
+                  widget: image,
+                  required: false,
+                }
+              - { label: Description, name: description, widget: text }
               - label: Product features
                 name: features
                 widget: list
                 required: false
-                fields: 
-                  - {label: Heading, name: heading, widget: string}
-                  - {label: "Icon", name: "icon", widget: image, hint: "Try to keep the image extension in SVG" }
+                fields:
+                  - { label: Heading, name: heading, widget: string }
+                  - {
+                      label: 'Icon',
+                      name: 'icon',
+                      widget: image,
+                      hint: 'Try to keep the image extension in SVG',
+                    }
 
-          - label: "Success factors section"
+          - label: 'Success factors section'
             name: successFactors
             widget: object
-            fields: 
-              - {label: Subheading, name: subheading, widget: text, hint: "Small text above title", required: false}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - label: "Call to action"
+            fields:
+              - {
+                  label: Subheading,
+                  name: subheading,
+                  widget: text,
+                  hint: 'Small text above title',
+                  required: false,
+                }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - label: 'Call to action'
                 widget: object
                 name: button
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - {label: "Background image", name: "bgimage", widget: image }
-              - label:  "Success factors"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - { label: 'Background image', name: 'bgimage', widget: image }
+              - label: 'Success factors'
                 widget: list
                 name: features
-                field: {label: Text, name: text, widget: text}
+                field: { label: Text, name: text, widget: text }
 
-
-          - label: "SEALAB TV CHANNEL"
+          - label: 'SEALAB TV CHANNEL'
             name: splitSection
             widget: object
-            fields: 
-              - {label: "Image right", name: "featuredimage", widget: image }
-              - {label: Subheading, name: subheading, widget: text, hint: "Small text above title", required: false}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - label: "Call to action"
+            fields:
+              - { label: 'Image right', name: 'featuredimage', widget: image }
+              - {
+                  label: Subheading,
+                  name: subheading,
+                  widget: text,
+                  hint: 'Small text above title',
+                  required: false,
+                }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - label: 'Call to action'
                 widget: object
                 name: button
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
 
           - label: Partnership
             name: partnering
             widget: object
-            fields: 
-              - {label: Subheading, name: subheading, widget: text, hint: "Small text above title", required: false}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - label: "Call to action buttons"
+            fields:
+              - {
+                  label: Subheading,
+                  name: subheading,
+                  widget: text,
+                  hint: 'Small text above title',
+                  required: false,
+                }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - label: 'Call to action buttons'
                 widget: list
                 name: buttons
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - {label: "Background image", name: "bgimage", widget: image }
-              
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - { label: 'Background image', name: 'bgimage', widget: image }
+
           - label: Inspirational section
             name: quoteSection
             widget: object
-            fields: 
-              - {label: "Content", name: "content", widget: "markdown"}
+            fields:
+              - { label: 'Content', name: 'content', widget: 'markdown' }
               - label: Button
                 widget: object
                 name: button
                 fields:
-                  - {label: "Button text", name: text, widget: string, hint: "Keep it short"}
-                  - {label: "Button path", name: path, widget: string, hint: "Last part of url. Example: /technologies/edge-intelligence"}
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      hint: 'Keep it short',
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      hint: 'Last part of url. Example: /technologies/edge-intelligence',
+                    }
           - label: Quotes section
             widget: list
             name: quotes
             required: false
             fields:
-              - {label: "Author name", name: authorName, widget: string, required: false}
-              - {label: "Author position", name: authorPosition, widget: string, required: false}
-              - {label: "Author image", name: "authorImage", widget: image, required: false}
-              - {label: "Quote text", name: quoteText, widget: text, required: false}
-      - file: "src/pages/investors.md"
-        label: "Investors page"
-        name: "investors"
+              - {
+                  label: 'Author name',
+                  name: authorName,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: 'Author position',
+                  name: authorPosition,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: 'Author image',
+                  name: 'authorImage',
+                  widget: image,
+                  required: false,
+                }
+              - {
+                  label: 'Quote text',
+                  name: quoteText,
+                  widget: text,
+                  required: false,
+                }
+      - file: 'src/pages/investors.md'
+        label: 'Investors page'
+        name: 'investors'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "investor-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: text}
-          - {label: "Image", name: "featuredimage", widget: "image", hint: "Image to use on the page."}
-          - {label: "Image caption", name: featuredimageCaption, widget: text}
-          - label: "Shareholders in SEALAB"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'investor-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: SEO Description,
+              name: seoDescription",
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: text }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image to use on the page.',
+            }
+          - { label: 'Image caption', name: featuredimageCaption, widget: text }
+          - label: 'Shareholders in SEALAB'
             name: shareholders
             widget: list
-            hint: "This is also showed in a table on the Investor page."
+            hint: 'This is also showed in a table on the Investor page.'
             fields:
-              - {label: "Company/Person name", name: name, widget: string}
-              - {label: "Number of shares", name: shares, widget: number}
-              - {label: "Percentage of shares", name: percentage, widget: number, valueType: "float", max: 1, min: 0, step: 0.1}
-              - {label: "Account type", name: accountType, widget: string, default: "A"}
-              - {label: "Country", name: country, widget: string, default: "NOR"}
-          - label: "Financial highlights"
+              - { label: 'Company/Person name', name: name, widget: string }
+              - { label: 'Number of shares', name: shares, widget: number }
+              - {
+                  label: 'Percentage of shares',
+                  name: percentage,
+                  widget: number,
+                  valueType: 'float',
+                  max: 1,
+                  min: 0,
+                  step: 0.1,
+                }
+              - {
+                  label: 'Account type',
+                  name: accountType,
+                  widget: string,
+                  default: 'A',
+                }
+              - {
+                  label: 'Country',
+                  name: country,
+                  widget: string,
+                  default: 'NOR',
+                }
+          - label: 'Financial highlights'
             name: highlights
             widget: object
-            fields: 
-              - {label: "Left content", name: content, widget: markdown}
-              - label: "Call to action button"
+            fields:
+              - { label: 'Left content', name: content, widget: markdown }
+              - label: 'Call to action button'
                 widget: object
                 name: button
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - label: "Highlighted financials"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - label: 'Highlighted financials'
                 widget: list
                 name: items
-                hint: "Try to keep it at a maximum of 4 highlights."
+                hint: 'Try to keep it at a maximum of 4 highlights.'
                 fields:
-                  - {label: "Content", name: content, widget: markdown}
-                  - {label: "Percentage", name: percentage, widget: number, valueType: "float", max: 1, min: 0, step: 0.1}
-          - label: "SEALAB Highlighted Partners"
+                  - { label: 'Content', name: content, widget: markdown }
+                  - {
+                      label: 'Percentage',
+                      name: percentage,
+                      widget: number,
+                      valueType: 'float',
+                      max: 1,
+                      min: 0,
+                      step: 0.1,
+                    }
+          - label: 'SEALAB Highlighted Partners'
             name: partners
             widget: object
-            fields: 
-              - {label: "Centered content", name: content, widget: markdown}
-              - label: "Call to action button"
+            fields:
+              - { label: 'Centered content', name: content, widget: markdown }
+              - label: 'Call to action button'
                 widget: object
                 name: button
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - label: "Partner logos"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - label: 'Partner logos'
                 widget: list
                 name: logos
-                field: {label: "Logo", name: "image", widget: "image"}
-          - label: "Cooperation"
+                field: { label: 'Logo', name: 'image', widget: 'image' }
+          - label: 'Cooperation'
             name: splitSection
             widget: object
-            fields: 
-              - {label: Heading, name: heading, widget: string}
-              - {label: "Left content", name: left, widget: markdown, required: false}
-              - {label: "Right content", name: right, widget: markdown, required: false}
-              - label: "Call to action buttons"
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - {
+                  label: 'Left content',
+                  name: left,
+                  widget: markdown,
+                  required: false,
+                }
+              - {
+                  label: 'Right content',
+                  name: right,
+                  widget: markdown,
+                  required: false,
+                }
+              - label: 'Call to action buttons'
                 widget: list
                 name: buttons
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-          - label: "Table section with shareholder information"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+          - label: 'Table section with shareholder information'
             name: table
             widget: object
-            fields: 
-              - {label: Title, name: content, widget: markdown, required: false}
-              - label: "Key numbers"
+            fields:
+              - {
+                  label: Title,
+                  name: content,
+                  widget: markdown,
+                  required: false,
+                }
+              - label: 'Key numbers'
                 name: boxes
                 widget: list
                 fields:
-                  - {label: Heading, name: heading, widget: string}
-                  - {label: Description, name: description, widget: text}
-          - label: "Presentation files"
+                  - { label: Heading, name: heading, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: 'Presentation files'
             name: presentations
             widget: object
-            fields: 
-              - {label: Heading, name: heading, widget: string}
+            fields:
+              - { label: Heading, name: heading, widget: string }
               - label: Files
                 name: items
                 widget: list
                 fields:
-                  - {label: Heading, name: heading, widget: string}
-                  - {label: File, name: file, widget: file}
-                  - {label: Icon, name: icon, widget: image, default: "/img/icon-sealab-logo-dark.svg"}
-                  - {label: Description, name: description, widget: string, default: "Download PDF", hint: "Remember to change this, if uploading a different file like Powerpoints"}
+                  - { label: Heading, name: heading, widget: string }
+                  - { label: File, name: file, widget: file }
+                  - {
+                      label: Icon,
+                      name: icon,
+                      widget: image,
+                      default: '/img/icon-sealab-logo-dark.svg',
+                    }
+                  - {
+                      label: Description,
+                      name: description,
+                      widget: string,
+                      default: 'Download PDF',
+                      hint: 'Remember to change this, if uploading a different file like Powerpoints',
+                    }
 
-       
-      - file: "src/pages/about/vision-strategy.md"
-        name: "vision-strategy"
-        label: "Vision & Strategy"
-        filter: {field: "templateKey", value: "vision-strategy"}
+      - file: 'src/pages/about/vision-strategy.md'
+        name: 'vision-strategy'
+        label: 'Vision & Strategy'
+        filter: { field: 'templateKey', value: 'vision-strategy' }
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "vision-strategy"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "text", hint: "Text."}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Image", name: "featuredimage", widget: "image", hint: "Image to use on the page."}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'vision-strategy',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              hint: 'Text.',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image to use on the page.',
+            }
 
           - label: Primary Split Section
             name: primarySplitSection
             widget: object
             fields:
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - {label: "Right Content", name: "right", widget: "markdown"}
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - { label: 'Right Content', name: 'right', widget: 'markdown' }
 
           - label: Centered Text Section
             name: centeredTextSection
             widget: object
             fields:
-              - {label: "Text", name: "content", widget: "markdown"}
+              - { label: 'Text', name: 'content', widget: 'markdown' }
 
           - label: Primary Centered Image Section
             name: primaryCenteredImageSection
             widget: object
             fields:
-              - {label: "Centered Image", name: "featuredimage", widget: "image"}
-              - {label: Caption, name: "featuredimageCaption", widget: "string", required: false}
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - {label: "Right Content", name: "right", widget: "markdown"}
-          
+              - {
+                  label: 'Centered Image',
+                  name: 'featuredimage',
+                  widget: 'image',
+                }
+              - {
+                  label: Caption,
+                  name: 'featuredimageCaption',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - { label: 'Right Content', name: 'right', widget: 'markdown' }
+
           - label: Tertiary Split Section
             name: tertiarySplitSection
             widget: object
             required: false
             fields:
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - label: "Right - Advantages list"
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - label: 'Right - Advantages list'
                 name: right
                 widget: list
-                hint: "Should number of items should be 2, 4, 6 or 8 to create a balanced design."
-                field: {label: "Content", name: "content", widget: "markdown"}
-          
+                hint: 'Should number of items should be 2, 4, 6 or 8 to create a balanced design.'
+                field: { label: 'Content', name: 'content', widget: 'markdown' }
+
           - label: Quaternary Split Section
             name: quaternarySplitSection
             widget: object
             fields:
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - {label: "Right Content", name: "right", widget: "markdown"}
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - { label: 'Right Content', name: 'right', widget: 'markdown' }
 
           - label: Primary Collapsible List
             name: primaryCollapsibleList
@@ -817,328 +1641,793 @@ collections:
                 name: listItems
                 widget: list
                 fields:
-                  - {label: "Heading", name: "heading", widget: "string"}
-                  - {label: "Content", name: "content", widget: "markdown"}
+                  - { label: 'Heading', name: 'heading', widget: 'string' }
+                  - { label: 'Content', name: 'content', widget: 'markdown' }
 
           - label: Quinary Split Section
             name: quinarySplitSection
             widget: object
             fields:
-              - {label: "Centered Image", name: "featuredimage", widget: "image"}
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - {label: "Right Content", name: "right", widget: "markdown", required: false}
+              - {
+                  label: 'Centered Image',
+                  name: 'featuredimage',
+                  widget: 'image',
+                }
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - {
+                  label: 'Right Content',
+                  name: 'right',
+                  widget: 'markdown',
+                  required: false,
+                }
 
-      - file: "src/pages/about/social-responsibility.md"
-        label: "Social responsibility"
-        name: "about-social-responsibility"
+      - file: 'src/pages/about/social-responsibility.md'
+        label: 'Social responsibility'
+        name: 'about-social-responsibility'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-social-responsibility"}
-          - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: text, required: false}
-          - label: "UN Responsibility images"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'about-social-responsibility',
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: SEO Description,
+              name: seoDescription",
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - label: 'UN Responsibility images'
             name: featuredImages
             widget: list
-            field: {label: Image, name: image, widget: image}
-          - label: "UN Sustainable"
+            field: { label: Image, name: image, widget: image }
+          - label: 'UN Sustainable'
             name: splitSection
             required: false
             widget: object
             fields:
-                - {label: "Content - left", name: "left", widget: "markdown", required: false }
-                - {label: "Content - right", name: "right", widget: "markdown", required: false }
-          - label: "Three columns"
-            name: "threeColSection"
+              - {
+                  label: 'Content - left',
+                  name: 'left',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - {
+                  label: 'Content - right',
+                  name: 'right',
+                  widget: 'markdown',
+                  required: false,
+                }
+          - label: 'Three columns'
+            name: 'threeColSection'
             required: false
             widget: list
             fields:
-                - {label: "Content - left", name: "description", widget: "markdown", required: false }
-                - {label: Icon, name: icon, widget: image, required: false }
-          - label: "Sustainability"
+              - {
+                  label: 'Content - left',
+                  name: 'description',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - { label: Icon, name: icon, widget: image, required: false }
+          - label: 'Sustainability'
             name: splitSection2
             required: false
             widget: object
             fields:
-                - {label: "Content - left", name: "left", widget: "markdown", required: false }
-                - {label: "Image - right", name: "right", widget: "image", required: false }
-          - label: "Responsibilities"
-            name: "responsibilities"
+              - {
+                  label: 'Content - left',
+                  name: 'left',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - {
+                  label: 'Image - right',
+                  name: 'right',
+                  widget: 'image',
+                  required: false,
+                }
+          - label: 'Responsibilities'
+            name: 'responsibilities'
             required: false
             widget: list
             fields:
-                - {label: "Heading --->", name: "description", widget: "string", required: false }
-                - {label: "Content", name: "description", widget: "markdown", required: false }
-          - label: "ISO"
+              - {
+                  label: 'Heading --->',
+                  name: 'description',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Content',
+                  name: 'description',
+                  widget: 'markdown',
+                  required: false,
+                }
+          - label: 'ISO'
             name: splitSection3
             required: false
             widget: object
             fields:
-                - {label: "Content - left", name: "left", widget: "markdown", required: false }
-                - {label: "Image - right", name: "right", widget: "image", required: false }
+              - {
+                  label: 'Content - left',
+                  name: 'left',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - {
+                  label: 'Image - right',
+                  name: 'right',
+                  widget: 'image',
+                  required: false,
+                }
 
-      - file: "src/pages/leadership.md"
-        label: "Leadership"
-        name: "about-page-leadership"
-        description: "This is a about page template. (e.g. Leadership)"
+      - file: 'src/pages/leadership.md'
+        label: 'Leadership'
+        name: 'about-page-leadership'
+        description: 'This is a about page template. (e.g. Leadership)'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page-leadership"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "text", hint: "Text."}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Image", name: "featuredimage", widget: "image", hint: "Image to use on the page."}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'about-page-leadership',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              hint: 'Text.',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - {
+              label: 'Image',
+              name: 'featuredimage',
+              widget: 'image',
+              hint: 'Image to use on the page.',
+            }
           - label: Persons
             name: persons
             widget: list
             fields:
-              - {label: "Role", name: "role", widget: "string"}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Description", name: "description", widget: "markdown"}
-              - {label: "Image", name: "profilePicture", widget: "image", hint: "Profile picutre"}
-          - {label: "Quote centered", name: "body", widget: "markdown", required: false}
+              - { label: 'Role', name: 'role', widget: 'string' }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'markdown',
+                }
+              - {
+                  label: 'Image',
+                  name: 'profilePicture',
+                  widget: 'image',
+                  hint: 'Profile picutre',
+                }
+          - {
+              label: 'Quote centered',
+              name: 'body',
+              widget: 'markdown',
+              required: false,
+            }
 
-      - file: "src/pages/sealab-tv-channel.md"
-        label: "SEALAB TV Channel"
-        name: "sealab-tv-channel"
+      - file: 'src/pages/sealab-tv-channel.md'
+        label: 'SEALAB TV Channel'
+        name: 'sealab-tv-channel'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tv-channel-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "text", hint: "Text."}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Image below livestream and schedule", name: "featuredimage", widget: "image", required: false}
-          - label: "Split section"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'tv-channel-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              hint: 'Text.',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - {
+              label: 'Image below livestream and schedule',
+              name: 'featuredimage',
+              widget: 'image',
+              required: false,
+            }
+          - label: 'Split section'
             name: splitSection
             required: false
             widget: object
             fields:
-                - {label: "Heading", name: "heading", widget: "string", required: false, hint: "This is the title you see on the top of a page."}
-                - {label: "Content - left", name: "left", widget: "markdown", required: false }
-                - {label: "Image - right", name: "right", widget: "markdown", required: false }
+              - {
+                  label: 'Heading',
+                  name: 'heading',
+                  widget: 'string',
+                  required: false,
+                  hint: 'This is the title you see on the top of a page.',
+                }
+              - {
+                  label: 'Content - left',
+                  name: 'left',
+                  widget: 'markdown',
+                  required: false,
+                }
+              - {
+                  label: 'Image - right',
+                  name: 'right',
+                  widget: 'markdown',
+                  required: false,
+                }
 
-      - file: "src/pages/about/partners.md"
-        label: "About - Partners"
-        name: "about-page-partners"
-        description: "This is the template for the Partners page."
+      - file: 'src/pages/about/partners.md'
+        label: 'About - Partners'
+        name: 'about-page-partners'
+        description: 'This is the template for the Partners page.'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page-partners"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "markdown", hint: "Markdown text under title", required: false}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - label: "Partners"
-            name: "partnerItems"
-            widget: "list"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'about-page-partners',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              hint: 'Markdown text under title',
+              required: false,
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - label: 'Partners'
+            name: 'partnerItems'
+            widget: 'list'
             fields:
-              - {label: "Partner logo", name: "icon", widget: "image"}
-              - {label: "Partner website url", name: "url", widget: "string", hint: "The partner logo will be a link that directs to the url specified here."}
-          - {label: "Content", name: "body", widget: "markdown"}
+              - { label: 'Partner logo', name: 'icon', widget: 'image' }
+              - {
+                  label: 'Partner website url',
+                  name: 'url',
+                  widget: 'string',
+                  hint: 'The partner logo will be a link that directs to the url specified here.',
+                }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
 
-      - file: "src/pages/research-laboratories.md"
-        name: "research-laboratories"
-        label: "Research laboratories"
+      - file: 'src/pages/research-laboratories.md'
+        name: 'research-laboratories'
+        label: 'Research laboratories'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "research-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "markdown", hint: "Markdown text under title", required: false}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - label: "Featured images - GRID"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'research-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              hint: 'Markdown text under title',
+              required: false,
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - label: 'Featured images - GRID'
             name: featuredimages
             widget: list
-            hint: "Try to keep it at a maximum 6"
-            field: {label: "Image", name: "image", widget: image}
-          - label: "Research section"
+            hint: 'Try to keep it at a maximum 6'
+            field: { label: 'Image', name: 'image', widget: image }
+          - label: 'Research section'
             name: centeredSection
             widget: object
             fields:
-              - {label: "Content", name: "content", widget: "markdown"}
-              - label: "Call to action button"
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - label: 'Call to action button'
                 widget: object
                 name: button
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - label: "Images GRID"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - label: 'Images GRID'
                 name: images
                 widget: list
-                hint: "Try to keep it at a maximum 6"
-                field: {label: "Image", name: "image", widget: image}
-          
+                hint: 'Try to keep it at a maximum 6'
+                field: { label: 'Image', name: 'image', widget: image }
 
-
-          - label: "Career"
+          - label: 'Career'
             name: careers
             widget: object
-            fields: 
-              - {label: "Subheading", name: subheading, widget: string, required: false}
-              - {label: "Heading", name: heading, widget: string}
-              - {label: "Left content", name: left, widget: markdown}
-              - label: "Call to action buttons"
+            fields:
+              - {
+                  label: 'Subheading',
+                  name: subheading,
+                  widget: string,
+                  required: false,
+                }
+              - { label: 'Heading', name: heading, widget: string }
+              - { label: 'Left content', name: left, widget: markdown }
+              - label: 'Call to action buttons'
                 widget: list
                 name: buttons
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
-              - label: "Positions - SEALAB"
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
+              - label: 'Positions - SEALAB'
                 widget: object
                 name: positions
                 fields:
-                  - {label: "Heading", name: heading, widget: string}
-                  - label: "Positions list"
+                  - { label: 'Heading', name: heading, widget: string }
+                  - label: 'Positions list'
                     widget: list
                     name: items
                     required: false
-          - {label: "Content", name: body, widget: markdown, required: false}
-          - label: "Split section"
+          - { label: 'Content', name: body, widget: markdown, required: false }
+          - label: 'Split section'
             widget: object
             name: splitSection
             fields:
-              - {label: "Left Content", name: "left", widget: "markdown"}
-              - {label: "Right Image", name: "featuredimage", widget: "image"}
-          - label: "Section with background image"
+              - { label: 'Left Content', name: 'left', widget: 'markdown' }
+              - { label: 'Right Image', name: 'featuredimage', widget: 'image' }
+          - label: 'Section with background image'
             name: backgroundSection
             widget: object
             fields:
-              - {label: "Background image", name: "bgimage", widget: "image", required: false}
-              - {label: "Heading", name: heading, widget: string}
-              - {label: "Description", name: "description", widget: "markdown"}
+              - {
+                  label: 'Background image',
+                  name: 'bgimage',
+                  widget: 'image',
+                  required: false,
+                }
+              - { label: 'Heading', name: heading, widget: string }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'markdown',
+                }
 
-      - file: "src/pages/history.md"
-        label: "History - SEALAB"
-        name: "history"
+      - file: 'src/pages/history.md'
+        label: 'History - SEALAB'
+        name: 'history'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "history-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "markdown", hint: "Markdown text under title", required: false}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Hero image", name: "featuredimage", widget: image }
-          - {label: "Content", name: "body", widget: "markdown", required: false, hint: "Showed before history."}
-          - label: "History"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'history-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              hint: 'Markdown text under title',
+              required: false,
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: 'Hero image', name: 'featuredimage', widget: image }
+          - {
+              label: 'Content',
+              name: 'body',
+              widget: 'markdown',
+              required: false,
+              hint: 'Showed before history.',
+            }
+          - label: 'History'
             widget: list
             name: history
             fields:
-              - {label: "Time", name: "year", widget: "string", hint: "Could be the year. Keep it at 4 (!!) characters."}
-              - {label: "Subheading", name: "subheading", widget: "string", required: false}
-              - {label: "Content", name: "content", widget: "markdown"}
-              - {label: "Position", name: "position", widget: "select", options: ["left", "center", "right"], default: ["left"]}
-              - {label: "Highlighted", name: "highlighted", widget: "boolean", required: false, hint: "Makes the background behind year in red color, and some of the text bold"}
-              - {label: "Image", name: "featuredimage", widget: image, required: false }
-          - {label: "Content", name: "lastContent", widget: "markdown", required: false, hint: "Showed before history."}
+              - {
+                  label: 'Time',
+                  name: 'year',
+                  widget: 'string',
+                  hint: 'Could be the year. Keep it at 4 (!!) characters.',
+                }
+              - {
+                  label: 'Subheading',
+                  name: 'subheading',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Content', name: 'content', widget: 'markdown' }
+              - {
+                  label: 'Position',
+                  name: 'position',
+                  widget: 'select',
+                  options: ['left', 'center', 'right'],
+                  default: ['left'],
+                }
+              - {
+                  label: 'Highlighted',
+                  name: 'highlighted',
+                  widget: 'boolean',
+                  required: false,
+                  hint: 'Makes the background behind year in red color, and some of the text bold',
+                }
+              - {
+                  label: 'Image',
+                  name: 'featuredimage',
+                  widget: image,
+                  required: false,
+                }
+          - {
+              label: 'Content',
+              name: 'lastContent',
+              widget: 'markdown',
+              required: false,
+              hint: 'Showed before history.',
+            }
 
-
-      - file: "src/pages/about/partnership.md"
-        label: "Partnership / App community"
-        name: "partnership"
+      - file: 'src/pages/about/partnership.md'
+        label: 'Partnership / App community'
+        name: 'partnership'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partnership-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "markdown", hint: "Markdown text under title", required: false}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          - {label: "Featured image", name: "featuredimage", widget: image }
-          - label: "Content below section"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'partnership-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              hint: 'Markdown text under title',
+              required: false,
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+          - { label: 'Featured image', name: 'featuredimage', widget: image }
+          - label: 'Content below section'
             name: featuredimageSection
             widget: object
-            fields: 
-              - {label: "Content", name: "content", widget: "markdown", required: false, hint: "Showed below image, left aligned"}
-              - label: "Call to action buttons"
+            fields:
+              - {
+                  label: 'Content',
+                  name: 'content',
+                  widget: 'markdown',
+                  required: false,
+                  hint: 'Showed below image, left aligned',
+                }
+              - label: 'Call to action buttons'
                 widget: list
                 name: buttons
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
 
-          - label: "Content below section"
+          - label: 'Content below section'
             name: splitSection
             widget: object
-            fields: 
-              - {label: "Subheading", name: subheading, widget: string, required: false}
-              - {label: "Content", name: "content", widget: "markdown", hint: "Aligned left"}
-              - {label: "Featured image", name: "featuredimage", widget: image }
+            fields:
+              - {
+                  label: 'Subheading',
+                  name: subheading,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: 'Content',
+                  name: 'content',
+                  widget: 'markdown',
+                  hint: 'Aligned left',
+                }
+              - {
+                  label: 'Featured image',
+                  name: 'featuredimage',
+                  widget: image,
+                }
 
-          - label: "AI Systems"
+          - label: 'AI Systems'
             name: features
             widget: object
-            fields: 
-              - {label: "Content", name: "content", widget: "markdown", hint: "Is centered"}
+            fields:
+              - {
+                  label: 'Content',
+                  name: 'content',
+                  widget: 'markdown',
+                  hint: 'Is centered',
+                }
               - label: Systems
                 widget: list
                 name: items
                 fields:
-                  - {label: "Heading", name: heading, widget: string}
-                  - {label: "Additional description", name: description, widget: text, required: false}
-                  - {label: "Icon", name: "icon", widget: image, hint: "Try to upload SVG's, they look nicer." }
-         
-          - label: "Partnerships examples"
+                  - { label: 'Heading', name: heading, widget: string }
+                  - {
+                      label: 'Additional description',
+                      name: description,
+                      widget: text,
+                      required: false,
+                    }
+                  - {
+                      label: 'Icon',
+                      name: 'icon',
+                      widget: image,
+                      hint: "Try to upload SVG's, they look nicer.",
+                    }
+
+          - label: 'Partnerships examples'
             name: partnering
             widget: object
-            fields: 
-              - {label: "Heading", name: heading, widget: string}
-              - {label: "Subheading", name: subheading, widget: text, required: false}
-              - label: "Call to action buttons"
+            fields:
+              - { label: 'Heading', name: heading, widget: string }
+              - {
+                  label: 'Subheading',
+                  name: subheading,
+                  widget: text,
+                  required: false,
+                }
+              - label: 'Call to action buttons'
                 widget: list
                 name: buttons
                 required: false
                 fields:
-                  - {label: "Button text", name: text, widget: string, required: false}
-                  - {label: "Button path", name: path, widget: string, required: false}
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
               - label: Partnerships
                 widget: list
                 name: items
                 fields:
-                  - {label: "Content", name: content, widget: markdown}
-                  - {label: "Logo", name: "logo", widget: image, hint: "Try to upload SVG's, they look nicer." }           
-                    
+                  - { label: 'Content', name: content, widget: markdown }
+                  - {
+                      label: 'Logo',
+                      name: 'logo',
+                      widget: image,
+                      hint: "Try to upload SVG's, they look nicer.",
+                    }
 
-          - {label: "Content", name: "body", widget: "markdown", required: false, hint: "Showed at the end of the section"}
+          - {
+              label: 'Content',
+              name: 'body',
+              widget: 'markdown',
+              required: false,
+              hint: 'Showed at the end of the section',
+            }
 
-#### ABOUT PAGE PRESS ####
-      - file: "src/pages/press.md"
-        label: "Press and resources"
-        name: "resources"
+      #### ABOUT PAGE PRESS ####
+      - file: 'src/pages/press.md'
+        label: 'Press and resources'
+        name: 'resources'
         description: "Add resource files to be presented for client download. Remember that downloaded files will have the same name as they have in our CMS system. If you cannot find the page you're looking for, go to Regular pages.  New pages will be added at top-level of the pages, under www.sealab.blue/about/name-of-your-page/. Remember to also add link to the page in Navbar or Footer."
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "press-page"}
-          - {label: "Title", name: "title", widget: "string", hint: "Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name"}
-          - {label: "Heading", name: "heading", widget: "string", hint: "This is the title you see on the top of a page."}
-          - {label: "Description", name: "description", widget: "text", hint: "Text."}
-          - {label: "SEO Description", name: "seoDescription", widget: "text", hint: "SEO is important for search engines. Recommended size: 50-160 characters"}
-          
-          - label: "Guidelines"
-            name: "guidelines"
-            widget: "list"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'press-page',
+            }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              hint: 'Title on the tab and SEO title. Keep title between 25-60 characters. Recommended format: Primary Keyword - Secondary Keyword | Brand Name',
+            }
+          - {
+              label: 'Heading',
+              name: 'heading',
+              widget: 'string',
+              hint: 'This is the title you see on the top of a page.',
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              hint: 'Text.',
+            }
+          - {
+              label: 'SEO Description',
+              name: 'seoDescription',
+              widget: 'text',
+              hint: 'SEO is important for search engines. Recommended size: 50-160 characters',
+            }
+
+          - label: 'Guidelines'
+            name: 'guidelines'
+            widget: 'list'
             required: false
-            field: {label: "Guideline", widget: string, name: text, required: false, hint: "Keep it short, one sentence at most."}
+            field:
+              {
+                label: 'Guideline',
+                widget: string,
+                name: text,
+                required: false,
+                hint: 'Keep it short, one sentence at most.',
+              }
           - label: Subpages
             name: subPages
             widget: list
             fields:
-              - {label: "Heading", name: "heading", widget: "string", hint: "Subpage heading"}
+              - {
+                  label: 'Heading',
+                  name: 'heading',
+                  widget: 'string',
+                  hint: 'Subpage heading',
+                }
               - label: Files
                 name: files
                 widget: list
                 fields:
-                  - {label: "Display name", name: "displayName", widget: "string", hint: "Display title of the file"}
-                  - label: "Download file"
-                    name: "path"
-                    widget: "file"
+                  - {
+                      label: 'Display name',
+                      name: 'displayName',
+                      widget: 'string',
+                      hint: 'Display title of the file',
+                    }
+                  - label: 'Download file'
+                    name: 'path'
+                    widget: 'file'
                     media_library:
                       config:
                         multiple: true
-                  - {label: "Should be fullwidth", name: "isImageFullwidth", widget: "boolean", required: false, hint: "Makes the image fullwidth. Use if image does not have a transparent background. "}
-                  - label: "Image Background color"
-                    name: "backgroundColor"
-                    widget: "select"
+                  - {
+                      label: 'Should be fullwidth',
+                      name: 'isImageFullwidth',
+                      widget: 'boolean',
+                      required: false,
+                      hint: 'Makes the image fullwidth. Use if image does not have a transparent background. ',
+                    }
+                  - label: 'Image Background color'
+                    name: 'backgroundColor'
+                    widget: 'select'
                     required: false
-                    default: "light"
-                    options: ["light", "dark"]
-                  - {label: "Dimensions", name: "dimensions", required: false, widget: "string", hint: "e.g. 1080x720px"}
-          - {label: "Content", name: "body", widget: "markdown", required: false}
-  
-
+                    default: 'light'
+                    options: ['light', 'dark']
+                  - {
+                      label: 'Dimensions',
+                      name: 'dimensions',
+                      required: false,
+                      widget: 'string',
+                      hint: 'e.g. 1080x720px',
+                    }
+          - {
+              label: 'Content',
+              name: 'body',
+              widget: 'markdown',
+              required: false,
+            }
