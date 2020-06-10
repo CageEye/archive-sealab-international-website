@@ -28,8 +28,6 @@ menuPaths:
           title: River & wildlife monitoring
         - path: /solutions/seabed-mining/
           title: Seabed mining
-        - path: /solutions/well-and-fishing-boats/
-          title: Well & fishing boats
     path: '#'
     title: Industries
   - dropdown:
