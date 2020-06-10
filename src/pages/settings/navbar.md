@@ -4,6 +4,8 @@ menuPaths:
       regular:
         - path: /solutions/atlantic-salmon-and-seafood/
           title: Aquaculture
+        - path: /solutions/land-based-fish-farming/
+          title: Land based fish farming
         - path: /solutions/harbor-surveillance/
           title: Harbor surveillance
         - path: /solutions/underwater-drones-and-robotics/
@@ -26,8 +28,6 @@ menuPaths:
           title: River & wildlife monitoring
         - path: /solutions/seabed-mining/
           title: Seabed mining
-        - path: /solutions/well-and-fishing-boats/
-          title: Well & fishing boats
     path: '#'
     title: Industries
   - dropdown:
@@ -46,16 +46,6 @@ menuPaths:
           title: BlueThink™ GO
     path: '#'
     title: Products
-  - dropdown:
-      highlighted:
-        - path: /projects/indisal/
-          title: Indisal
-        - path: /projects/5G-heart/
-          title: 5G Heart
-        - path: /projects/clean-ocean-initiative/
-          title: Clean ocean initiative
-    path: '#'
-    title: Projects
   - dropdown:
       highlighted:
         - path: /investors/
@@ -86,8 +76,12 @@ menuPaths:
         - path: /research-laboratories/
           title: R&D in SEALAB
       regular:
-        - path: /about/sealab-osc/
-          title: 'Ocean Space Center '
+        - path: /projects/5G-heart/
+          title: Project - 5G HEART
+        - path: /projects/indisal/
+          title: Project - INDISAL
+        - path: /projects/clean-ocean-initiative/
+          title: Clean ocean initiative
         - path: /contact/locations/
           title: Locations
         - path: /contact/
@@ -95,3 +89,4 @@ menuPaths:
     path: '#'
     title: About
 ---
+
