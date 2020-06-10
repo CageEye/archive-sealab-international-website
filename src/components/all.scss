@@ -46,6 +46,9 @@ body {
         fill: $white;
         stroke: $white;
       }
+      a {
+        color: $white;
+      }
       &:hover,
       &:focus {
         opacity: 0.85;
@@ -65,6 +68,7 @@ body {
       &:focus {
         opacity: 1;
       }
+
       svg,
       svg path {
         fill: $text-dark;
@@ -407,6 +411,7 @@ body {
     }
     .column:nth-of-type(2) {
       order: 1;
+      width: 100%;
     }
   }
 }
@@ -1330,5 +1335,182 @@ section.product-page-primary {
         margin: 20px 0;
       }
     }
+  }
+}
+
+/****************     Land Based Fish Farming    ********************/
+
+.landbased-fishfarming-page {
+  .section--title {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+  }
+  .section--subheading {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    font-weight: bold;
+  }
+  .center-align-wrapper {
+    width: 100%;
+    max-width: 895px;
+    margin: auto;
+    
+    text-align: center;
+    & * {
+      text-align: center !important;
+    }
+    & .description {
+      width: 100%;
+      max-width: 660px;
+      margin: auto;
+      
+      font-size: 22px;
+      line-height: 170%;
+    }
+    & a {
+      margin: 41px 0;
+    }
+  }
+  .side-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 570px;
+    margin: auto;
+
+    background: transparent;
+
+    .image-gradient {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(356.64deg, #0E111B 4.06%, rgba(14, 17, 27, 0.21) 34.1%), linear-gradient(0deg, rgba(14, 17, 27, 0.3), rgba(14, 17, 27, 0.3));
+    }
+    .side-image1 {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .side-image2 {
+      display: inline-block;
+
+      width: 40%;
+      height: 200px;
+      margin-right: 10px;
+    }
+    .side-image3 {
+      display: inline-block;
+
+      width: calc(60% - 10px);
+      height: 200px;
+    }
+  }
+  .middle-description {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+  }
+  .has-text-centered {
+    margin: auto;
+  }
+  .buttons-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    
+    & a {
+      display: flex;
+      align-items: center;
+
+      margin-right: 18px;
+      margin-bottom: 17px;
+    }
+  }
+  @media only screen and (max-width: $tablet) {
+    .column {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .section--title {
+      margin-bottom: 36px;
+    }
+    .middle-description {
+      font-size: 20px;
+    }
+    .center-align-wrapper {
+      & * {
+        margin-left: 0;
+      }
+      & .description {
+        max-width: 100%;
+        text-align: left !important;
+      }
+      & .has-mobile-left {
+        text-align: left !important;
+      }
+    }
+    .side-image {
+      .side-image2 {
+        height: 130px;
+      }
+      .side-image3 {
+        height: 130px;
+      }
+    }
+    .full-width-image {
+      width: calc(100% + 30px);
+      min-height: 375px;
+      margin-left: -15px;
+      margin-bottom: 60px;
+    }
+    .buttons-wrap {
+      & a {
+        width: 100%;
+        margin-right: 0;
+        & span:nth-child(1) {
+          display: block;
+
+          width: calc(100% - 20px);
+          
+          text-align: left;
+          word-wrap:break-word;
+          white-space: normal;
+        }
+        & span:nth-child(2) {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+/****************     Global Custom Style    ********************/
+
+.is-vcentered {
+  align-items: center;
+}
+.is-centered {
+  text-align: center;
+}
+.is-mobile-hidden {
+  display: block;
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+.is-mobile-show {
+  display: none;
+  @media only screen and (max-width: $tablet) {
+    display: block;
   }
 }
