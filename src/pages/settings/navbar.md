@@ -40,10 +40,12 @@ menuPaths:
     title: Technologies
   - dropdown:
       highlighted:
-        - path: /products/subsea-cam/
-          title: sCAM
         - path: /products/bluethink-go/
           title: BlueThink™ GO
+        - path: /products/subsea-cam/
+          title: Subsea camera - sCAM
+        - path: /products/subsea-light-quintus/
+          title: Subsea light - Quintus LED
     path: '#'
     title: Products
   - dropdown:
