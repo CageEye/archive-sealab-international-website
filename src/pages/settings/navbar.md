@@ -48,16 +48,6 @@ menuPaths:
     title: Products
   - dropdown:
       highlighted:
-        - path: /projects/indisal/
-          title: Indisal
-        - path: /projects/5G-heart/
-          title: 5G Heart
-        - path: /projects/clean-ocean-initiative/
-          title: Clean ocean initiative
-    path: '#'
-    title: Projects
-  - dropdown:
-      highlighted:
         - path: /investors/
           title: For investors
         - path: /about/vision-strategy/
@@ -86,8 +76,12 @@ menuPaths:
         - path: /research-laboratories/
           title: R&D in SEALAB
       regular:
-        - path: /about/sealab-osc/
-          title: 'Ocean Space Center '
+        - path: /projects/5G-heart/
+          title: Project - 5G HEART
+        - path: /projects/indisal/
+          title: Project - INDISAL
+        - path: /projects/clean-ocean-initiative/
+          title: Clean ocean initiative
         - path: /contact/locations/
           title: Locations
         - path: /contact/
@@ -95,3 +89,4 @@ menuPaths:
     path: '#'
     title: About
 ---
+
