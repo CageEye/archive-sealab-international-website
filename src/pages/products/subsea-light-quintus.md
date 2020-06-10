@@ -1,9 +1,9 @@
 ---
 templateKey: product-template-hardware
-title: Quintus LED
+title: Subsea Light - Quintus LED | SEALAB
 seoDescription: >-
-  Quintus LED is a powerful work light that is suitable for a wide range of
-  underwater services. The light has a maximum light output of 40,000 lumens.
+  Quintus LED is a powerful subsea light that is suitable for a wide range of
+  subsea services. The light has a maximum light output of 40,000 lumens.
 featuredimages:
   - alt: Quintus LED seen from the side
     img: >-
@@ -17,13 +17,13 @@ featuredimages:
   - alt: Quintus LED seen from below
     img: >-
       /img/SEALAB_P02-002.1_Quintus_V1.1_2020-Jun-04_06-12-42AM-000_CustomizedView3339076685.png
-heading: Quintus LED - Your high quality underwater light
+heading: Quintus LED - Your high quality subsea light
 shortDescription: >-
-  Quintus LED is a powerful work light that is suitable for a wide range of
-  underwater services. A robust construction with an effective design guarantees
+  Quintus LED is a powerful subsea light that is suitable for a wide range of
+  subsea services. A robust construction with an effective design guarantees
   a long lifetime with minimal maintenance. The light has a maximum light output
   of 40,000 lumens and a lifetime of more than 50,000 hours, which is about 5
-  years of continuous use. 
+  years of continuous use.
 highlightSpecifications:
   - description: Max Light Output
     heading: '40,000 Lumens'
@@ -88,7 +88,8 @@ textAndImages:
 
       Quintus LED is suitable for many application areas. If you need to carry
       out an installation or a reparation in the dark, for example on an
-      underwater pier construction, Quintus LED can provide great working light.
+      subsea pier construction, Quintus LED can provide great working light.
     featuredimage: /img/Quintus_Installed_under_a_Pier.jpg
 ---
-Quintus LED can advantageously be used together with our underwater camera, sCAM. Together they make it possible to get exceptionally good night pictures below the surface. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.
+
+Quintus LED can advantageously be used together with our subsea camera, sCAM. Together they make it possible to get exceptionally good night pictures below the surface. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.
