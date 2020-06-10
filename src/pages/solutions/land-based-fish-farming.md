@@ -65,7 +65,7 @@ scamSection:
   secondButtonLink: /products/subsea-cam/
   secondButtonTxt: Camera technology/edge computing
   sideImage: /img/sCAM-highlighted.png
-middleImage: /img/land-based-fish-farming-middle.jpg
+middleImage: /img/SEALAB_Control_room_indoor.png
 controlSection:
   content: >-
     Continuous monitoring is the best decision support available. With our
@@ -100,7 +100,8 @@ imageSplitSections:
       important considering fish maturation for example for Atlantic Salmon.
     heading: SEALAB Quintus LED
     label: Designed for AI and computer vision
-    sideImage: /img/sealab-quintus-led.png
+    sideImage: >-
+      /img/SEALAB_P02-002.1_Quintus_V1.1_2020-Jun-05_07-13-58AM-000_CustomizedView6616039714.png
 middleDescription: >-
   We connect everything – people, process, data and things – and we use those
   connections to change our world for the better. We don’t just dream it, we do
