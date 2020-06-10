@@ -2354,8 +2354,9 @@ collections:
                 }
               - {
                   label: 'Mobile full width image',
-                  name: 'topImage',
+                  name: 'mobileTopImage',
                   widget: image,
+                  required: false,
                 }
               - { label: 'Heading', name: 'heading', widget: string }
               - {

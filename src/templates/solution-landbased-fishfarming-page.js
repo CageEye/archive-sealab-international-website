@@ -259,10 +259,14 @@ export const LandBasedFishFarmingPageTemplate = ({
               className="is-mobile-hidden"
               fluid={getStartSection.topImage.childImageSharp.fluid}
             />
-            <Img
-              className="is-mobile-show"
-              fluid={getStartSection.mobileTopImage.childImageSharp.fluid}
-            />
+            {getStartSection.mobileTopImage ? (
+              <Img
+                className="is-mobile-show"
+                fluid={getStartSection.mobileTopImage.childImageSharp.fluid}
+              />
+            ) : (
+              <></>
+            )}
           </div>
           <div className="row center-align-wrapper">
             <br />
@@ -405,9 +409,7 @@ export const pageQuery = graphql`
           label
           heading
           description
-          features {
-            feature
-          }
+          features
         }
         advantageSection {
           label

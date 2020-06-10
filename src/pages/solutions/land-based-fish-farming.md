@@ -32,10 +32,10 @@ featureSection:
     Several years of experience within sea based aquaculture has made us ready
     to supply the land based industry the following quality products:
   features:
-    - feature: Complete surveillance systems
+    - Complete surveillance systems
     - BlueThink™ GO
     - Bluethink™ Control room
-    - feature: Lightning
+    - Lightning
   label: Based on experience from traditional fish farming
 advantageSection:
   advantages:
@@ -63,7 +63,7 @@ scamSection:
   heading: sCAM
   label: Complete surveillance systems
   secondButtonLink: /products/subsea-cam/
-  secondButtonTxt: Camera technology/edge computing
+  secondButtonTxt: Edge computing
   sideImage: /img/sCAM-highlighted.png
 middleImage: /img/SEALAB_Control_room_indoor.png
 controlSection:
@@ -92,8 +92,8 @@ imageSplitSections:
     heading: BlueThink™ GO
     label: Your mobile control room
     sideImage: /img/bluethink-go.png
-  - buttonLink: /technologies/edge-intelligence/
-    buttonTxt: SEALAB Quintus LED
+  - buttonLink: /products/subsea-light-quintus/
+    buttonTxt: Quintus LED
     content: >-
       Correct use of lighting will increase your profit. Both growth rate and
       feed utilization are depending on the lightning regime. It is also
@@ -130,5 +130,5 @@ getStartSection:
     you like to hear more about some of the products? Do not hesitate to contact
     us.
   topImage: /img/get-started-with-sealab.jpg
+  mobileTopImage: /img/get-started-with-sealab-mobile.jpg
 ---
-

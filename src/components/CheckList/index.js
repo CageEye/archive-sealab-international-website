@@ -41,8 +41,8 @@ const CheckList = ({ features }) => {
     <Wrapper>
       {features.map(item => (
         <CheckItem>
-          <img src={CheckMark} alt={item.feature} />
-          {item.feature}
+          <img src={CheckMark} alt={item} />
+          {item}
         </CheckItem>
       ))}
     </Wrapper>
