@@ -108,7 +108,7 @@ middleDescription: >-
   it every day at SEALAB. And we’re doing it faster than ever before, in ways no
   one else can.
 settingSection:
-  buttonLink: /technologies/edge-intelligence/
+  buttonLink: /about/research-laboratories/
   buttonTxt: R&D at SEALAB
   content: >-
     Innovation drives the value we create. Whether hardware, software,
@@ -129,6 +129,7 @@ getStartSection:
     Are you interested in using SEALAB's solutions at your fish farm? Or would
     you like to hear more about some of the products? Do not hesitate to contact
     us.
-  topImage: /img/get-started-with-sealab.jpg
   mobileTopImage: /img/get-started-with-sealab-mobile.jpg
+  topImage: /img/get-started-with-sealab.jpg
 ---
+
