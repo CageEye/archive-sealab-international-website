@@ -9,6 +9,7 @@ import BackgroundImage from '../components/BackgroundImage';
 import CheckList from '../components/CheckList';
 import AdvantagesList from '../components/AdvantagesList';
 import Button from '../components/Button';
+import { ButtonFlex } from '../styles';
 import ReadMoreIcon from '../img/readmore-arrow.inline.svg';
 
 export const LandBasedFishFarmingPageTemplate = ({
@@ -100,18 +101,19 @@ export const LandBasedFishFarmingPageTemplate = ({
               <p className="section--subheading">{scamSection.label}</p>
               <h2 className="section--title">{scamSection.heading}</h2>
               <HTMLContent content={scamSection.content} />
-              <div className="buttons-wrap">
-                <Button
-                  className="is-primary"
-                  text={scamSection.firstButtonTxt}
-                  path={scamSection.firstButtonLink}
-                />
-                <Button
-                  className="is-transparent"
-                  text={scamSection.secondButtonTxt}
-                  path={scamSection.secondButtonLink}
-                />
-              </div>
+              {scamSection.buttons && scamSection.buttons.length > 0 ? (
+                <ButtonFlex className="buttons">
+                  {scamSection.buttons.map(buttonObject => (
+                    <Button
+                      className={classNames('is-transparent')}
+                      text={buttonObject.text}
+                      path={buttonObject.path}
+                    />
+                  ))}
+                </ButtonFlex>
+              ) : (
+                <></>
+              )}
             </div>
             <div className="column">
               <Img
@@ -136,18 +138,19 @@ export const LandBasedFishFarmingPageTemplate = ({
             </div>
             <div className="column">
               <HTMLContent content={controlSection.content} />
-              <div className="buttons-wrap">
-                <Button
-                  className="is-primary"
-                  text={controlSection.firstButtonTxt}
-                  path={controlSection.firstButtonLink}
-                />
-                <Button
-                  className="is-transparent"
-                  text={controlSection.secondButtonTxt}
-                  path={controlSection.secondButtonLink}
-                />
-              </div>
+              {controlSection.buttons && controlSection.buttons.length > 0 ? (
+                <ButtonFlex className="buttons">
+                  {controlSection.buttons.map(buttonObject => (
+                    <Button
+                      className={classNames('is-transparent')}
+                      text={buttonObject.text}
+                      path={buttonObject.path}
+                    />
+                  ))}
+                </ButtonFlex>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </div>
@@ -431,10 +434,10 @@ export const pageQuery = graphql`
           label
           heading
           content
-          firstButtonTxt
-          firstButtonLink
-          secondButtonTxt
-          secondButtonLink
+          buttons {
+            path
+            text
+          }
           sideImage {
             publicURL
             extension
@@ -460,10 +463,10 @@ export const pageQuery = graphql`
           label
           heading
           content
-          firstButtonTxt
-          firstButtonLink
-          secondButtonTxt
-          secondButtonLink
+          buttons {
+            path
+            text
+          }
         }
         imageSplitSections {
           label

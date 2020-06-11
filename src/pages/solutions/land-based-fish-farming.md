@@ -58,12 +58,14 @@ scamSection:
     biomass control, respiratory rate measuring and feeding control will help
     our customers to reach their goals. SEALAB supplies both underwater and
     surface cameras.
-  firstButtonLink: /products/subsea-cam/
-  firstButtonTxt: sCAM
   heading: sCAM
   label: Complete surveillance systems
-  secondButtonLink: /technologies/edge-intelligence/
-  secondButtonTxt: Edge computing
+  buttons:
+    - path: /products/subsea-cam/
+      text: sCAM
+    - path: /technologies/edge-intelligence/
+      text: Edge computing
+
   sideImage: /img/sCAM-highlighted.png
 middleImage: /img/SEALAB_Control_room_indoor.png
 controlSection:
@@ -74,14 +76,13 @@ controlSection:
     clear look at what is going on in the cages can contribute to higher
     predictability, lower mortality and better fish welfare. The control room is
     using BlueThink™ Software Platform and is therefore open to third parties.
-  firstButtonLink: /technologies/edge-intelligence/
-  firstButtonTxt: BlueThink™ Control Room
+  buttons:
+    - path: /technologies/software-platform/
+      text: BlueThink™ Software Platform
   heading: BlueThink™ Control Room
   label: High-quality Livestream
-  secondButtonLink: /technologies/software-platform/
-  secondButtonTxt: BlueThink™ Software Platform
 imageSplitSections:
-  - buttonLink: /products/bluethink-go
+  - buttonLink: /products/bluethink-go/
     buttonTxt: 'BlueThink™ GO '
     content: >-
       Have you ever been concerned about the conditions in the fish tanks when
@@ -122,7 +123,7 @@ settingSection:
   sideImage2: /img/land-based-fish-farm-setting-3.jpg
   sideImage3: /img/land-based-fish-farm-setting-2.jpg
 getStartSection:
-  buttonLink: /contact
+  buttonLink: /contact/
   buttonTxt: Contact us for a demo
   heading: Get started with SEALAB
   description: >-
@@ -132,4 +133,3 @@ getStartSection:
   mobileTopImage: /img/get-started-with-sealab-mobile.jpg
   topImage: /img/get-started-with-sealab.jpg
 ---
-
