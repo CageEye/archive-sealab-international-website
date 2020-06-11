@@ -62,7 +62,7 @@ scamSection:
   firstButtonTxt: sCAM
   heading: sCAM
   label: Complete surveillance systems
-  secondButtonLink: /technologies/edge-intelligence/
+  secondButtonLink: /products/subsea-cam/
   secondButtonTxt: Edge computing
   sideImage: /img/sCAM-highlighted.png
 middleImage: /img/SEALAB_Control_room_indoor.png
@@ -74,12 +74,12 @@ controlSection:
     clear look at what is going on in the cages can contribute to higher
     predictability, lower mortality and better fish welfare. The control room is
     using BlueThink™ Software Platform and is therefore open to third parties.
-  firstButtonLink: /technologies/edge-intelligence/
-  firstButtonTxt: BlueThink™ Control Room
+  firstButtonLink: /technologies/software-platform/
+  firstButtonTxt: BlueThink™ Software Platform
   heading: BlueThink™ Control Room
   label: High-quality Livestream
   secondButtonLink: /technologies/software-platform/
-  secondButtonTxt: BlueThink™ Software Platform
+  secondButtonTxt: /technologies/software-platform/
 imageSplitSections:
   - buttonLink: /products/bluethink-go
     buttonTxt: 'BlueThink™ GO '
