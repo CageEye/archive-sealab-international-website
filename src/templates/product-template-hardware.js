@@ -4,12 +4,20 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Slideshow from '../components/Slideshow';
-// import Button from '../components/Button';
+import Button from '../components/Button';
 import Specifications from '../components/Specifications';
 import SectionList from '../components/SectionListAlternating';
 
 import Content, { HTMLContent } from '../components/Content';
 import generateHTML from '../utils/generateHTML';
+
+const HardwareWrapper = styled.section`
+  #product-description {
+    .button {
+      margin-top: 30px;
+    }
+  }
+`;
 
 const StyledCenteredText = styled.div`
   font-size: 24px;
@@ -30,7 +38,7 @@ export const HardwarePageTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <>
+    <HardwareWrapper>
       <section className="section has-light-dark-background">
         <div className="container">
           <Slideshow content={featuredimages} />
@@ -50,6 +58,11 @@ export const HardwarePageTemplate = ({
                 <strong>Description</strong>
               </p>
               <p className="description--text">{shortDescription}</p>
+              <Button
+                className="is-primary button"
+                text="Book a demo"
+                path="/contact/"
+              />
             </div>
           </div>
         </div>
@@ -81,7 +94,7 @@ export const HardwarePageTemplate = ({
         className="section has-dark-background"
         sections={textAndImages}
       />
-    </>
+    </HardwareWrapper>
   );
 };
 
