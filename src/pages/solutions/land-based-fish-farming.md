@@ -62,7 +62,7 @@ scamSection:
   firstButtonTxt: sCAM
   heading: sCAM
   label: Complete surveillance systems
-  secondButtonLink: /products/subsea-cam/
+  secondButtonLink: /technologies/edge-intelligence/
   secondButtonTxt: Edge computing
   sideImage: /img/sCAM-highlighted.png
 middleImage: /img/SEALAB_Control_room_indoor.png
