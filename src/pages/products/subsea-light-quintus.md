@@ -1,6 +1,6 @@
 ---
 templateKey: product-template-hardware
-title: Subsea Light - Quintus LED | SEALAB
+title: "Subsea Light - Quintus LED |\_SEALAB"
 seoDescription: >-
   Quintus LED is a powerful subsea light that is suitable for a wide range of
   subsea services. The light has a maximum light output of 40,000 lumens.
@@ -20,8 +20,8 @@ featuredimages:
 heading: Quintus LED - Your high quality subsea light
 shortDescription: >-
   Quintus LED is a powerful subsea light that is suitable for a wide range of
-  subsea services. A robust construction with an effective design guarantees
-  a long lifetime with minimal maintenance. The light has a maximum light output
+  subsea services. A robust construction with an effective design guarantees a
+  long lifetime with minimal maintenance. The light has a maximum light output
   of 40,000 lumens and a lifetime of more than 50,000 hours, which is about 5
   years of continuous use.
 highlightSpecifications:
@@ -86,10 +86,10 @@ textAndImages:
       ## Many application areas
 
 
-      Quintus LED is suitable for many application areas. If you need to carry
-      out an installation or a reparation in the dark, for example on an
-      subsea pier construction, Quintus LED can provide great working light.
+      Quintus LED is suitable for many applications. If you need to carry out an
+      installation or repair in the dark, for example underwater pier
+      construction during the night, the Quintus LED can provide great working
+      light.
     featuredimage: /img/Quintus_Installed_under_a_Pier.jpg
 ---
-
-Quintus LED can advantageously be used together with our subsea camera, sCAM. Together they make it possible to get exceptionally good night pictures below the surface. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.
+Quintus LED can advantageously be used together with our subsea camera, sCAM. Together they make it possible to capture exceptional high-quality images below the surface, even during night time. Clear and colourful images that far exceed what you can see with the naked eye. Images that are well suited for AI applications.
