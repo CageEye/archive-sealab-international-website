@@ -2256,26 +2256,23 @@ collections:
                   name: 'content',
                   widget: 'markdown',
                 }
-              - {
-                  label: 'First Button Text',
-                  name: 'firstButtonTxt',
-                  widget: string,
-                }
-              - {
-                  label: 'First Button Link',
-                  name: 'firstButtonLink',
-                  widget: string,
-                }
-              - {
-                  label: 'Second Button Text',
-                  name: 'secondButtonTxt',
-                  widget: string,
-                }
-              - {
-                  label: 'Second Button Link',
-                  name: 'secondButtonLink',
-                  widget: string,
-                }
+              - label: 'Call to action buttons'
+                widget: list
+                name: buttons
+                required: false
+                fields:
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
               - { label: 'Side image', name: 'sideImage', widget: image }
           - { label: 'Full width image', name: 'middleImage', widget: image }
           - label: 'BlueThink Control Room Section'
@@ -2289,26 +2286,23 @@ collections:
                   name: 'content',
                   widget: 'markdown',
                 }
-              - {
-                  label: 'First Button Text',
-                  name: 'firstButtonTxt',
-                  widget: string,
-                }
-              - {
-                  label: 'First Button Link',
-                  name: 'firstButtonLink',
-                  widget: string,
-                }
-              - {
-                  label: 'Second Button Text',
-                  name: 'secondButtonTxt',
-                  widget: string,
-                }
-              - {
-                  label: 'Second Button Link',
-                  name: 'secondButtonLink',
-                  widget: string,
-                }
+              - label: 'Call to action buttons'
+                widget: list
+                name: buttons
+                required: false
+                fields:
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: path,
+                      widget: string,
+                      required: false,
+                    }
           - label: 'Image Split Sections'
             name: imageSplitSections
             widget: list
