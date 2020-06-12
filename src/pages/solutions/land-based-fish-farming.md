@@ -23,7 +23,7 @@ seaToLandSection:
     changing as systems and technologies become increasingly sophisticated.
     Cutting edge technologies will be needed.
   label: For a sustainable future
-  sideImage: /img/adobe_atlantic_salmon_landbased.jpeg
+  sideImage: /img/landbased-icon.png
 featureSection:
   heading: >-
     SEALAB delivers surveillance and analysis systems for hatcheries and land
@@ -51,6 +51,11 @@ advantageSection:
       featuredimage: /img/easy-instalation.png
   label: 'General advantages of SEALAB land based products:'
 scamSection:
+  buttons:
+    - path: /products/subsea-cam/
+      text: sCAM
+    - path: /technologies/edge-intelligence/
+      text: Edge computing
   content: >-
     Companies who seek new ways to make their facility as energy-efficient and
     sustainable as possible will need real-time surveillance systems for
@@ -60,15 +65,12 @@ scamSection:
     surface cameras.
   heading: sCAM
   label: Complete surveillance systems
-  buttons:
-    - path: /products/subsea-cam/
-      text: sCAM
-    - path: /technologies/edge-intelligence/
-      text: Edge computing
-
   sideImage: /img/sCAM-highlighted.png
 middleImage: /img/SEALAB_Control_room_indoor.png
 controlSection:
+  buttons:
+    - path: /technologies/software-platform/
+      text: BlueThink™ Software Platform
   content: >-
     Continuous monitoring is the best decision support available. With our
     unique camera technology and software, which communicate together (IoT), you
@@ -76,9 +78,6 @@ controlSection:
     clear look at what is going on in the cages can contribute to higher
     predictability, lower mortality and better fish welfare. The control room is
     using BlueThink™ Software Platform and is therefore open to third parties.
-  buttons:
-    - path: /technologies/software-platform/
-      text: BlueThink™ Software Platform
   heading: BlueThink™ Control Room
   label: High-quality Livestream
 imageSplitSections:
@@ -133,3 +132,4 @@ getStartSection:
   mobileTopImage: /img/get-started-with-sealab-mobile.jpg
   topImage: /img/get-started-with-sealab.jpg
 ---
+
