@@ -60,7 +60,6 @@ export const LandBasedFishFarmingPageTemplate = ({
             </div>
             <div className="column">
               <div className="side-image is-mobile-hidden">
-                <div className="image-gradient" />
                 <Img fluid={seaToLandSection.sideImage.childImageSharp.fluid} />
               </div>
             </div>
