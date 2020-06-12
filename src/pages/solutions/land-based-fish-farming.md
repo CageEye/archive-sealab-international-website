@@ -35,7 +35,7 @@ featureSection:
     - Complete surveillance systems
     - BlueThink™ GO
     - Bluethink™ Control room
-    - Lightning
+    - Lighting
   label: Based on experience from traditional fish farming
 advantageSection:
   advantages:
@@ -126,9 +126,8 @@ getStartSection:
   buttonTxt: Contact us for a demo
   heading: Get started with SEALAB
   description: >-
-    Are you interested in using SEALAB's solutions at your fish farm? Or would
-    you like to hear more about some of the products? Do not hesitate to contact
-    us.
+    Are you interested in using SEALAB's solutions at your fish farm? Would you
+    like to hear more about some of our products? Do not hesitate to contact us.
   mobileTopImage: /img/get-started-with-sealab-mobile.jpg
   topImage: /img/get-started-with-sealab.jpg
 ---
