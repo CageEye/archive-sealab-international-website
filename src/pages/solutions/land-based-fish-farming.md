@@ -91,7 +91,7 @@ imageSplitSections:
       parties.
     heading: BlueThink™ GO
     label: Your mobile control room
-    sideImage: /img/bluethink-go.png
+    sideImage: /img/land-based-fish-farming-blueThink.png
   - buttonLink: /products/subsea-light-quintus/
     buttonTxt: Quintus LED
     content: >-
