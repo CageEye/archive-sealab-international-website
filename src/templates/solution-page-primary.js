@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Layout from '../components/Layout';
@@ -7,10 +8,24 @@ import Content, { HTMLContent } from '../components/Content';
 import SectionList from '../components/SectionList';
 import SplittedSection from '../components/SplittedSection';
 import LargeImageWithSplitSection from '../components/LargeImageWithSplitSection';
-import BorderedContentSection from '../components/BorderedContentSection';
-import BackgroundImage from '../components/BackgroundImage';
+import SideImageSection from '../components/SideImageSection';
+import GetStartSection from '../components/GetStartSection';
+import ButtonsList from '../components/Button/ButtonsList';
+import SolutionHero from '../components/SolutionHero';
+import ExperiencesList from '../components/ExperiencesList';
 import ReadMoreIcon from '../img/readmore-arrow.inline.svg';
 import generateHTML from '../utils/generateHTML';
+
+const Quote = styled.section`
+  border-top: 2px solid #27384d;
+  border-bottom: 2px solid #27384d;
+  color: white;
+  font-size: 22px;
+  .quote__author {
+    font-size: 14px;
+    font-weight: bold;
+  }
+`;
 
 export const SolutionPageTemplate = ({
   content,
@@ -20,7 +35,11 @@ export const SolutionPageTemplate = ({
   featuredimage,
   splitSections,
   imageSection,
-  btgo,
+  imageSplitSection,
+  experiencesSection,
+  quote,
+  blueThinkGo,
+  getStartSection,
   splitSection,
 }) => {
   const PostContent = contentComponent || Content;
@@ -45,25 +64,10 @@ export const SolutionPageTemplate = ({
         </div>
       </section>
       <SectionList id="first-section" items={splitSections} />
-      {btgo ? (
-        <BorderedContentSection
-          heading={btgo.heading}
-          subheading={btgo.subheading}
-          fluidImage={btgo.featuredimage.childImageSharp.fluid}
-          className="section is-medium"
-        >
-          <PostContent
-            content={generateHTML(btgo.description)}
-            className="content links-are-buttons"
-          />
-        </BorderedContentSection>
-      ) : (
-        <></>
-      )}
-
       {imageSection ? (
         <LargeImageWithSplitSection
           image={imageSection.featuredimage}
+          subheading={imageSection.subheading}
           leftColumn={
             <PostContent
               content={generateHTML(imageSection.left)}
@@ -71,16 +75,59 @@ export const SolutionPageTemplate = ({
             />
           }
           rightColumn={
-            <PostContent
-              content={generateHTML(imageSection.right)}
-              className="content is-left-aligned"
-            />
+            <>
+              <PostContent
+                content={generateHTML(imageSection.right)}
+                className="content is-left-aligned"
+              />
+              {imageSection.linkButtons ? (
+                <ButtonsList buttons={imageSection.linkButtons} />
+              ) : (
+                <></>
+              )}
+            </>
           }
         />
       ) : (
         <></>
       )}
-
+      <SideImageSection sectionData={imageSplitSection} />
+      {experiencesSection ? (
+        <section className="section has-dark-background">
+          <div className="container">
+            <div className="column center-align-wrapper">
+              <div className="short-width-wrap">
+                <h2 className="section--title has-mobile-left">
+                  {experiencesSection.heading}
+                </h2>
+              </div>
+              <HTMLContent
+                className="description"
+                content={experiencesSection.content}
+              />
+            </div>
+            <div>
+              <ExperiencesList experiences={experiencesSection.experiences} />
+            </div>
+          </div>
+        </section>
+      ) : (
+        <></>
+      )}
+      {quote ? (
+        <Quote className="section zig-zag-background">
+          <div className="container centered">
+            <PostContent
+              content={generateHTML(quote.content)}
+              className="content centered-free-text"
+            />
+            <p className="quote__author">{quote.author}</p>
+          </div>
+        </Quote>
+      ) : (
+        <></>
+      )}
+      <SideImageSection sectionData={blueThinkGo} />
       {splitSection ? (
         <section className="section has-dark-background">
           <div className="container">
@@ -104,7 +151,6 @@ export const SolutionPageTemplate = ({
       ) : (
         <></>
       )}
-
       {content ? (
         <section className="section is-medium has-dark-background">
           <div className="container">
@@ -117,32 +163,8 @@ export const SolutionPageTemplate = ({
       ) : (
         <></>
       )}
+      <GetStartSection sectionData={getStartSection} />
     </section>
-  );
-};
-
-const SolutionHero = ({ className, heading, description, image }) => {
-  return (
-    <BackgroundImage
-      className={classNames('hero', className)}
-      image={image}
-      filterStyle={{
-        background:
-          'linear-gradient(358.35deg, #0E111B 4.06%, rgba(14, 17, 27, 0.21) 34.1%), linear-gradient(0deg, rgba(14, 17, 27, 0.3), rgba(14, 17, 27, 0.3))',
-      }}
-      style={{
-        backgroundPosition: 'bottom center !important',
-      }}
-    >
-      <div className={classNames('hero-body')}>
-        <div className="container">
-          <div>
-            <h1>{heading}</h1>
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
-    </BackgroundImage>
   );
 };
 
@@ -157,8 +179,12 @@ const SolutionPage = ({ data }) => {
     featuredimage,
     splitSections,
     imageSection,
+    imageSplitSection,
+    experiencesSection,
+    quote,
+    blueThinkGo,
+    getStartSection,
     splitSection,
-    btgo,
   } = frontmatter;
 
   return (
@@ -171,8 +197,12 @@ const SolutionPage = ({ data }) => {
         featuredimage={featuredimage}
         splitSections={splitSections}
         imageSection={imageSection}
+        imageSplitSection={imageSplitSection}
+        experiencesSection={experiencesSection}
+        quote={quote}
+        blueThinkGo={blueThinkGo}
+        getStartSection={getStartSection}
         splitSection={splitSection}
-        btgo={btgo}
       />
     </Layout>
   );
@@ -214,15 +244,110 @@ export const pageQuery = graphql`
               }
             }
           }
+          linkButtons {
+            text
+            path
+          }
         }
         imageSection {
           left
           right
+          subheading
           featuredimage {
+            publicURL
+            extension
             childImageSharp {
               fluid(maxWidth: 1410, quality: 80) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
                 presentationWidth
+              }
+            }
+          }
+          linkButtons {
+            text
+            path
+          }
+        }
+        imageSplitSection {
+          heading
+          content
+          featuredimage {
+            publicURL
+            extension
+            childImageSharp {
+              fluid(maxHeight: 440, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+                presentationWidth
+              }
+            }
+          }
+          imageSide
+          linkButtons {
+            text
+            path
+          }
+        }
+        experiencesSection {
+          heading
+          content
+          experiences {
+            featuredimage {
+              publicURL
+              extension
+              childImageSharp {
+                fluid(maxHeight: 160, quality: 80) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  presentationWidth
+                }
+              }
+            }
+            description
+          }
+        }
+        quote {
+          content
+          author
+        }
+        blueThinkGo {
+          heading
+          subheading
+          content
+          featuredimage {
+            publicURL
+            extension
+            childImageSharp {
+              fluid(maxHeight: 440, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+                presentationWidth
+              }
+            }
+          }
+          imageSide
+          linkButtons {
+            text
+            path
+          }
+        }
+        getStartSection {
+          heading
+          description
+          text
+          path
+          topImage {
+            publicURL
+            extension
+            childImageSharp {
+              fluid(maxHeight: 491, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
+          mobileTopImage {
+            publicURL
+            extension
+            childImageSharp {
+              fluid(maxHeight: 560, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
@@ -231,19 +356,6 @@ export const pageQuery = graphql`
           heading
           left
           right
-        }
-        btgo {
-          subheading
-          heading
-          description
-          featuredimage {
-            childImageSharp {
-              fluid(maxHeight: 500, quality: 80) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-                presentationWidth
-              }
-            }
-          }
         }
       }
     }

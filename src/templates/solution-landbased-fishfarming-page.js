@@ -1,14 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Layout from '../components/Layout';
 import { HTMLContent } from '../components/Content';
-import BackgroundImage from '../components/BackgroundImage';
+import SolutionHero from '../components/SolutionHero';
 import CheckList from '../components/CheckList';
 import AdvantagesList from '../components/AdvantagesList';
-import Button from '../components/Button';
+import NonStretchedImage from '../components/NonStretchedImage';
+import GetStartSection from '../components/GetStartSection';
+import ButtonsList from '../components/Button/ButtonsList';
 import ReadMoreIcon from '../img/readmore-arrow.inline.svg';
 
 export const LandBasedFishFarmingPageTemplate = ({
@@ -28,7 +29,7 @@ export const LandBasedFishFarmingPageTemplate = ({
 }) => {
   return (
     <section className="solution-page has-dark-background landbased-fishfarming-page">
-      <Hero
+      <SolutionHero
         className="is-large"
         heading={heading}
         description={description}
@@ -46,9 +47,11 @@ export const LandBasedFishFarmingPageTemplate = ({
         </div>
       </section>
       <section id="first-section" className="section">
-        <Img
-          className="full-width-image is-mobile-show"
+        <NonStretchedImage
           fluid={seaToLandSection.sideImage.childImageSharp.fluid}
+          publicURL={seaToLandSection.sideImage.publicURL}
+          extension={seaToLandSection.sideImage.extension}
+          className="full-width-image is-mobile-show"
         />
         <div className="container">
           <div className="columns is-vcentered">
@@ -60,7 +63,12 @@ export const LandBasedFishFarmingPageTemplate = ({
             <div className="column">
               <div className="side-image is-mobile-hidden">
                 <div className="image-gradient" />
-                <Img fluid={seaToLandSection.sideImage.childImageSharp.fluid} />
+                <NonStretchedImage
+                  objectFit="contain"
+                  alt=""
+                  className="side-image"
+                  {...seaToLandSection.sideImage}
+                />
               </div>
             </div>
           </div>
@@ -75,10 +83,12 @@ export const LandBasedFishFarmingPageTemplate = ({
             <h2 className="section--title has-mobile-left">
               {featureSection.heading}
             </h2>
-            <HTMLContent
-              className="description"
-              content={featureSection.description}
-            />
+            <div className="short-width-wrap">
+              <HTMLContent
+                className="description"
+                content={featureSection.description}
+              />
+            </div>
             <CheckList features={featureSection.features} />
           </div>
         </div>
@@ -101,22 +111,15 @@ export const LandBasedFishFarmingPageTemplate = ({
               <h2 className="section--title">{scamSection.heading}</h2>
               <HTMLContent content={scamSection.content} />
               <div className="buttons-wrap">
-                <Button
-                  className="is-primary"
-                  text={scamSection.firstButtonTxt}
-                  path={scamSection.firstButtonLink}
-                />
-                <Button
-                  className="is-transparent"
-                  text={scamSection.secondButtonTxt}
-                  path={scamSection.secondButtonLink}
-                />
+                <ButtonsList buttons={scamSection.linkButtons} />
               </div>
             </div>
             <div className="column">
-              <Img
+              <NonStretchedImage
+                objectFit="contain"
+                alt=""
                 className="side-image"
-                fluid={scamSection.sideImage.childImageSharp.fluid}
+                {...scamSection.sideImage}
               />
             </div>
           </div>
@@ -124,7 +127,12 @@ export const LandBasedFishFarmingPageTemplate = ({
       </section>
       <section className="section is-mobile-hidden">
         <div className="container">
-          <Img fluid={middleImage.childImageSharp.fluid} />
+          <NonStretchedImage
+            objectFit="contain"
+            alt=""
+            className="side-image"
+            {...middleImage}
+          />
         </div>
       </section>
       <section className="section is-mobile-hidden">
@@ -137,16 +145,7 @@ export const LandBasedFishFarmingPageTemplate = ({
             <div className="column">
               <HTMLContent content={controlSection.content} />
               <div className="buttons-wrap">
-                <Button
-                  className="is-primary"
-                  text={controlSection.firstButtonTxt}
-                  path={controlSection.firstButtonLink}
-                />
-                <Button
-                  className="is-transparent"
-                  text={controlSection.secondButtonTxt}
-                  path={controlSection.secondButtonLink}
-                />
+                <ButtonsList buttons={controlSection.linkButtons} />
               </div>
             </div>
           </div>
@@ -163,17 +162,15 @@ export const LandBasedFishFarmingPageTemplate = ({
                     <h2 className="section--title">{sectionData.heading}</h2>
                     <HTMLContent content={sectionData.content} />
                     <div className="buttons-wrap">
-                      <Button
-                        className="is-primary"
-                        text={sectionData.buttonTxt}
-                        path={sectionData.buttonLink}
-                      />
+                      <ButtonsList buttons={sectionData.linkButtons} />
                     </div>
                   </div>
                   <div className="column">
-                    <Img
+                    <NonStretchedImage
+                      objectFit="contain"
+                      alt=""
                       className="side-image"
-                      fluid={sectionData.sideImage.childImageSharp.fluid}
+                      {...sectionData.sideImage}
                     />
                   </div>
                 </div>
@@ -186,9 +183,11 @@ export const LandBasedFishFarmingPageTemplate = ({
             <div className="container">
               <div className="columns is-vcentered">
                 <div className="column">
-                  <Img
+                  <NonStretchedImage
+                    objectFit="contain"
+                    alt=""
                     className="side-image"
-                    fluid={sectionData.sideImage.childImageSharp.fluid}
+                    {...sectionData.sideImage}
                   />
                 </div>
                 <div className="column">
@@ -196,11 +195,7 @@ export const LandBasedFishFarmingPageTemplate = ({
                   <h2 className="section--title">{sectionData.heading}</h2>
                   <HTMLContent content={sectionData.content} />
                   <div className="buttons-wrap">
-                    <Button
-                      className="is-primary"
-                      text={sectionData.buttonTxt}
-                      path={sectionData.buttonLink}
-                    />
+                    <ButtonsList buttons={sectionData.linkButtons} />
                   </div>
                 </div>
               </div>
@@ -222,29 +217,31 @@ export const LandBasedFishFarmingPageTemplate = ({
               <h2 className="section--title">{settingSection.heading}</h2>
               <HTMLContent content={settingSection.content} />
               <div className="buttons-wrap">
-                <Button
-                  className="is-primary"
-                  text={settingSection.buttonTxt}
-                  path={settingSection.buttonLink}
-                />
+                <ButtonsList buttons={settingSection.linkButtons} />
               </div>
             </div>
             <div className="column">
               <div className="side-image">
                 <div>
-                  <Img
+                  <NonStretchedImage
+                    objectFit="contain"
+                    alt=""
                     className="side-image1"
-                    fluid={settingSection.sideImage1.childImageSharp.fluid}
+                    {...settingSection.sideImage1}
                   />
                 </div>
                 <div>
-                  <Img
+                  <NonStretchedImage
+                    objectFit="contain"
+                    alt=""
                     className="side-image2"
-                    fluid={settingSection.sideImage2.childImageSharp.fluid}
+                    {...settingSection.sideImage2}
                   />
-                  <Img
+                  <NonStretchedImage
+                    objectFit="contain"
+                    alt=""
                     className="side-image3"
-                    fluid={settingSection.sideImage3.childImageSharp.fluid}
+                    {...settingSection.sideImage3}
                   />
                 </div>
               </div>
@@ -252,67 +249,8 @@ export const LandBasedFishFarmingPageTemplate = ({
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="container">
-          <div className="row">
-            <Img
-              className="is-mobile-hidden"
-              fluid={getStartSection.topImage.childImageSharp.fluid}
-            />
-            <Img
-              className="is-mobile-show"
-              fluid={getStartSection.mobileTopImage.childImageSharp.fluid}
-            />
-          </div>
-          <div className="row center-align-wrapper">
-            <br />
-            <h2 className="section--title">{getStartSection.heading}</h2>
-            <HTMLContent content={getStartSection.description} />
-            <Button
-              className="is-primary"
-              text={getStartSection.buttonTxt}
-              path={getStartSection.buttonLink}
-            />
-          </div>
-        </div>
-      </section>
+      <GetStartSection sectionData={getStartSection} />
     </section>
-  );
-};
-
-const Hero = ({ className, heading, description, image }) => {
-  return (
-    <div>
-      <BackgroundImage
-        className={classNames('hero', className)}
-        image={image}
-        filterStyle={{
-          background:
-            'linear-gradient(358.35deg, #0E111B 4.06%, rgba(14, 17, 27, 0.21) 34.1%), linear-gradient(0deg, rgba(14, 17, 27, 0.3), rgba(14, 17, 27, 0.3))',
-        }}
-        style={{
-          backgroundPosition: 'bottom center !important',
-          minHeight: '320px',
-        }}
-      >
-        <div className={classNames('hero-body is-mobile-hidden')}>
-          <div className="container">
-            <div className="row">
-              <h1>{heading}</h1>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
-      </BackgroundImage>
-      <section className="section is-mobile-show">
-        <div className="container">
-          <div className="row">
-            <h1>{heading}</h1>
-            <p>{description}</p>
-          </div>
-        </div>
-      </section>
-    </div>
   );
 };
 
@@ -429,10 +367,10 @@ export const pageQuery = graphql`
           label
           heading
           content
-          firstButtonTxt
-          firstButtonLink
-          secondButtonTxt
-          secondButtonLink
+          linkButtons {
+            text
+            path
+          }
           sideImage {
             publicURL
             extension
@@ -458,17 +396,19 @@ export const pageQuery = graphql`
           label
           heading
           content
-          firstButtonTxt
-          firstButtonLink
-          secondButtonTxt
-          secondButtonLink
+          linkButtons {
+            text
+            path
+          }
         }
         imageSplitSections {
           label
           heading
           content
-          buttonTxt
-          buttonLink
+          linkButtons {
+            text
+            path
+          }
           sideImage {
             publicURL
             extension
@@ -484,8 +424,10 @@ export const pageQuery = graphql`
         settingSection {
           heading
           content
-          buttonTxt
-          buttonLink
+          linkButtons {
+            text
+            path
+          }
           sideImage1 {
             publicURL
             extension
@@ -520,8 +462,8 @@ export const pageQuery = graphql`
         getStartSection {
           heading
           description
-          buttonTxt
-          buttonLink
+          text
+          path
           topImage {
             publicURL
             extension
