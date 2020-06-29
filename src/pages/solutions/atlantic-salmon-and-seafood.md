@@ -10,9 +10,9 @@ seoDescription: >-
 priority: 2
 heading: Aquaculture
 description: >-
-  s developing the brain of your subsea camera. Our System on Chip (SoC) can be
-  customised for different cameras, and remotely reprogrammed to perform even
-  more advanced tasks.
+  SEALAB is developing the brain of your subsea camera. Our System on Chip (SoC)
+  can be customized for different cameras, and remotely reprogrammed to perform
+  even more advanced tasks.
 featuredimage: /img/aquaculture-hero.jpg
 splitSections:
   - content: >-
@@ -33,15 +33,16 @@ imageSection:
   featuredimage: /img/Innovation_1-2550-for-website.jpg
   left: '## Want to equip your camera with a brain?'
   linkButtons:
-    - path: /contact
+    - path: /contact/
       text: Book a Meeting
   right: >-
     SEALAB are developing System on Chip (SoC) with FPGA technology inside that
     fulfil the most demanding computer vision and AI tasks. The on-chip
     processing gets past challenges around massive data generation and poor
-    image quality by doing the processing in the camera unit itself. Our system
-    on chip can be customised for different cameras, and remotely reprogrammed
-    to perform even more advanced tasks.
+    image quality by doing the processing in the camera unit itself. Our System
+    on Chip can be customised for different cameras, and remotely reprogrammed
+    to perform even more advanced tasks. 
+
 
     If you are interested in upgrading your underwater camera with FPGA
     technology from SEALAB, contact us for a meeting.
@@ -52,14 +53,14 @@ imageSplitSection:
     is useful and efficient. Machine vision and Artificial Intelligence require
     a data volume, data quality, and frequency that challenge earlier paradigms
     such as cloud computing. Instead of transporting all data to the cloud,
-    important processing is done at the edge. A AI application that could
+    important processing is done at the edge. An AI application that could
     benefit from this is biomass estimation.
   heading: How the aquaculture can benefit from edge computing
   featuredimage: /img/biomass-estimation-illustration.jpg
   imageSide: left
   linkButtons:
-    - path: /contact
-      text: Read More
+    - path: /contact/
+      text: Contact us for more
 experiencesSection:
   content: >-
     In order to succeed with edge computing, it is not sufficient only being
