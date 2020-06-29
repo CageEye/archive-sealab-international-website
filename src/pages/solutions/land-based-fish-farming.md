@@ -51,7 +51,7 @@ advantageSection:
       featuredimage: /img/easy-instalation.png
   label: 'General advantages of SEALAB land based products:'
 scamSection:
-  buttons:
+  linkButtons:
     - path: /products/subsea-cam/
       text: sCAM
     - path: /technologies/edge-intelligence/
@@ -80,36 +80,26 @@ controlSection:
     using BlueThink™ Software Platform and is therefore open to third parties.
   heading: BlueThink™ Control Room
   label: High-quality Livestream
+  linkButtons:
+    - path: /technologies/software-platform/
+      text: BlueThink™ Software Platform
 imageSplitSections:
-  - buttonLink: /products/bluethink-go/
-    buttonTxt: 'BlueThink™ GO '
+  - content: >-
+      Have you ever been concerned about the conditions in the fish tanks when you're not at work? BlueThink™ GO lets you access your real-time data, Livestream, historical data and more no matter where and when. The service is using BlueThink™ Software Platform and is therefore open to third parties.
+    linkButtons:
+      - text: "BlueThink™ GO "
+        path: /products/bluethink-go
+    sideImage: /img/bluethink-go.png
+  - label: Designed for AI and computer vision
+    heading: "SEALAB Quintus LED"
     content: >-
-      Have you ever been concerned about the conditions in the fish tanks when
-      you're not at work? BlueThink™ GO lets you access your real-time data,
-      Livestream, historical data and more no matter where and when. The service
-      is using BlueThink™ Software Platform and is therefore open to third
-      parties.
-    heading: BlueThink™ GO
-    label: Your mobile control room
-    sideImage: /img/land-based-fish-farming-blueThink.png
-  - buttonLink: /products/subsea-light-quintus/
-    buttonTxt: Quintus LED
-    content: >-
-      Correct use of lighting will increase your profit. Both growth rate and
-      feed utilization are depending on the lightning regime. It is also
-      important considering fish maturation for example for Atlantic Salmon.
-    heading: SEALAB Quintus LED
-    label: Designed for AI and computer vision
-    sideImage: >-
-      /img/SEALAB_P02-002.1_Quintus_V1.1_2020-Jun-05_07-13-58AM-000_CustomizedView6616039714.png
-middleDescription: >-
-  We connect everything – people, process, data and things – and we use those
-  connections to change our world for the better. We don’t just dream it, we do
-  it every day at SEALAB. And we’re doing it faster than ever before, in ways no
-  one else can.
+      Correct use of lighting will increase your profit. Both growth rate and feed utilization are depending on the lightning regime. It is also important considering fish maturation for example for Atlantic Salmon.
+    linkButtons:
+      - text: "SEALAB Quintus LED"
+        path: /technologies/edge-intelligence/
+    sideImage: /img/sealab-quintus-led.png
+middleDescription: "We connect everything – people, process, data and things – and we use those connections to change our world for the better. We don’t just dream it, we do it every day at SEALAB. And we’re doing it faster than ever before, in ways no one else can."
 settingSection:
-  buttonLink: /about/research-laboratories/
-  buttonTxt: R&D at SEALAB
   content: >-
     Innovation drives the value we create. Whether hardware, software,
     processes, or services, we’re dedicated to surpassing industry standards to
@@ -118,16 +108,20 @@ settingSection:
     year, we invest significantly more into research and development than the
     industry average.
   heading: Setting a new standard
+  linkButtons:
+    - text: "R&D at SEALAB"
+      path: /about/research-laboratories/
   sideImage1: /img/land-based-fish-farm-setting-1.jpg
   sideImage2: /img/land-based-fish-farm-setting-3.jpg
   sideImage3: /img/land-based-fish-farm-setting-2.jpg
 getStartSection:
-  buttonLink: /contact/
-  buttonTxt: Contact us for a demo
   heading: Get started with SEALAB
   description: >-
     Are you interested in using SEALAB's solutions at your fish farm? Would you
     like to hear more about some of our products? Do not hesitate to contact us.
+    Are you interested in using SEALAB's solutions at your fish farm? Or would you like to hear more about some of the products? Do not hesitate to contact us.
+  text: Contact us for a demo
+  path: "/contact"
   mobileTopImage: /img/get-started-with-sealab-mobile.jpg
   topImage: /img/get-started-with-sealab.jpg
 ---
