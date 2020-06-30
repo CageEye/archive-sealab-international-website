@@ -368,6 +368,7 @@ body {
     @include text_Light;
 
     padding-bottom: 20px;
+    font-weight: bold;
 
     @media screen and (max-width: $tablet) {
       padding-bottom: 10px;
@@ -1676,6 +1677,35 @@ section.product-page-primary {
 }
 
 /****************     Global Custom Style    ********************/
+.center-align-wrapper {
+  width: 100%;
+  max-width: 930px;
+  margin: auto;
+  text-align: center;
+
+  & * {
+    text-align: center !important;
+  }
+
+  & .description {
+    font-size: 22px;
+    line-height: 170%;
+  }
+
+  & a {
+    margin: 41px 0;
+  }
+}
+
+.short-width-wrap {
+  width: 100%;
+  max-width: 660px !important;
+  margin: auto !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
 
 .is-vcentered {
   align-items: center;
@@ -1698,5 +1728,54 @@ section.product-page-primary {
 
   @media only screen and (max-width: $tablet) {
     display: block;
+  }
+}
+
+.buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+    margin-bottom: 17px;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .center-align-wrapper {
+    & * {
+      margin-left: 0;
+    }
+
+    & .description {
+      max-width: 100%;
+      text-align: left !important;
+    }
+
+    & .has-mobile-left {
+      text-align: left !important;
+    }
+  }
+
+  .buttons-wrap {
+    & a {
+      width: 100%;
+      margin-right: 0;
+
+      & span:nth-child(1) {
+        display: block;
+        width: calc(100% - 20px);
+        text-align: left;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+
+      & span:nth-child(2) {
+        width: 20px;
+      }
+    }
   }
 }

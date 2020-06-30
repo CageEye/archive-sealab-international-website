@@ -1,0 +1,9 @@
+@import '../_variables.scss';
+
+.automargin {
+  margin: auto !important;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px !important;
+  }
+}
