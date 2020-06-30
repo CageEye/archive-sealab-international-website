@@ -11,6 +11,9 @@ import NonStretchedImage from '../components/NonStretchedImage';
 import GetStartSection from '../components/GetStartSection';
 import ButtonsList from '../components/Button/ButtonsList';
 import ReadMoreIcon from '../img/readmore-arrow.inline.svg';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 export const LandBasedFishFarmingPageTemplate = ({
   description,
@@ -154,7 +157,7 @@ export const LandBasedFishFarmingPageTemplate = ({
       {imageSplitSections.map((sectionData, i) => {
         if (i % 2 === 0) {
           return (
-            <section className="section">
+            <section key={gen.next().value} className="section">
               <div className="container">
                 <div className="columns is-vcentered reverse-row-order">
                   <div className="column">
@@ -179,7 +182,7 @@ export const LandBasedFishFarmingPageTemplate = ({
           );
         }
         return (
-          <section className="section">
+          <section key={gen.next().value} className="section">
             <div className="container">
               <div className="columns is-vcentered">
                 <div className="column">

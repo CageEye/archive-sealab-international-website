@@ -1,6 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './ShareHolderTable.module.scss';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const ShareHolderTable = ({ shareholders }) => {
   if (
@@ -26,6 +29,7 @@ const ShareHolderTable = ({ shareholders }) => {
         <tbody className={styles.body}>
           {shareholders.map((shareholderItem, index) => (
             <TableItem
+              key={gen.next().value}
               rank={index + 1}
               shareholder={shareholderItem.name}
               shares={shareholderItem.shares}

@@ -10,6 +10,9 @@ import Button from '../components/Button';
 import SplittedSection from '../components/SplittedSection';
 import CTASection from '../components/CTASection';
 import { ButtonFlex } from '../styles';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 const StyledEdgeIntelligence = styled.section`
   .quote {
@@ -133,6 +136,7 @@ export const EdgeIntelligenceTemplate = ({
       {systemOnChip && systemOnChip.subsections ? (
         systemOnChip.subsections.map((sectionItem, index) => (
           <SplittedSection
+            key={gen.next().value}
             className={classNames('system-on-chip', 'section', {
               'has-border-top--mobile': index === 0,
               'has-border-top': index === 0,
@@ -163,6 +167,7 @@ export const EdgeIntelligenceTemplate = ({
 
                       return (
                         <Button
+                          key={gen.next().value}
                           className={classNames({
                             'is-transparent': !isContactButton,
                             'is-primary': isContactButton,
@@ -209,6 +214,7 @@ export const EdgeIntelligenceTemplate = ({
           </div>
           {examples.items.map(sectionItem => (
             <SplittedSection
+              key={gen.next().value}
               className="section"
               leftColumnCSS="center-vertically"
               leftColumn={
@@ -232,6 +238,7 @@ export const EdgeIntelligenceTemplate = ({
                     <ButtonFlex className="buttons">
                       {sectionItem.buttons.map(buttonObject => (
                         <Button
+                          key={gen.next().value}
                           className={classNames('is-transparent')}
                           text={buttonObject.text}
                           path={buttonObject.path}

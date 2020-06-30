@@ -10,6 +10,9 @@ import SplittedSection from '../components/SplittedSection';
 import Button from '../components/Button';
 import NonStretchedImage from '../components/NonStretchedImage';
 import { ButtonFlex } from '../styles';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 const ImageGrid = styled.div`
   display: grid;
@@ -136,7 +139,7 @@ export const ResearchPageTemplate = ({
         <div className="container">
           <ImageGrid>
             {featuredimages.map(imageItem => (
-              <div className="image-item">
+              <div key={gen.next().value} className="image-item">
                 <NonStretchedImage
                   objectFit="contain"
                   alt=""
@@ -162,7 +165,7 @@ export const ResearchPageTemplate = ({
         </div>
         <ImageGridStairs>
           {centeredSection.images.map(imageItem => (
-            <div className="image-item">
+            <div key={gen.next().value} className="image-item">
               <NonStretchedImage
                 objectFit="contain"
                 alt=""
@@ -185,6 +188,7 @@ export const ResearchPageTemplate = ({
             <ButtonFlex>
               {careers.buttons.map(buttonObject => (
                 <Button
+                  key={gen.next().value}
                   className="is-transparent"
                   text={buttonObject.text}
                   path={buttonObject.path}
@@ -200,7 +204,7 @@ export const ResearchPageTemplate = ({
             </p>
             <CareersList>
               {careers.positions.items.map(positionText => (
-                <li>{positionText}</li>
+                <li key={gen.next().value}>{positionText}</li>
               ))}
             </CareersList>
           </>

@@ -13,6 +13,9 @@ import PercentageItems from '../components/PercentageItems';
 import NonStretchedImage from '../components/NonStretchedImage';
 import ShareHolderTable from '../components/ShareHolderTable';
 import DownloadIcon from '../img/icon-download.inline.svg';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 const PieChartSection = styled.section`
   padding: 3rem 0;
@@ -240,6 +243,7 @@ export const InvestorPageTemplate = ({
           <ImageGrid>
             {partners.logos.map(imageItem => (
               <NonStretchedImage
+                key={gen.next().value}
                 objectFit="contain"
                 alt=""
                 className="image image-item"
@@ -262,6 +266,7 @@ export const InvestorPageTemplate = ({
                 <ButtonFlex>
                   {splitSection.buttons.map(buttonObject => (
                     <Button
+                      key={gen.next().value}
                       className="is-transparent"
                       text={buttonObject.text}
                       path={buttonObject.path}
@@ -293,7 +298,10 @@ export const InvestorPageTemplate = ({
           />
           <TableHeaders>
             {table.boxes.map(boxItem => (
-              <div className="table-header has-light-dark-background">
+              <div
+                key={gen.next().value}
+                className="table-header has-light-dark-background"
+              >
                 <p>{boxItem.heading}</p>
                 <h3>{boxItem.description}</h3>
               </div>
@@ -309,6 +317,7 @@ export const InvestorPageTemplate = ({
           <FilesWrapper>
             {presentations.items.map(fileItem => (
               <a
+                key={gen.next().value}
                 href={fileItem.file.publicURL}
                 download
                 className="file-item has-dark-background"

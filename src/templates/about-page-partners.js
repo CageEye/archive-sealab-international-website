@@ -4,6 +4,9 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import NonStretchedImage from '../components/NonStretchedImage';
 import Content, { HTMLContent } from '../components/Content';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 export const AboutPagePartnersTemplate = ({
   content,
@@ -26,6 +29,7 @@ export const AboutPagePartnersTemplate = ({
           <div className="wrapper">
             {partnerItems.map(partner => (
               <a
+                key={gen.next().value}
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"

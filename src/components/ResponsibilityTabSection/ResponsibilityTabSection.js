@@ -70,17 +70,19 @@ class ResponsibilityTabSection extends React.Component {
                 </TabItem>
               ))}
             </div>
+
             <div>
               {responsibilities.map(item => {
                 if (item.heading === currentTab) {
                   return (
                     <PostContent
+                      key={gen.next().value}
                       className="content"
                       content={generateHTML(item.content)}
                     />
                   );
                 }
-                return <></>;
+                return <React.Fragment key={gen.next().value} />;
               })}
             </div>
           </div>

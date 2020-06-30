@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import NonStretchedImage from '../NonStretchedImage';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const Wrap = styled.div`
   display: grid;
@@ -37,7 +40,7 @@ const ExperiencesList = ({ experiences }) => {
     <Wrap>
       {experiences.map(experience => {
         return (
-          <div>
+          <div key={gen.next().value}>
             <NonStretchedImage
               objectFit="contain"
               alt=""

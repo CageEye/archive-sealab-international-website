@@ -10,6 +10,9 @@ import generateHTML from '../utils/generateHTML';
 import Button from '../components/Button';
 import SplittedSection from '../components/SplittedSection';
 import NonStretchedImage from '../components/NonStretchedImage';
+import { idMaker } from '../utils/id-maker';
+
+const gen = idMaker();
 
 const StyledPartnershipPage = styled.section`
   section.image-section {
@@ -151,6 +154,7 @@ export const PartnershipPagePrimaryTemplate = ({
           <ButtonFlex className="button-flex">
             {featuredimageSection.buttons.map(buttonObject => (
               <Button
+                key={gen.next().value}
                 className="is-primary"
                 text={buttonObject.text}
                 path={buttonObject.path}
@@ -191,7 +195,7 @@ export const PartnershipPagePrimaryTemplate = ({
         <div className="container">
           <IconsGrid>
             {features.items.map(item => (
-              <div className="icon-item">
+              <div key={gen.next().value} className="icon-item">
                 <NonStretchedImage
                   objectFit="contain"
                   alt=""
@@ -212,6 +216,7 @@ export const PartnershipPagePrimaryTemplate = ({
           <ButtonFlex className="button-flex">
             {partnering.buttons.map(buttonObject => (
               <Button
+                key={gen.next().value}
                 className="is-primary"
                 text={buttonObject.text}
                 path={buttonObject.path}
@@ -221,7 +226,7 @@ export const PartnershipPagePrimaryTemplate = ({
         </div>
         <div className="container">
           {partnering.items.map(partnerItem => (
-            <PartnerItem>
+            <PartnerItem key={gen.next().value}>
               <NonStretchedImage
                 objectFit="contain"
                 alt=""

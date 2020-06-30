@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Collapsible from 'react-collapsible';
+import { idMaker } from '../../utils/id-maker';
 
 import styles from './CollapsibleWithImage.module.scss';
+
+const gen = idMaker();
 
 const CollapsibleWithImage = ({ collapsibleItems, children, className }) => {
   if (!collapsibleItems || collapsibleItems.length < 1 || !children) {
@@ -19,6 +22,7 @@ const CollapsibleWithImage = ({ collapsibleItems, children, className }) => {
           >
             {collapsibleItems.map(item => (
               <CollapsibleItem
+                key={gen.next().value}
                 heading={item.heading}
                 description={item.description}
               />

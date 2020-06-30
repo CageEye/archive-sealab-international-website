@@ -3,6 +3,9 @@ import classNames from 'classnames';
 import Content, { HTMLContent } from '../Content';
 import styles from './QuadSplitSection.module.scss';
 import generateHTML from '../../utils/generateHTML';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const QuadSplitSection = ({ contentItems, className, contentItemsCss }) => {
   if (!contentItems || contentItems.length < 1 || !contentItems[0].content)
@@ -15,7 +18,10 @@ const QuadSplitSection = ({ contentItems, className, contentItemsCss }) => {
         <div className={styles.wrapper}>
           {contentItems.map(content => {
             return (
-              <div className={classNames(styles.box, contentItemsCss)}>
+              <div
+                key={gen.next().value}
+                className={classNames(styles.box, contentItemsCss)}
+              >
                 <PostContent
                   content={generateHTML(content.content)}
                   className={classNames('content', styles.content)}

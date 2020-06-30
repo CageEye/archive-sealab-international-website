@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import CheckMark from '../../img/check-icon.svg';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const Wrapper = styled.div`
   display: grid;
@@ -40,7 +43,7 @@ const CheckList = ({ features }) => {
   return (
     <Wrapper>
       {features.map(item => (
-        <CheckItem>
+        <CheckItem key={gen.next().value}>
           <img src={CheckMark} alt={item} />
           {item}
         </CheckItem>

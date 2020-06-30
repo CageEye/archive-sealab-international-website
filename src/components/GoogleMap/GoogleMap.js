@@ -7,6 +7,9 @@ import {
   Marker,
 } from 'react-google-maps';
 import mapStyles from './maps';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const MyMap = compose(
   withProps({
@@ -31,7 +34,10 @@ const MyMap = compose(
     center={props.mapCoordinates}
   >
     {props.markers.map(marker => (
-      <Marker position={{ lat: marker.lat, lng: marker.lng }} />
+      <Marker
+        key={gen.next().value}
+        position={{ lat: marker.lat, lng: marker.lng }}
+      />
     ))}
   </GoogleMap>
 ));

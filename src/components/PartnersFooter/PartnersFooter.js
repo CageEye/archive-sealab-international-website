@@ -2,6 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './PartnersFooter.module.scss';
 import NonStretchedImage from '../NonStretchedImage';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const PartnersFooter = ({ partners, className }) => {
   if (
@@ -18,7 +21,7 @@ const PartnersFooter = ({ partners, className }) => {
       <h3 className={styles.header}>{partners.heading}</h3>
       <div id="partners" className="columns partnerContainer">
         {partners.partnerItems.map(partner => (
-          <div className="column partnerItem">
+          <div key={gen.next().value} className="column partnerItem">
             <figure className={styles.image}>
               <NonStretchedImage
                 objectFit="contain"

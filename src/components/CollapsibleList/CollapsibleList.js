@@ -3,8 +3,11 @@ import classNames from 'classnames';
 import Collapsible from 'react-collapsible';
 import generateHTML from '../../utils/generateHTML';
 import Content, { HTMLContent } from '../Content';
+import { idMaker } from '../../utils/id-maker';
 
 import styles from './CollapsibleList.module.scss';
+
+const gen = idMaker();
 
 const CollapsibleList = ({ collapsibleItems, className }) => {
   if (!collapsibleItems || collapsibleItems.length < 1) {
@@ -20,7 +23,11 @@ const CollapsibleList = ({ collapsibleItems, className }) => {
             className={classNames('column', 'is-6', styles.collapsibleColumn)}
           >
             {collapsibleItems.map(item => (
-              <CollapsibleItem heading={item.heading} content={item.content} />
+              <CollapsibleItem
+                key={gen.next().value}
+                heading={item.heading}
+                content={item.content}
+              />
             ))}
           </div>
         </div>

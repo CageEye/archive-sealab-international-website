@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { idMaker } from '../../utils/id-maker';
+
+const gen = idMaker();
 
 const Wrap = styled.div`
   display: grid;
@@ -48,6 +51,7 @@ const AdvantagesList = ({ advantages }) => (
     {advantages.map((item, i) => {
       return (
         <AdvantageItem
+          key={gen.next().value}
           borderLeft={i === 0 ? 'none' : '1px solid rgba(255, 255, 255, 0.2)'}
         >
           <Img fluid={item.featuredimage.childImageSharp.fluid} />
