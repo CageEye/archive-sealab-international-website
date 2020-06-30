@@ -34,7 +34,8 @@ const CurrentTimeline = ({ heading, event }) => {
     return strTimeList;
   };
   useEffect(() => {
-    if (!event) return undefined;
+    let ignore = false;
+    if (!event || ignore) return undefined;
     const { start_time: startTime, stop_time: endTime } = event;
     const intervalId = setTimeout(() => {
       const calculateProgress = () => {
@@ -49,6 +50,7 @@ const CurrentTimeline = ({ heading, event }) => {
     }, 1000);
     return () => {
       clearTimeout(intervalId);
+      ignore = true;
     };
   }, [event, eventProgress]);
 

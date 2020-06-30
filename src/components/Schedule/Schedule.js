@@ -13,7 +13,7 @@ const Slideshow = () => {
   );
 
   useEffect(() => {
-    setCurrentDate(new Date().toISOString().split('T')[0]);
+    let ignore = false;
     async function fetchSchedule() {
       const apiResponse = await fetchFromResourceApi(
         `/site-info/livestream-schedules/${process.env.GATSBY_UID}/${currentDate}.json`,
@@ -23,10 +23,18 @@ const Slideshow = () => {
       }
       setCurrentSchedule(apiResponse.data);
     }
-    fetchSchedule();
+    if (!ignore) {
+      setCurrentDate(new Date().toISOString().split('T')[0]);
+      fetchSchedule();
+    }
+    return () => {
+      ignore = true;
+    };
   }, [currentDate]);
 
   useEffect(() => {
+    let ignore = false;
+    let timer;
     function updateCurrrentEvent() {
       if (typeof currentSchedule === 'undefined') {
         return;
@@ -40,7 +48,7 @@ const Slideshow = () => {
         elemStopTime = new Date(Date.parse(currentSchedule[i].stop_time));
         if (elemStartTime < now && elemStopTime > now) {
           const eventDuration = elemStopTime.getTime() - now.getTime();
-          setTimeout(() => {
+          timer = setTimeout(() => {
             updateCurrrentEvent();
           }, eventDuration);
           setCurrentEvent(i);
@@ -50,7 +58,13 @@ const Slideshow = () => {
       }
       setCurrentEvent(undefined);
     }
-    updateCurrrentEvent();
+    if (!ignore) {
+      updateCurrrentEvent();
+    }
+    return () => {
+      clearTimeout(timer);
+      ignore = true;
+    };
   }, [currentSchedule]);
 
   return (

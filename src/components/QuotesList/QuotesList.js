@@ -5,8 +5,8 @@ import NonStretchedImage from '../NonStretchedImage';
 import ArrowIcon from '../ArrowButton';
 
 const QuotesList = ({ quotes, className }) => {
-  if (!quotes || quotes.length < 1) return <></>;
   const [activeQuoteIndex, setActiveQuoteIndex] = useState(0);
+  if (!quotes || quotes.length < 1) return <></>;
 
   const previous = () => {
     if (activeQuoteIndex > 0) setActiveQuoteIndex(activeQuoteIndex - 1);

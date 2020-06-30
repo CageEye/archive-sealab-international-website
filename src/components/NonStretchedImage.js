@@ -5,8 +5,18 @@ const NonStretchedImage = props => {
   let normalizedProps = props;
 
   /* eslint-disable */
-  if (props.childImageSharp && props.childImageSharp.fluid && props.childImageSharp.fluid.presentationWidth) {
-    return <Img fluid={props.childImageSharp.fluid} className={props.className? props.className : 'image'} style={{maxWidth: props.childImageSharp.fluid.presentationWidth}} />;
+  if (
+    props.childImageSharp &&
+    props.childImageSharp.fluid &&
+    props.childImageSharp.fluid.presentationWidth
+  ) {
+    return (
+      <Img
+        fluid={props.childImageSharp.fluid}
+        className={props.className ? props.className : 'image'}
+        style={{ maxWidth: props.childImageSharp.fluid.presentationWidth }}
+      />
+    );
   }
   if (props.fluid && props.fluid.presentationWidth) {
     normalizedProps = {
@@ -24,7 +34,7 @@ const NonStretchedImage = props => {
       <img src={props.publicURL} alt={props.alt} className={props.className} />
     );
   } else if (props.extension && props.extension === 'svg') {
-    <img src={props.publicURL} alt={props.alt} className={props.className} />
+    <img src={props.publicURL} alt={props.alt} className={props.className} />;
   }
 
   return <Img {...normalizedProps} />;

@@ -74,7 +74,7 @@ module.exports = {
       options: {
         serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
-            let path = edge.node.path;
+            const { path } = edge.node;
             let priority = 0.4;
             if (path.match(/products/) && !path.match(/thanks/)) {
               priority = 1.0;

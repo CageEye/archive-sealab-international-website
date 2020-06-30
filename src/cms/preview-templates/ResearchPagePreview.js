@@ -4,7 +4,6 @@ import { ResearchPageTemplate } from '../../templates/research-page';
 
 const ResearchPagePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS();
-  console.log(data);
 
   if (data) {
     return (
