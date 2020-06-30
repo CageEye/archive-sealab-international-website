@@ -13,7 +13,7 @@ body {
   display: block;
   min-width: 100% !important;
   width: 100% !important;
-  font-family: 'Open Sans';
+  font-family: $primaryFont;
   background-color: $background-color-dark;
 
   .button,
@@ -25,45 +25,29 @@ body {
     border-radius: 3px;
 
     @include buttonText;
+
     & svg {
       transition: $transition;
     }
+
     &.small {
       padding: 0.8rem 1rem !important;
     }
+
     &.medium {
       padding: 1rem 1rem !important;
     }
+
     &.large {
       padding: 1.1rem 1rem !important;
     }
-    &.is-primary,
-    &:not(.is-secondary):not(.is-transparent):not(.is-white) {
-      background-color: $red;
-      color: $white;
-      text-decoration: none !important;
-      svg {
-        fill: $white;
-        stroke: $white;
-      }
-      a {
-        color: $white;
-      }
-      &:hover,
-      &:focus {
-        opacity: 0.85;
-        background-color: $red;
-        color: $white;
-      }
-      &.disabled {
-        background-color: #e32938;
-      }
-    }
+
     &.is-secondary {
       background-color: $white;
       border: 1px solid transparent;
       color: $text-dark;
       opacity: 0.95;
+
       &:hover,
       &:focus {
         opacity: 1;
@@ -75,20 +59,51 @@ body {
         stroke: $text-dark;
       }
     }
+
+    &.is-primary,
+    &:not(.is-secondary):not(.is-transparent):not(.is-white) {
+      background-color: $red;
+      color: $white;
+      text-decoration: none !important;
+
+      svg {
+        fill: $white;
+        stroke: $white;
+      }
+
+      a {
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.85;
+        background-color: $red;
+        color: $white;
+      }
+
+      &.disabled {
+        background-color: #e32938;
+      }
+    }
+
     &.is-transparent {
       background-color: transparent;
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: $white;
+
       &:hover,
       &:focus {
         background-color: $white;
         border: 1px solid $border;
         color: $text-dark;
+
         svg {
           fill: $text-dark;
           stroke: $text-dark;
         }
       }
+
       &.has-white-background {
         border: 1px solid $text-dark;
         color: $text-dark;
@@ -97,11 +112,13 @@ body {
           fill: $text-dark;
           stroke: $text-dark;
         }
+
         &:hover,
         &:focus {
           background-color: $text-dark;
           border: 1px solid transparent;
           color: $white;
+
           svg {
             fill: $white;
             stroke: $white;
@@ -109,10 +126,12 @@ body {
         }
       }
     }
+
     &.is-link {
       background-color: transparent;
       border: 1px solid transparent;
       color: $white;
+
       &:hover,
       &:focus {
         background-color: transparent;
@@ -123,11 +142,14 @@ body {
 
   a.is-link:not(.button) {
     padding: 0;
+
     @include regularLink;
+
     background-color: transparent;
     border: none;
     color: $white;
     transition: $transition;
+
     &:hover,
     &:focus {
       background-color: transparent;
@@ -137,20 +159,24 @@ body {
 
   .link.has-white-background {
     color: $text-dark;
+
     svg {
       fill: $text-dark;
       stroke: $text-dark;
     }
-    &:after {
+
+    &::after {
       border-bottom: 1px solid $border-light-background;
     }
   }
+
   .columns {
     @media screen and (max-width: $tablet) {
       margin-left: 0;
       margin-right: 0;
     }
   }
+
   h1,
   h2,
   h3,
@@ -162,8 +188,10 @@ body {
 
   h1 {
     @include Title;
+
     font-size: 34px;
     padding-bottom: 20px;
+
     @media screen and (min-width: $desktop) {
       font-size: 52px;
     }
@@ -181,6 +209,7 @@ body {
     &.large {
       font-weight: 38px;
     }
+
     @media screen and (min-width: $desktop) {
       font-size: 46px;
 
@@ -211,14 +240,17 @@ body {
   h2,
   h3 {
     font-family: $titleFont;
+
     @media screen and (max-width: $tablet) {
       margin-top: 20px;
     }
   }
+
   hr {
     background-color: $border-light-background;
     height: 1px;
   }
+
   figcaption {
     font-family: $primaryFont;
     font-size: 14px;
@@ -229,6 +261,7 @@ body {
 
   .content {
     font-size: 18px;
+
     h1,
     h2,
     h3,
@@ -237,26 +270,16 @@ body {
       margin-bottom: 0;
       padding-bottom: 20px;
     }
+
     p strong {
       font-weight: 700;
     }
+
     a:not(.button) {
       color: $red;
       font-weight: bold;
       font-size: inherit;
       text-decoration: underline;
-    }
-    blockquote p {
-      background: red;
-    }
-    blockquote p {
-      background: red !important;
-      max-width: 1370px;
-      font-family: $titleFont;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 130%;
-      text-align: center;
     }
   }
 
@@ -268,12 +291,15 @@ body {
   .has-dark-background .content,
   .has-dark-background.content {
     @include text_Light;
+
     color: $body-light;
+
     p,
     li {
       @include text_Light;
     }
   }
+
   .section,
   .hero-body {
     @media screen and (max-width: $tablet) {
@@ -284,6 +310,7 @@ body {
 
 .has-dark-background {
   color: $white;
+
   h1,
   h2,
   h3,
@@ -293,14 +320,17 @@ body {
     color: $white;
   }
 }
+
 .has-light-dark-background {
   color: $white;
   background-color: $dark-light;
+
   h1,
   h2,
   h3 {
     color: $white;
   }
+
   strong,
   li,
   p,
@@ -312,33 +342,43 @@ body {
 .section {
   .section--title {
     @include PageTitle;
+
     font-size: 56px;
     padding-bottom: 30px;
+
     @media screen and (max-width: $tablet) {
       font-size: 38px;
       line-height: 46px;
       padding-bottom: 20px;
     }
   }
+
   .section--description {
     @include text_Light;
+
     color: $body-light !important;
     font-size: 20px;
+
     @media screen and (max-width: $tablet) {
       font-size: $fontMedium;
     }
   }
+
   .section--subheading {
     @include text_Light;
+
     padding-bottom: 20px;
+
     @media screen and (max-width: $tablet) {
       padding-bottom: 10px;
     }
   }
+
   .section--title,
   .section--description,
   .section--subheading {
     max-width: 950px;
+
     &:not(.has-text-centered) {
       margin-left: 0;
       margin-right: auto;
@@ -351,6 +391,7 @@ body {
       text-align: center;
       padding: 1rem;
       font-size: 20px;
+
       p,
       h1,
       h2,
@@ -359,19 +400,23 @@ body {
         max-width: 988px;
         margin: 0 auto;
       }
+
       &.centered-free-text--blue strong {
         font-weight: normal;
         font-size: inherit;
         color: $light-blue;
       }
+
       .button {
         margin-left: auto;
         margin-right: auto;
       }
+
       &.highlighted {
         font-size: $fontLarge;
       }
     }
+
     &.is-left-aligned {
       max-width: 950px;
       margin-right: auto;
@@ -380,11 +425,10 @@ body {
   }
 }
 
-
-
 .section.is-small {
   padding: 2rem 1.5rem;
 }
+
 @media screen and (min-width: $tablet) {
   .hero.is-large .hero-body {
     padding: 18rem 1.5rem;
@@ -396,6 +440,7 @@ body {
     padding: 1.5rem;
     padding-top: 18rem;
   }
+
   .is-large-bottom {
     padding: 1.5rem;
     padding-bottom: 18rem;
@@ -406,9 +451,11 @@ body {
   @media only screen and (max-width: $tablet) {
     display: flex;
     flex-flow: column;
+
     .column:first-of-type {
       order: 2;
     }
+
     .column:nth-of-type(2) {
       order: 1;
       width: 100%;
@@ -418,27 +465,33 @@ body {
 
 .big-paragraph {
   @include text_Light;
+
   font-size: $fontLarge;
   padding-bottom: 24px;
 }
 
 .regular-paragraph {
   @include text_Light;
+
   font-size: $fontMedium;
   padding-bottom: 16px;
 }
 
 .paragraph {
   @include text_Light;
+
   font-size: 16px;
   line-height: 100%;
 }
+
 .small-paragraph {
   font-size: 14px !important;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .heading {
   font-weight: bold;
   text-transform: none;
@@ -449,7 +502,7 @@ body {
     width: 100%;
     height: 375px;
     overflow: hidden;
-  
+
     @media screen and (min-width: $tablet) {
       height: 100%;
     }
@@ -467,6 +520,7 @@ body {
   line-height: 110%;
   color: $white !important;
 }
+
 .subheading--below {
   color: $body-light;
   font-size: 24px;
@@ -491,6 +545,7 @@ body {
 
 .has-border-top {
   border-top: 2px solid #27384d;
+
   &.has-border-top--mobile {
     @media only screen and (min-width: $tablet) {
       border-top: none;
@@ -501,9 +556,6 @@ body {
 .has-border-bottom {
   border-bottom: 2px solid #27384d;
 }
-
-
-
 
 .center-vertically {
   margin: auto 0 !important;
@@ -531,12 +583,14 @@ nav.navbar {
   &.is-transparent {
     background-color: transparent;
   }
+
   .navbar-brand {
     figure.image img,
     figure.image svg {
       max-height: 50px;
     }
   }
+
   .navbar-item,
   .navbar-link {
     color: $white;
@@ -547,6 +601,7 @@ nav.navbar {
       background-color: transparent;
     }
   }
+
   a.is-active,
   div[role='button'].is-active {
     color: $white !important;
@@ -557,15 +612,18 @@ nav.navbar {
 
   @media only screen and (max-width: $desktop) {
     background-color: $background-color-dark;
+
     .navbar-brand {
       figure.image svg {
         width: 200px;
       }
+
       .navbar-item {
         padding-left: 0;
         padding-right: 0;
       }
     }
+
     .navbar-menu.is-active {
       background-color: $background-color-dark;
       position: absolute;
@@ -573,9 +631,11 @@ nav.navbar {
       width: 100%;
       z-index: 0;
       padding: 15px;
+
       .navbar-item,
       .navbar-link {
         @include text_Navbar;
+
         padding: 18px 0;
         color: white;
         font-weight: bold;
@@ -585,6 +645,7 @@ nav.navbar {
         border: none;
       }
     }
+
     a.is-active {
       filter: brightness(1.4);
       background-color: $secondary-background;
@@ -595,6 +656,7 @@ nav.navbar {
       color: $white;
       background-color: transparent;
       border: none;
+
       &.is-active,
       & {
         span {
@@ -603,52 +665,64 @@ nav.navbar {
           left: calc(50% - 22px);
         }
       }
-      & {
-        span:nth-child(1) {
-          top: calc(50% - 8px);
-        }
-        span:nth-child(2) {
-          top: calc(50% - 1px);
-        }
-        span:nth-child(3) {
-          top: calc(50% + 6px);
-        }
+
+      span:nth-child(1) {
+        top: calc(50% - 8px);
       }
+
+      span:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+
+      span:nth-child(3) {
+        top: calc(50% + 6px);
+      }
+
       &.is-active {
         span:nth-child(1) {
           top: calc(50% - 6px);
         }
+
         span:nth-child(2) {
           top: calc(50% - 1px);
         }
+
         span:nth-child(3) {
           top: calc(50% + 4px);
         }
       }
     }
+
     #contact {
       background-color: transparent;
       color: $white;
       display: flex;
       flex-wrap: nowrap;
+
       .info {
         // width: 50%;
         margin: 15px 0;
       }
+
       .info:first-of-type {
         margin-right: 25px;
       }
+
       .info:last-of-type {
         align-self: flex-end;
         margin-left: auto;
+
         @media only screen and (min-width: 767px) {
           min-width: 50%;
         }
       }
+
       .subtitle {
         @include text_Subtitle;
+
         margin-bottom: 5px;
       }
+
       .is-bold {
         @include text_Bold;
       }
@@ -662,6 +736,7 @@ footer.footer {
   background: none;
   margin: 0;
   padding: 0;
+
   .has-dark-background {
     background-color: $footer-background;
 
@@ -672,21 +747,26 @@ footer.footer {
       color: $white;
     }
   }
+
   section#book-demo {
     border-top: 1px solid $border-dark-background;
+
     .cta {
       margin-left: auto;
       margin-right: 0;
     }
+
     h3 {
       color: $white;
       font-weight: 600;
       font-size: 18px;
+
       &.is-red {
         font-weight: bold;
         text-transform: none;
       }
     }
+
     .contact-info {
       a {
         display: inline-flex;
@@ -709,16 +789,19 @@ footer.footer {
     .text {
       padding-right: 20px;
     }
+
     @media only screen and (min-width: $desktop) {
       .cta {
         text-align: right;
         display: flex;
+
         .text,
         .button {
           margin: auto;
           margin-right: 0;
           margin-bottom: 0;
         }
+
         .button {
           max-width: 180px;
           margin-left: 0;
@@ -728,6 +811,7 @@ footer.footer {
       }
     }
   }
+
   section#company-information,
   section#footer-navigation {
     h3 {
@@ -743,15 +827,19 @@ footer.footer {
       margin-bottom: 20px;
     }
   }
+
   section#copyright {
     border-top: 1px solid $border-dark-background;
     text-align: center;
+
     svg {
       max-width: 300px;
       margin: auto 0;
     }
+
     .copyright-text {
       margin: auto 0;
+
       p {
         font-size: 14px;
         line-height: 19px;
@@ -759,22 +847,27 @@ footer.footer {
         opacity: 0.5;
         padding-bottom: 24px;
       }
+
       a {
         font-size: 14px;
         line-height: 19px;
       }
     }
+
     @media only screen and (min-width: $desktop) {
       display: flex;
+
       .copyright-text {
         align-self: flex-end;
         margin-left: auto;
         display: inline-flex;
+
         & > * {
           padding: 0 20px;
         }
+
         p {
-          padding-bottom: 0px;
+          padding-bottom: 0;
         }
       }
     }
@@ -793,9 +886,11 @@ section.project-page-template {
 
   .figure {
     text-align: center;
+
     .image {
       margin-bottom: 10px;
     }
+
     .caption {
       font-size: 18px;
       line-height: 170%;
@@ -826,10 +921,12 @@ section.about-page-primary {
 section.vision-strategy {
   .content {
     font-size: 18px;
+
     h4 {
       color: #dbe0ea;
     }
   }
+
   figcaption {
     padding: 0 $paddingHorizontalMobile;
   }
@@ -842,9 +939,11 @@ section.vision-strategy {
   .right-wrapper {
     margin-top: 30px;
     padding: 20px;
+
     p {
       font-weight: 300;
     }
+
     h3 {
       margin-bottom: 0;
       font-size: 24px;
@@ -868,14 +967,17 @@ section.vision-strategy {
     .quad-wrapper {
       padding: 32px 24px;
     }
+
     br {
       display: block;
     }
   }
 }
+
 section.centered-free-text p {
   font-size: 20px !important;
 }
+
 section.boxes {
   .is-left-aligned {
     h2,
@@ -885,46 +987,57 @@ section.boxes {
       margin-left: 0;
     }
   }
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px 40px;
+
     @media screen and (min-width: $widescreen) {
       grid-template-columns: 2fr 3fr;
     }
+
     @media screen and (min-width: $fullhd) {
       grid-template-columns: 1fr 1fr;
     }
   }
 }
+
 section#vision-last {
   padding-top: 0.5rem;
 }
 
 section.about-page-partners {
   background-color: white;
+
   .section h1 {
     color: black;
   }
+
   .section p {
     color: black !important;
   }
+
   .logo-section {
     background-color: white;
   }
+
   .wrapper {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-auto-rows: 1fr;
+
     .image-container {
       margin: auto;
+
       .image {
         width: auto;
         max-height: 100px;
         max-width: 180px;
       }
     }
+
     @media only screen and (min-width: $tablet) {
       grid-gap: 50px;
     }
@@ -935,6 +1048,7 @@ section.images .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
   grid-gap: 0;
+
   @media only screen and (min-width: $desktop) {
     .image:nth-of-type(odd) {
       margin-top: 20px;
@@ -946,6 +1060,7 @@ section.social-responsibility {
   .has-light-dark-background.three-col {
     text-align: center;
     font-size: 15px !important;
+
     p {
       font-size: 15px !important;
     }
@@ -957,8 +1072,10 @@ section.about-page-leadership {
     display: grid;
     grid-gap: 30px 0;
     grid-template-columns: 1fr;
+
     .person {
       padding-right: 50px;
+
       .person--heading {
         display: grid;
         grid-template-columns: 65px auto;
@@ -966,6 +1083,7 @@ section.about-page-leadership {
         grid-template-areas:
           'image role'
           'image name';
+
         .image {
           grid-area: image;
           height: 63px !important;
@@ -973,10 +1091,12 @@ section.about-page-leadership {
           margin-left: 0 !important;
           border-radius: 60px;
         }
+
         .role {
           grid-area: role;
           font-weight: bold;
         }
+
         .name {
           grid-area: name;
           font-size: 24px !important;
@@ -986,12 +1106,15 @@ section.about-page-leadership {
       }
     }
   }
+
   blockquote p {
     font-size: 24px !important;
   }
+
   @media only screen and (min-width: $tablet) {
     .wrapper {
       grid-template-columns: repeat(auto-fill, minmax(580px, 1fr));
+
       .name {
         margin-top: 0 !important;
       }
@@ -1015,6 +1138,7 @@ section.about-page-leadership {
 
 section.map {
   background: $dark;
+
   div#google-maps {
     height: 40vh;
     width: 100%;
@@ -1030,15 +1154,18 @@ section#offices {
     padding-top: 1rem;
     margin: auto 0;
   }
+
   .wrapper {
     .office {
       cursor: pointer;
       padding: 0.5rem 0;
       border-top: 3px solid transparent;
       transition: $transition;
+
       &:last-of-type {
         border-right: none;
       }
+
       h3 {
         font-family: $primaryFont;
         font-weight: bold;
@@ -1047,6 +1174,7 @@ section#offices {
         letter-spacing: 1px;
         margin-bottom: 5px;
       }
+
       p {
         font-family: $primaryFont;
         font-style: normal;
@@ -1064,25 +1192,31 @@ section#offices {
       }
     }
   }
+
   @media only screen and (min-width: $tablet) {
     padding-bottom: 4rem;
     border-bottom: 1px solid $border-dark-background;
+
     h1 {
       padding-top: 0;
     }
+
     .wrapper {
       display: grid;
       grid-gap: 10px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+
       .office {
         padding: 1rem;
         border-right: 1px solid $border-dark-background;
+
         h3 {
           margin-bottom: 15px;
         }
       }
     }
   }
+
   @media only screen and (min-width: $widescreen) {
     .wrapper {
       .office {
@@ -1091,6 +1225,7 @@ section#offices {
         &.is-active {
           outline: 0;
           border-top: 3px solid $red;
+
           h3,
           p {
             text-decoration: underline;
@@ -1107,6 +1242,7 @@ section#offices {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     button {
       height: 58px;
       background-color: $white;
@@ -1115,6 +1251,7 @@ section#offices {
       font-weight: 600;
       border: none;
       border-top: 4px solid $grey-light;
+
       &:hover,
       &:focus,
       &.is-active {
@@ -1130,6 +1267,7 @@ section#contact-form {
   padding-top: 3rem !important;
   background-color: $background-color-dark;
   color: $white;
+
   h1,
   p,
   li,
@@ -1147,6 +1285,7 @@ section#contact-form {
     letter-spacing: 0.5px;
     padding-bottom: 2rem;
   }
+
   .contact-information {
     .contact-information-item {
       display: grid;
@@ -1155,29 +1294,37 @@ section#contact-form {
       grid-template-areas:
         '.......  title'
         'icon content';
+
       h4 {
         grid-area: title;
         color: $white;
+
         @include text_Light;
+
         margin: 0;
         padding-bottom: 12px;
       }
+
       svg {
         grid-area: icon;
       }
+
       .contact-information-item-content {
         grid-area: content;
+
         p,
         a {
           @include text_Bold;
         }
       }
+
       svg,
       .contact-information-item-content {
         margin: auto 0;
       }
     }
   }
+
   #form {
     background-color: $secondary-background;
 
@@ -1188,10 +1335,12 @@ section#contact-form {
       border-radius: 3px;
       color: $white;
     }
+
     button {
       width: 100%;
       max-width: none;
     }
+
     @media screen and(min-width: $desktop) {
       padding: 2rem;
     }
@@ -1204,12 +1353,14 @@ section#contact-form {
   section.hero {
     .hero-body {
       font-size: 20px;
+
       h1,
       p {
         max-width: 734px;
         margin-left: 0;
       }
     }
+
     @media only screen and (min-width: $tablet) {
       .hero-body {
         padding: 22rem 1.5rem;
@@ -1217,11 +1368,14 @@ section#contact-form {
       }
     }
   }
+
   section#read-more {
     display: none;
+
     @media only screen and (min-width: $tablet) {
       display: block;
       padding: 0 1.5rem;
+
       .read-more-button {
         position: absolute;
         overflow: visible;
@@ -1260,8 +1414,9 @@ section#project-page-primary .wrapper {
   }
 
   .figure {
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 0;
+
     figcaption {
       text-align: left;
     }
@@ -1275,19 +1430,21 @@ section#project-page-primary .wrapper {
       'partners partners';
 
     .figure {
-      margin-right: 0px;
+      margin-right: 0;
       margin-bottom: 40px;
+
       figcaption {
         text-align: right;
       }
     }
 
     .content {
-      margin-left: 0px;
+      margin-left: 0;
       max-width: 1050px;
+
       p {
         max-width: 930px;
-        margin-left: 0px;
+        margin-left: 0;
       }
     }
   }
@@ -1298,37 +1455,45 @@ section.product-page-primary {
   .content.centered-free-text {
     max-width: 854px;
     margin: 0 auto;
+
     h3 {
       font-weight: bold;
       font-size: 18px;
     }
+
     h2:first-of-type {
+      margin: 0 auto;
       margin-top: 0;
       max-width: 720px;
-      margin: 0 auto;
     }
+
     p {
       font-size: 18px;
     }
   }
+
   .background-image-lines {
     background-image: url('../img/zigzagLines.svg');
     background-size: cover;
+
     .image {
       margin: 0 auto;
     }
   }
+
   .alternating-sections {
     h3 {
       font-size: 18px;
       color: $body-light;
       margin-bottom: 15px;
     }
+
     h1,
     h2 {
       margin-top: 0;
     }
   }
+
   @media only screen and (max-width: $tablet) {
     .large-image {
       .button {
@@ -1346,40 +1511,41 @@ section.product-page-primary {
     margin-bottom: 32px;
     padding-bottom: 0;
   }
+
   .section--subheading {
     margin-bottom: 0;
     padding-bottom: 0;
-
     font-weight: bold;
   }
+
   .center-align-wrapper {
     width: 100%;
     max-width: 895px;
     margin: auto;
-    
     text-align: center;
+
     & * {
       text-align: center !important;
     }
+
     & .description {
       width: 100%;
       max-width: 660px;
       margin: auto;
-      
       font-size: 22px;
       line-height: 170%;
     }
+
     & a {
       margin: 41px 0;
     }
   }
+
   .side-image {
     position: relative;
-
     width: 100%;
     max-width: 570px;
     margin: auto;
-
     background: transparent;
 
     .image-gradient {
@@ -1387,105 +1553,120 @@ section.product-page-primary {
       z-index: 1;
       top: 0;
       left: 0;
-
       width: 100%;
       height: 100%;
-
-      background: linear-gradient(356.64deg, #0E111B 4.06%, rgba(14, 17, 27, 0.21) 34.1%), linear-gradient(0deg, rgba(14, 17, 27, 0.3), rgba(14, 17, 27, 0.3));
+      background: linear-gradient(
+          356.64deg,
+          #0e111b 4.06%,
+          rgba(14, 17, 27, 0.21) 34.1%
+        ),
+        linear-gradient(0deg, rgba(14, 17, 27, 0.3), rgba(14, 17, 27, 0.3));
     }
+
     .side-image1 {
       width: 100%;
       margin-bottom: 8px;
     }
+
     .side-image2 {
       display: inline-block;
-
       width: 40%;
       height: 200px;
       margin-right: 10px;
     }
+
     .side-image3 {
       display: inline-block;
-
       width: calc(60% - 10px);
       height: 200px;
     }
   }
+
   .middle-description {
-    font-family: Ubuntu;
+    font-family: $titleFont;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
     line-height: 130%;
     text-align: center;
   }
+
   .has-text-centered {
     margin: auto;
   }
+
   .buttons-wrap {
     display: flex;
     flex-wrap: wrap;
-
     margin-top: 40px;
-    
+
     & a {
       display: flex;
       align-items: center;
-
       margin-right: 18px;
       margin-bottom: 17px;
     }
   }
+
   @media only screen and (max-width: $tablet) {
     .column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
+
     .section--title {
       margin-bottom: 36px;
     }
+
     .middle-description {
       font-size: 20px;
     }
+
     .center-align-wrapper {
       & * {
         margin-left: 0;
       }
+
       & .description {
         max-width: 100%;
         text-align: left !important;
       }
+
       & .has-mobile-left {
         text-align: left !important;
       }
     }
+
     .side-image {
       .side-image2 {
         height: 130px;
       }
+
       .side-image3 {
         height: 130px;
       }
     }
+
     .full-width-image {
       width: calc(100% + 30px);
       min-height: 375px;
       margin-left: -15px;
       margin-bottom: 60px;
     }
+
     .buttons-wrap {
       & a {
         width: 100%;
         margin-right: 0;
+
         & span:nth-child(1) {
           display: block;
-
           width: calc(100% - 20px);
-          
           text-align: left;
-          word-wrap:break-word;
+          word-wrap: break-word;
           white-space: normal;
         }
+
         & span:nth-child(2) {
           width: 20px;
         }
@@ -1499,17 +1680,22 @@ section.product-page-primary {
 .is-vcentered {
   align-items: center;
 }
+
 .is-centered {
   text-align: center;
 }
+
 .is-mobile-hidden {
   display: block;
+
   @media only screen and (max-width: $tablet) {
     display: none;
   }
 }
+
 .is-mobile-show {
   display: none;
+
   @media only screen and (max-width: $tablet) {
     display: block;
   }

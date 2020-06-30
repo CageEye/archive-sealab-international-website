@@ -13,6 +13,7 @@
     font-size: 14px;
     padding-bottom: 5px;
   }
+
   .event__text__camera {
     padding-top: 10px;
     font-weight: bold;
@@ -20,21 +21,26 @@
     line-height: 170%;
     text-transform: uppercase;
     margin: auto 0;
+
     svg {
       width: 12px;
       margin-right: 10px;
     }
+
     &.is__active {
       color: $red;
-      svg, svg path {
-        fill: $red !important;
 
+      svg,
+      svg path {
+        fill: $red !important;
       }
     }
+
     &:not(.is__active) {
       color: $white !important;
 
-      svg, svg path {
+      svg,
+      svg path {
         fill: rgba(255, 255, 255, 0.8) !important;
       }
     }

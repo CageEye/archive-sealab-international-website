@@ -83,8 +83,9 @@
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:lint": "eslint src -c .eslintrc --ext js,jsx && prettier --ignore-path .eslintignore \"**/*.+(jsx|js|scss|css)\"",
-    "test:lint:fix": "eslint --ignore-path .eslintignore . --fix && prettier --ignore-path .eslintignore --write \"**/*.+(jsx|js|scss|css)\""
+    "test:lint": "eslint src -c .eslintrc --ext js,jsx && prettier --list-different --ignore-path .eslintignore \"**/*.+(jsx|js|scss|css)\"",
+    "test:lint:fix": "eslint --ignore-path .eslintignore . --fix && prettier --loglevel warn  --ignore-path .eslintignore --write \"**/*.+(jsx|js|scss|css)\"",
+    "stylelint": "stylelint '**/*.scss' --config=.stylelintrc.json"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -103,7 +104,8 @@
     "lint-staged": "^10.2.11",
     "prettier": "^1.19.1",
     "stylelint": "^13.6.1",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
   },
   "husky": {
     "hooks": {
@@ -116,7 +118,7 @@
       "prettier --write"
     ],
     "src/**/*.{css,scss}": [
-      "stylelint --config=.stylelintrc --fix",
+      "stylelint --config=.stylelintrc.json --fix",
       "prettier --config .prettierrc --write"
     ]
   }

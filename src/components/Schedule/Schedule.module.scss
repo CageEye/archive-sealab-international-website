@@ -9,9 +9,7 @@
 .scheduleWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 0px 20px;
-
-  
+  grid-gap: 0 20px;
 
   @media only screen and (min-width: $tablet) {
     grid-template-columns: 1fr;

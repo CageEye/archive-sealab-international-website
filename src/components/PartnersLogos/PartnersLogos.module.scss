@@ -2,15 +2,15 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) ) ;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
   padding: 0 10px;
   margin: auto !important;
 
-
   .logoRectangular {
     width: 32vw !important;
     height: 100%;
+
     @media only screen and (min-width: $tablet) {
       width: 8vw !important;
     }
@@ -19,12 +19,13 @@
   .logoSquare {
     width: 100%;
     height: 16vw !important;
+
     @media only screen and (min-width: $tablet) {
       height: 4vw !important;
     }
   }
 
   @media only screen and (min-width: $tablet) {
-    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr) ) ;
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
   }
 }

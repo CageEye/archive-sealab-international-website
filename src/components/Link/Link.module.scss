@@ -1,17 +1,20 @@
 @import '../_variables.scss';
 
-
 .link {
   color: $white;
   background-color: transparent;
   // border-bottom: 1px solid transparent;
   @include buttonText;
+
   overflow-x: hidden;
   position: relative;
-  &:hover:after, &:focus:after {
+
+  &:hover::after,
+  &:focus::after {
     width: 100%;
   }
-  &:after {
+
+  &::after {
     transition: $transition;
     content: '';
     position: absolute;
@@ -20,10 +23,11 @@
     width: 0;
     border-bottom: 1px solid $border-dark-background;
   }
+
   &.has-white-background {
     color: $text-dark;
 
-    &:after {
+    &::after {
       border-bottom: 1px solid $border-light-background;
     }
   }

@@ -1,20 +1,21 @@
 @import '../_variables.scss';
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-    grid-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
 
-    .box {
-        & > * {
-            padding-bottom: 0 !important;
-        }
-        .content {
-            background-color: transparent;
-        }
+  .box {
+    & > * {
+      padding-bottom: 0 !important;
     }
 
-    // @media only screen and (min-width: $tablet) {
+    .content {
+      background-color: transparent;
+    }
+  }
 
-    // }
+  // @media only screen and (min-width: $tablet) {
+
+  // }
 }

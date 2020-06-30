@@ -1,6 +1,5 @@
 @import '../_variables.scss';
 
-
 .chartContainer {
   height: 180px !important;
   width: 100vw !important;
@@ -15,16 +14,19 @@
     font-weight: bold;
     fill: $white;
   }
+
   tspan.pieChart__title__company {
     fill: $body-light;
     font-size: 7px;
     font-weight: bold;
     text-transform: uppercase;
   }
+
   text.label__text {
     font-weight: bold;
     font-size: 10px;
   }
+
   text.label__company {
     font-size: 10px;
   }
@@ -39,20 +41,22 @@
 
   @media only screen and (min-width: $tablet) {
     height: 450px !important;
+
     tspan.pieChart__title__percentage {
       font-size: 32px !important;
     }
+
     tspan.pieChart__title__company {
       font-size: 14px !important;
     }
+
     text.label__text {
       font-weight: bold;
       font-size: 14px;
     }
+
     text.label__company {
       font-size: 14px;
     }
   }
 }
-
-
