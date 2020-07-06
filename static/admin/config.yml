@@ -1389,7 +1389,6 @@ collections:
                   valueType: 'float',
                   max: 1,
                   min: 0,
-                  step: 0.1,
                 }
               - {
                   label: 'Account type',
@@ -1438,7 +1437,6 @@ collections:
                       valueType: 'float',
                       max: 1,
                       min: 0,
-                      step: 0.1,
                     }
           - label: 'SEALAB Highlighted Partners'
             name: partners
