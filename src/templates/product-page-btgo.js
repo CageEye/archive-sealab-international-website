@@ -52,7 +52,7 @@ export const ProductPageTemplate = ({
               <TextWithExternalCTA
                 heading={furtherInformationData.heading}
                 description={furtherInformationData.description}
-                buttonUrl={furtherInformationData.cta.url}
+                buttonPath={furtherInformationData.cta.path}
                 buttonText={furtherInformationData.cta.text}
               />
             </div>
@@ -197,7 +197,7 @@ export const pageQuery = graphql`
           heading
           description
           cta {
-            url
+            path
             text
           }
           dataBoxes {

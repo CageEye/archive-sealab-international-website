@@ -8,8 +8,8 @@ subheading: 'Stay connected to your facility at all times, from anywhere!'
 featuredimage: /img/btgo-all-in-one-gradient.jpg
 furtherInformationData:
   cta:
-    text: Demo - SEALAB Ocean Space Center
-    url: 'https://sealab.live/'
+    text: Contact us for demo
+    path: 'https://sealab.live/'
   dataBoxes:
     - heading: Air temperature
       icon: /img/btgo-x-100-airtemp.svg
