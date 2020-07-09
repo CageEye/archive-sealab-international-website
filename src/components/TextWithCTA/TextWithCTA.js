@@ -11,7 +11,7 @@ const TextWithCTA = ({ heading, description, buttonText, buttonPath }) => {
         {description}
       </p>
       {buttonText ? (
-        <Button text={buttonText} link={buttonPath} className="is-primary" />
+        <Button text={buttonText} path={buttonPath} className="is-primary" />
       ) : (
         <></>
       )}
