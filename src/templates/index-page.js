@@ -123,9 +123,7 @@ export const IndexPageTemplate = ({
   centeredSection,
   productSection,
   successFactors,
-  splitSection,
   partnering,
-  quoteSection,
   contentComponent,
 }) => {
   const PostContent = contentComponent || Content;
@@ -236,31 +234,6 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </BackgroundImage>
-      <SplittedSection
-        className="section is-medium has-dark-background tv-channel"
-        shouldReorderOnMobile
-        leftColumn={
-          <>
-            <PostContent
-              className="content"
-              content={generateHTML(splitSection.content)}
-            />
-            <Button
-              className="is-primary"
-              text={splitSection.button.text}
-              path={splitSection.button.path}
-            />
-          </>
-        }
-        rightColumn={
-          <NonStretchedImage
-            fluid={splitSection.featuredimage.childImageSharp.fluid}
-            objectFit="contain"
-            alt={splitSection.heading}
-            className="image"
-          />
-        }
-      />
       <BackgroundImage
         image={partnering.bgimage}
         id
@@ -295,21 +268,6 @@ export const IndexPageTemplate = ({
           </div>
         </section>
       </BackgroundImage>
-      <section className="section has-dark-background is-medium quote">
-        <div className="container">
-          <PostContent
-            className="content"
-            content={generateHTML(quoteSection.content)}
-          />
-          <Button
-            className="is-secondary small"
-            text={quoteSection.button.text}
-            path={quoteSection.button.path}
-          />
-        </div>
-      </section>
-      {/* 
-      <QuotesList quotes={quotes} className="section has-dark-background" /> */}
     </FrontPage>
   );
 };
@@ -326,9 +284,7 @@ const IndexPage = ({ data }) => {
     centeredSection,
     productSection,
     successFactors,
-    splitSection,
     partnering,
-    quoteSection,
   } = frontmatter;
 
   return (
@@ -342,9 +298,7 @@ const IndexPage = ({ data }) => {
         centeredSection={centeredSection}
         productSection={productSection}
         successFactors={successFactors}
-        splitSection={splitSection}
         partnering={partnering}
-        quoteSection={quoteSection}
       />
     </Layout>
   );
@@ -431,22 +385,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        splitSection {
-          content
-          subheading
-          button {
-            text
-            path
-          }
-          featuredimage {
-            childImageSharp {
-              fluid(maxWidth: 700, quality: 80) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-                presentationWidth
-              }
-            }
-          }
-        }
         partnering {
           content
           subheading
@@ -461,13 +399,6 @@ export const pageQuery = graphql`
                 presentationWidth
               }
             }
-          }
-        }
-        quoteSection {
-          content
-          button {
-            text
-            path
           }
         }
       }

@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: "SEALAB "
+title: 'SEALAB '
 seoDescription": You've never seen camera technology for harsh environment like
   this. We're offering AI Solutions under water with great computer vision
   techniques. Our system is open to third parties.
@@ -9,15 +9,16 @@ bgimage: /img/sealab-water-hero-edit.jpg
 items:
   - description: Yearly negative impact due to poor ocean management
     keyNumber: 200
-    keyNumberAfter: "  Billion"
+    keyNumberAfter: '  Billion'
     keyNumberBefore: $
   - description: People rely on the ocean
     keyNumber: 7.8
-    keyNumberAfter: "  Billion"
-  - description: Needed yearly to reduce the negative impact and sustain the ocean
+    keyNumberAfter: '  Billion'
+  - description:
+      Needed yearly to reduce the negative impact and sustain the ocean
       from now, to infinity and beyond
     keyNumber: 21
-    keyNumberAfter: "  Billion"
+    keyNumberAfter: '  Billion'
     keyNumberBefore: $
 centeredSection:
   button:
@@ -25,7 +26,7 @@ centeredSection:
     text: Read more
   description: SEALAB provides a space for people to connect, create and communicate
   heading: The oceans affect us all, but entering the deep is not for everyone
-  subheading: ""
+  subheading: ''
 productSection:
   description: |-
     You've never seen camera technology for harsh environment like this. 
@@ -56,17 +57,7 @@ successFactors:
       expertise and support
     - Apply state of the art machine learning to different industries
     - Our ideas will change everything in the Ocean Space
-  subheading: ""
-splitSection:
-  button:
-    path: ""
-    text: ""
-  content: >-
-    ## SEALAB TV Channel
-
-    The monitored areas include both a gulls nest, an eagles aerie and our own custom built lobster shelter. The goal for this project is simply to satisfy our own curiosity and to provide the inhabitants of Gjæsingen island with a new way to enjoy their local environment.
-  featuredimage: /img/sealab-tv-channel.jpg
-  subheading: ""
+  subheading: ''
 partnering:
   bgimage: /img/water_dark_light_technology.jpg
   buttons:
@@ -79,23 +70,4 @@ partnering:
 
     Our Research Laboratories are constantly developing and testing new technological solutions. SEALAB’s DNA is very strong when we talk about creativity and different ways of thinking. We need more Rockstars on the team. If you have X-factor and what is needed – launch your career at SEALAB.
   subheading: X-factor
-quoteSection:
-  button:
-    path: /about/innovation-cause-we-can/
-    text: Innovation ‘cause we can
-  content: >-
-    **The little things in life matter. If you can’t do the little things right,
-    you’ll never be able to do the big things right.**
-
-    <p id="author">- Oscar Markovic and Milan Markovic, Founders at Work</p>
-quotes:
-  - authorImage: ""
-    authorName: ""
-    authorPosition: ""
-    quoteText: We would really recommend SEALAB if you are in need - because
-      electronics for these environments is hard to find.
-  - authorImage: ""
-    authorName: ""
-    authorPosition: ""
-    quoteText: The Apple approach for harsh environments
 ---
