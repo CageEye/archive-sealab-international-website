@@ -14,16 +14,13 @@ featuredimages:
   - alt: Subsea camera left top
     img: /img/render-7.2-pt-cam.png
 heading: Meet SEALAB subsea camera - An underwater camera for harsh environments
-shortDescription: >-
-  The new SEALAB-camera is completely groundbreaking in marine environments and
-  uses up to six lenses. The optics are optimized for use in several tasks in
-  the Ocean Space. SEALAB's basic camera DNA is of course essential. The data
-  platform has several separate lenses that are combined and used together.
-  Thus, you get both 2D and 3D images using advanced software and Artificial
-  Intelligence that gives you pictures in unparalleled detail, regardless of
-  lighting conditions - regardless of depth.
-
-  This, in combination with the image sensors being SEALAB's largest ever, makes it possible to get exceptionally good night pictures below the surface. Clear and colorful images that far exceed what you can see with the naked eye. And best of all, Intel inside.
+shortDescription: "SEALAB PT-Cam delivers sharp images for monitoring and
+  analysis in the aquaculture industry. The underwater camera can be angled in
+  all directions and the SEALAB Smart Winch allows you to manoeuvre it both
+  forwards, backwards and up and down in the entire depth of the cage. The fact
+  that the camera films in full HD, has autofocus and auto-adjusted colour
+  balance makes it perfectly suitable for assisting the fish farmer in daily
+  routines such as feeding and monitoring of the fish. "
 highlightSpecifications:
   - description: Full HD 1080p
     heading: Resolution
@@ -38,34 +35,28 @@ allSpecifications:
     description: 300°
   - heading: Tilt
     description: 180°
-  - heading: Color video
-    description: Yes
+  - heading: Colour video
+    description: true
   - heading: Aperture
     description: F1.6
   - heading: High sensitivity (WDR)
     description: 130 db
   - heading: Depth and temperature sensor
-    description: Yes
+    description: true
   - heading: "IMU and compass "
-    description: Yes
+    description: true
   - heading: Housing material
     description: POM/Stainless steel
   - heading: Dimensions (D x H)
     description: 298 cm x 11 / 22.5 cm
   - heading: IP
     description: "69"
-specificationDescription: As the camera is under development, some of the
-  specifications can still be changed.
+specificationDescription: " "
 textAndImages:
   - description: >-
       ## Internet of Things
 
       In addition to the underwater camera, the SEALAB camera system integrates underwater light, winch, environmental sensors and software. These communicate together through IoT and support algorithms for machine learning and artificial intelligence.
     featuredimage: /img/5g-bluethink.png
-  - description: >-
-      ## Produced in Norway
-
-      The new sCAM is both developed and produced in Trondheim at SEALAB Factory. Here, the characteristics of each camera is tested in detail to ensure high quality. 
-    featuredimage: /img/asbjorn_camera_edit.jpg
 ---
-SEALAB cameras are covered by a "Lifetime Guarantee of Excellence." This states that SEALAB guarantees the product for a lifetime against breakage or defects in workmanship. The Guarantee does not cover drop from plane, bear attack or children under 5.
+A robust construction and an intelligent design guarantee a long lifetime with minimal maintenance. The round shape of the camera ensures that the net won't get damaged if they should come into contact with each other.
