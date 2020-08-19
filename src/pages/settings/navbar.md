@@ -19,12 +19,12 @@ menuPaths:
     title: Technologies
   - dropdown:
       highlighted:
-        - path: /products/bluethink-go/
-          title: BlueThink™ GO
         - path: /products/subsea-cam/
-          title: Subsea camera - sCAM
+          title: SEALAB subsea camera
         - path: /products/subsea-light-quintus/
-          title: Subsea light - Quintus LED
+          title: SEALAB subsea light
+        - path: /products/bluethink-go/
+          title: SEALAB Dashboard
     path: "#"
     title: Products
   - dropdown:
