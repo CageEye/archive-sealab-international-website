@@ -1,11 +1,12 @@
 ---
 menuPaths:
   - dropdown:
-      regular:
-        - path: /solutions/atlantic-salmon-and-seafood/
-          title: Aquaculture
-        - path: /solutions/land-based-fish-farming/
-          title: Land based fish farming
+      regular: []
+      highlighted:
+        - title: Aquaculture
+          path: /solutions/atlantic-salmon-and-seafood/
+        - title: Land based fish farming
+          path: /solutions/land-based-fish-farming/
     path: "#"
     title: Industries
   - dropdown:
