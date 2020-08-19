@@ -36,8 +36,6 @@ menuPaths:
           title: Our history
         - path: /research-laboratories/
           title: R&D in SEALAB
-        - title: Sustainability impact
-          path: /about/social-responsibility/
       regular:
         - path: /projects/5G-heart/
           title: Project - 5G HEART
@@ -47,6 +45,8 @@ menuPaths:
           title: Clean ocean initiative
         - title: Our partners
           path: /about/partners/
+        - title: Sustainability impact
+          path: /about/social-responsibility/
     path: "#"
     title: About
 ---
