@@ -1,11 +1,12 @@
 ---
 menuPaths:
   - dropdown:
-      regular:
-        - path: /solutions/atlantic-salmon-and-seafood/
-          title: Aquaculture
-        - path: /solutions/land-based-fish-farming/
-          title: Land based fish farming
+      regular: []
+      highlighted:
+        - title: Aquaculture
+          path: /solutions/atlantic-salmon-and-seafood/
+        - title: Land based fish farming
+          path: /solutions/land-based-fish-farming/
     path: "#"
     title: Industries
   - dropdown:
@@ -36,8 +37,6 @@ menuPaths:
           title: Our history
         - path: /research-laboratories/
           title: R&D in SEALAB
-        - title: Sustainability impact
-          path: /about/social-responsibility/
       regular:
         - path: /projects/5G-heart/
           title: Project - 5G HEART
@@ -47,6 +46,8 @@ menuPaths:
           title: Clean ocean initiative
         - title: Our partners
           path: /about/partners/
+        - title: Sustainability impact
+          path: /about/social-responsibility/
     path: "#"
     title: About
 ---
