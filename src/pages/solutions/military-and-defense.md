@@ -1,16 +1,14 @@
 ---
 templateKey: solution-page-secondary
-title: Military & defense
-seoDescription: >-
-  With underwater computer vision from SEALAB you can compare camera images with
-  photographic databases. In each case, human operators - not machines - make
-  final judgments before anyone takes action.
+title: Military
+seoDescription: With underwater computer vision from SEALAB you can compare
+  camera images with photographic databases. In each case, human operators - not
+  machines - make final judgments before anyone takes action.
 priority: 5
 heading: Military & defense
-description: >-
-  With underwater computer vision from SEALAB you can compare camera images with
-  photographic databases. In each case, human operators - not machines - make
-  final judgments before anyone takes action.
+description: With underwater computer vision from SEALAB you can compare camera
+  images with photographic databases. In each case, human operators - not
+  machines - make final judgments before anyone takes action.
 featuredimage: /img/adobe_military_helicopters_boat.jpeg
 splitSections:
   - content: >-
@@ -23,11 +21,7 @@ splitSections:
       frame-grabbing techniques, will play the key role.
 
 
-      Continued developments in algorithms promise to enable the economical use
-      of computer vision in newer applications. The latest algorithms are
-      expected to provide robust geometric pattern-matching with several degrees
-      of freedom, compensate for extreme illumination and perform 3D analysis of
-      complex shapes.
+      Continued developments in algorithms promise to enable the economical use of computer vision in newer applications. The latest algorithms are expected to provide robust geometric pattern-matching with several degrees of freedom, compensate for extreme illumination and perform 3D analysis of complex shapes.
     heading: Human vision simulation & objects recognition
   - content: >-
       Both color tracking and motion or range of images can be used. To have
@@ -35,38 +29,16 @@ splitSections:
       one at appropriate times.  
 
 
-      SEALABs advanced FPGA technology for use under water address individual
-      pixels rather than needing the whole frame. If there is something coming
-      at you, you don't necessarily have to look at the whole thing, just that
-      object. Addressing individual pixels also allows you to have much faster
-      algorithms.
+      SEALABs advanced FPGA technology for use under water address individual pixels rather than needing the whole frame. If there is something coming at you, you don't necessarily have to look at the whole thing, just that object. Addressing individual pixels also allows you to have much faster algorithms.
 
 
-      There’s already a wide array of real-world use cases of computer vision in
-      the military above surface. But to deliver AI solutions under water, we
-      need smart cameras. There’s a wide breadth of current and near-term
-      military applications where computer vision can be uses under water, i.e.
-      surveillance, Autonomous Vehicles and Automation and Robotics. Smart 2D
-      and 3D cameras from SEALAB in combination with AI flags vessels and
-      people, as well as tracks objects of interest, for human analyst
-      attention. 
+      There’s already a wide array of real-world use cases of computer vision in the military above surface. But to deliver AI solutions under water, we need smart cameras. There’s a wide breadth of current and near-term military applications where computer vision can be uses under water, i.e. surveillance, Autonomous Vehicles and Automation and Robotics. Smart 2D and 3D cameras from SEALAB in combination with AI flags vessels and people, as well as tracks objects of interest, for human analyst attention. 
 
 
-      The objects within the footage would have been labeled as what we know the
-      objects to be, such as a vessel, a weapon, or a person. This labeled
-      footage would then be run through the software’s machine learning
-      algorithm. This would have trained the algorithm to discern the sequences
-      and patterns of 1’s and 0’s that, to the human eye, form the video of a
-      strategically relevant combat zone as displayed in drone surveillance
-      footage. 
+      The objects within the footage would have been labeled as what we know the objects to be, such as a vessel, a weapon, or a person. This labeled footage would then be run through the software’s machine learning algorithm. This would have trained the algorithm to discern the sequences and patterns of 1’s and 0’s that, to the human eye, form the video of a strategically relevant combat zone as displayed in drone surveillance footage. 
 
 
-      The algorithm behind the software would then be able to determine the
-      contents of the footage and identify any anomalies or strategically
-      relevant objects it has been trained to flag. The system then alerts a
-      human operator in some unknown fashion and highlights the flagged objects
-      within the video display. Next steps will be developing algorithms to
-      determine risks in humans.
+      The algorithm behind the software would then be able to determine the contents of the footage and identify any anomalies or strategically relevant objects it has been trained to flag. The system then alerts a human operator in some unknown fashion and highlights the flagged objects within the video display. Next steps will be developing algorithms to determine risks in humans.
     heading: Current innovations
     featuredimage: /img/military-innovation.svg
     subheading: Advanced FPGA technology for use under water
