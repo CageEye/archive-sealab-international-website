@@ -36,15 +36,15 @@ allSpecifications:
   - heading: Tilt
     description: 180°
   - heading: Colour video
-    description: true
+    description: ""
   - heading: Aperture
     description: F1.6
   - heading: High sensitivity (WDR)
     description: 130 db
   - heading: Depth and temperature sensor
-    description: true
+    description: ""
   - heading: "IMU and compass "
-    description: true
+    description: ""
   - heading: Housing material
     description: POM/Stainless steel
   - heading: Dimensions (D x H)
