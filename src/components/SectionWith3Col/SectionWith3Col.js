@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import styled from 'styled-components';
 import Button from '../Button';
 import generateHTML from '../../utils/generateHTML';
 import Content, { HTMLContent } from '../Content';
@@ -7,6 +8,10 @@ import { idMaker } from '../../utils/id-maker';
 import styles from './SectionWith3Col.module.scss';
 
 const gen = idMaker();
+
+const StyledBox = styled.div`
+  padding: 1.25rem;
+`;
 
 const SectionWith3Col = ({
   heading,
@@ -50,7 +55,7 @@ const SectionWith3Col = ({
 const IconBox = ({ icon, heading, content, cta, className }) => {
   const PostContent = HTMLContent || Content;
   return (
-    <div className={classNames('box', styles.box, className)}>
+    <StyledBox className={classNames(styles.box, className)}>
       <figure className="image">
         <img className={styles.image} src={icon} alt={`Icon for ${heading}`} />
       </figure>
@@ -69,7 +74,7 @@ const IconBox = ({ icon, heading, content, cta, className }) => {
       ) : (
         <></>
       )}
-    </div>
+    </StyledBox>
   );
 };
 
