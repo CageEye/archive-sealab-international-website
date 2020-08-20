@@ -20,7 +20,7 @@ seaToLandSection:
   label: " Our goal is clear"
   sideImage: /img/Quintus_Submerged_in_Cage.jpg
 featureSection:
-  heading: "You've never seen camera technology for harsh environment like this. "
+  heading: You've never seen camera technology for harsh environment like this
   description: "SEALAB is proudly supplying the aquaculture industry with the
     following quality products:"
   features:
@@ -28,7 +28,7 @@ featureSection:
     - SEALAB Dashboard
     - SEALAB Control room
     - Subsea Lighting
-  label: Based on years of experience in the industry
+  label: " "
 advantageSection:
   advantages:
     - advantage: Developed, designed & manufactured in Norway
@@ -54,7 +54,7 @@ scamSection:
     pellet detection, biomass control and respiratory rate measuring will help
     our customers to reach their goals. SEALAB supplies both underwater and
     surface cameras.
-  heading: SEALAB subsea camera
+  heading: SEALAB Subsea Camera
   label: Complete Surveillance Systems
   sideImage: /img/render-4-pt-cam-1-.png
 middleImage: /img/BlueThink_Control_Room.png
