@@ -1,12 +1,18 @@
 @import '../_variables.scss';
 
-.dropdown {
+.dropdown__button,
+.navbar__item {
+  background-color: transparent;
+  color: $body-light !important;
+  font-size: 16px;
+  font-weight: 600 !important;
+
   @include text_Navbar;
 
-  .navbar__item {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
+  &:focus,
+  &:hover,
+  .dropdown__isActive {
+    color: white !important;
   }
 }
 
@@ -21,8 +27,6 @@
 
 @media only screen and (max-width: $tablet) {
   .dropdown {
-    @include text_Navbar;
-
     .dropdown__content {
       display: none;
       outline: none;
