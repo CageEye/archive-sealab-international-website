@@ -21,6 +21,8 @@ menuPaths:
           title: SEALAB Subsea Light
         - path: /products/bluethink-go/
           title: SEALAB Dashboard
+        - title: SEALAB Control Room
+          path: /control-room/
     path: "#"
     title: Products
   - dropdown:
