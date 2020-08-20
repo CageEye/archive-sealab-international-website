@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './SpecificationList.module.scss';
 
-const SpecificationList = ({ list }) => (
-  <div className={styles.list}>
-    {list.map(spec => (
-      <ListItem heading={spec.heading} description={spec.description} />
-    ))}
-  </div>
-);
+const SpecificationList = ({ list }) => {
+  if (!list && list.length < 1) return <></>;
+  return (
+    <div className={styles.list}>
+      {list.map(spec => (
+        <ListItem heading={spec.heading} description={spec.description} />
+      ))}
+    </div>
+  );
+};
 
 const ListItem = ({ heading, description }) => {
   let printDescription = description;

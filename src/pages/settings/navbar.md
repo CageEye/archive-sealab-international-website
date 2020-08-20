@@ -10,17 +10,17 @@ menuPaths:
         - path: /technologies/edge-intelligence/
           title: Edge intelligence
         - path: /technologies/software-platform/
-          title: BlueThink™ Software Platform
+          title: SEALAB Software Platform
     path: "#"
     title: Technologies
   - dropdown:
       highlighted:
-        - path: /products/bluethink-go/
-          title: BlueThink™ GO
         - path: /products/subsea-cam/
-          title: Subsea camera - sCAM
+          title: SEALAB Subsea Camera
         - path: /products/subsea-light-quintus/
-          title: Subsea light - Quintus LED
+          title: SEALAB Subsea Light
+        - path: /products/bluethink-go/
+          title: SEALAB Dashboard
     path: "#"
     title: Products
   - dropdown:
