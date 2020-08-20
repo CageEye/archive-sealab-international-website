@@ -30,18 +30,19 @@ featuredData:
       icon: /img/icon-aqualog.svg
       cta: /apper/aqualog
   heading: Increased control using SEALAB Apps
-videoDescription: Ved hjelp av våre unike LED-lys kan du følge med på laksen om
-  natten eller på større dybde. LED-lyset følger  kameraet til alle dybder.
+videoDescription: "SEALAB Subsea Light ensures that the Livestream quality is
+  excellent at nighttime or at depths where the natural lighting conditions are
+  limited. "
 featuredimage: /img/SEALAB Feed Barge Control Room.png
 features:
-  heading: BlueThink™ Kontrollrom
-  subheading: Hardware og Software, Produsert i Norge
-  description: Både hardware og software produseres i Norge. Slik får du en
-    lynrask levering og driftsikker løsning. Produktene er utviklet slik at de
-    behøver minimalt med vedlikehold og er enkle å installere. Ønsker du
-    livestream fra ditt anlegg, kan vi sette opp et helhetlig system på få
-    timer. Skulle du trenge hjelp, er service telefonen bemannet 24 timer i
-    døgnet.
+  heading: Hardware and Software - produced in Norway
+  subheading: "Controlling the entire production cycle "
+  description: Both hardware and software are produced in Norway. This has made
+    fast deliveries of a reliable solution possible. The products are also
+    designed for minimal maintenance and are easy to install. If you want
+    Livestream at your facility, SEALAB is able to provide you with a solution i
+    short time. Happy customers are our first priority, therefore our service
+    phone is open 24 hours a day.
   featureItems:
     - heading: Driftsikkert
       icon: /img/reliable.svg
