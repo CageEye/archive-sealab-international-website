@@ -53,21 +53,21 @@ features:
     - heading: Developed, designed & manufactured in Norway
       icon: /img/norway-manufacture.svg
 lightbox:
-  heading: Livestream løsning
-  description: BlueThink™ Kontrollrom baseres på interaksjon mellom en rekke
-    produkter som kombinert gir førsteklasses overvåkning av ditt anlegget.
+  heading: SEALAB Control Room
+  description: Provides the fish farmer with high-quality Livestream, both below
+    and above the sea surface.
   carouselItems:
     - heading: Internet of Things
       img: /img/sealabProPackage.png
-      description: Kamerasystemet integrerer undervannskamera, overflatekamera, lys,
-        sensorikk, mekanikk og programvare som alle kommuniserer sammen.
-    - heading: BlueThink™ Apps
+      description: The camera system integrates underwater camera, surface camera,
+        light, sensors, mechanics and software that all communicate together.
+    - heading: Open to third parties
       img: /img/SEALAB Feed Barge Control Room.png
-      description: Fra BlueThink Kontrollrom har du tilgang til Livestream i tillegg
-        til alle dine BlueThink™ Apps.
-    - heading: BlueThink™ GO
+      description: "Our system is open to third parties, as we believe this is
+        something everyone benefits from. "
+    - heading: SEALAB Dashboard
       img: /img/tablet-holding-portrait.jpg
-      description: Med BlueThink™ GO kan du følge med på anlegget ditt når som helst,
-        fra hvor som helst.
+      description: SEALAB Dashboard allows you to stay connected to your facility at
+        all times, from anywhere!
 ---
 SEALAB Apps provides the fish farmer with relevant information that makes him or her capable of making better decisions at work, every day.
