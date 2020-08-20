@@ -2,25 +2,23 @@
 templateKey: project-page-primary
 title: 5G HEART
 heading: 5G HEART
-seoDescription: >-
-  5G-HEART (5G HEalth AquacultuRe and Transport validation trials) will deploy
-  innovative digital use cases involving healthcare, transport and aquaculture
-  industry partnerships. The overall objective is to define and validate the
-  cost efficient 5G converged network concepts, which enable an intelligent hub
-  supported by multiple vertical industries.
-description: >-
-  5G-HEART (5G HEalth AquacultuRe and Transport validation trials) will deploy
-  innovative digital use cases involving healthcare, transport and aquaculture
-  industry partnerships. The overall objective is to define and validate the
-  cost efficient 5G converged network concepts, which enable an intelligent hub
-  supported by multiple vertical industries.
+seoDescription: 5G-HEART (5G HEalth AquacultuRe and Transport validation trials)
+  will deploy innovative digital use cases involving healthcare, transport and
+  aquaculture industry partnerships. The overall objective is to define and
+  validate the cost efficient 5G converged network concepts, which enable an
+  intelligent hub supported by multiple vertical industries.
+description: 5G-HEART (5G HEalth AquacultuRe and Transport validation trials)
+  will deploy innovative digital use cases involving healthcare, transport and
+  aquaculture industry partnerships. The overall objective is to define and
+  validate the cost efficient 5G converged network concepts, which enable an
+  intelligent hub supported by multiple vertical industries.
 featuredImage: /img/5g-bluethink.png
 keyFactors:
   factorItems:
     - description: Project duration
       primaryInfo: 01.06.19 - 31.05.22
     - description: Overall budget
-      primaryInfo: '€ 14.322.073,75'
+      primaryInfo: € 14.322.073,75
     - description: SEALAB Budget
       primaryInfo: € 510.625
   heading: Key-factors for the project
