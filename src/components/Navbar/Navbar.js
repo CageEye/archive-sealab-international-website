@@ -101,7 +101,9 @@ const NavbarItems = ({ menuPaths }) => {
         if (
           menuItem.dropdown &&
           typeof menuItem.dropdown !== 'string' &&
-          (menuItem.dropdown.highlighted || menuItem.dropdown.regular)
+          (menuItem.dropdown.highlighted || menuItem.dropdown.regular) &&
+          (menuItem.dropdown.highlighted.length > 0 ||
+            menuItem.dropdown.regular.length > 0)
         ) {
           return <MenuDropDown key={gen.next().value} menuItem={menuItem} />;
         }
