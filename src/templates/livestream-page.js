@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import YouTube from 'react-youtube';
+import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 import Content, { HTMLContent } from '../components/Content';
@@ -9,6 +10,107 @@ import Title from '../components/Title';
 import SEO from '../components/SEO';
 import SectionWith3Col from '../components/SectionWith3Col';
 import NonStretchedImage from '../components/NonStretchedImage';
+
+const StyledLivestreamPage = styled.div`
+  section.section#livestream-hero {
+    .column.children-padding {
+      padding-right: 20px;
+
+      & > * {
+        padding: 20px 0;
+      }
+
+      p {
+        @include text_Light;
+
+        padding-bottom: 25px;
+      }
+    }
+
+    figure.image img {
+      margin: auto;
+    }
+  }
+
+  section.video {
+    .content.has-white-background {
+      background: $white;
+      padding: 30px 15px;
+
+      p {
+        font-weight: bold;
+      }
+    }
+    .video-background {
+      margin: auto;
+      position: relative;
+      display: block;
+      text-align: center;
+    }
+    .video-iframe {
+      width: 85vw;
+      height: 48vw;
+      @media screen and (min-width: $desktop) {
+        width: 57vw;
+        height: 32vw;
+      }
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .video-foreground {
+        height: 300%;
+        top: -200px;
+      }
+    }
+    @media (max-aspect-ratio: 16/9) {
+      .video-foreground {
+        width: 300%;
+        left: -100px;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      .content.has-white-background {
+        max-width: 400px;
+        position: relative;
+        top: -100px;
+        left: 0;
+        padding: 30px;
+        p {
+          @include text_Dark;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  section#features {
+    #features-icons {
+      text-align: center;
+      margin-top: 32px;
+      .features-icons-item {
+        margin: auto;
+        padding: 40px 50px;
+        border-right: 1px solid $border-dark-background;
+        &:last-of-type {
+          border: 1px solid transparent;
+        }
+        figure.image {
+          padding-bottom: 30px;
+          img {
+            height: 60px;
+          }
+        }
+        h4 {
+          @include text_Bold;
+        }
+      }
+    }
+  }
+
+  section#solution-carousel.section {
+    padding-bottom: 6rem;
+  }
+`;
 
 export const LivestreamPageTemplate = ({
   title,
@@ -35,7 +137,7 @@ export const LivestreamPageTemplate = ({
     },
   };
   return (
-    <>
+    <StyledLivestreamPage>
       <SEO title={title} />
       <section
         id="livestream-hero"
@@ -124,7 +226,7 @@ export const LivestreamPageTemplate = ({
           <Carousel items={lightbox.carouselItems} />
         </div>
       </section>
-    </>
+    </StyledLivestreamPage>
   );
 };
 

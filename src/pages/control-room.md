@@ -48,9 +48,11 @@ lightbox:
       img: /img/sealabProPackage.png
       description: Kamerasystemet integrerer undervannskamera, overflatekamera, lys, sensorikk, mekanikk og programvare som alle kommuniserer sammen.
     - heading: BlueThink™ Apps
-      img: /img/sealab-controller-livestream.png
+      img: /img/SEALAB Feed Barge Control Room.png
       description: Fra BlueThink Kontrollrom har du tilgang til Livestream i tillegg til alle dine BlueThink™ Apps.
     - heading: BlueThink™ GO
       img: /img/tablet-holding-portrait.jpg
       description: Med BlueThink™ GO kan du følge med på anlegget ditt når som helst, fra hvor som helst.
----BlueThink™ Apps bidrar med relevant informasjon som gjør deg som oppdretter bedre rustet til å ta gode beslutninger på jobb, hver dag.
+---
+
+BlueThink™ Apps bidrar med relevant informasjon som gjør deg som oppdretter bedre rustet til å ta gode beslutninger på jobb, hver dag.
