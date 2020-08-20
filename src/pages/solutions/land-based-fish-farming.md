@@ -13,18 +13,16 @@ seoDescription: SEALAB provides leading camera technology solutions for
 priority: 2
 featuredimage: /img/_DSC0761.jpg
 seaToLandSection:
-  heading: From sea to land
-  description: Globally land-based aquaculture facilities are increasingly being
-    considered as a more sustainable alternative to open-water fish farms. Until
-    just a few years ago, land-based fish farming was considered too costly, but
-    this is changing as systems and technologies become increasingly
-    sophisticated. Cutting edge technologies will be needed.
-  label: For a sustainable future
-  sideImage: /img/landbased-icon.png
+  heading: Technology for a sustainable production
+  description: The aquaculture industry is in constant change. SEALAB develops
+    technology focusing on solving the biological challenges, and hence
+    contribute to the continued development of a sustainable industry.
+  label: " Our goal is clear"
+  sideImage: /img/Quintus_Submerged_in_Cage.jpg
 featureSection:
-  heading: Surveillance and analysis systems for the aquaculture industry
-  description: "SEALAB supplies the aquaculture industry with the following
-    quality products:"
+  heading: "You've never seen camera technology for harsh environment like this. "
+  description: "SEALAB is proudly supplying the aquaculture industry with the
+    following quality products:"
   features:
     - Complete surveillance systems
     - SEALAB Dashboard
