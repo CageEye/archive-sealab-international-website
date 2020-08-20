@@ -2,27 +2,23 @@
 menuPaths:
   - dropdown:
       regular: []
-      highlighted:
-        - title: Aquaculture
-          path: /solutions/atlantic-salmon-and-seafood/
-        - title: Land based fish farming
-          path: /solutions/land-based-fish-farming/
-    path: "#"
-    title: Industries
+      highlighted: []
+    path: /solutions/land-based-fish-farming/
+    title: Aquaculture
   - dropdown:
       highlighted:
         - path: /technologies/edge-intelligence/
           title: Edge intelligence
         - path: /technologies/software-platform/
-          title: BlueThink™ Software Platform
+          title: SEALAB Software Platform
     path: "#"
     title: Technologies
   - dropdown:
       highlighted:
         - path: /products/subsea-cam/
-          title: SEALAB subsea camera
+          title: SEALAB Subsea Camera
         - path: /products/subsea-light-quintus/
-          title: SEALAB subsea light
+          title: SEALAB Subsea Light
         - path: /products/bluethink-go/
           title: SEALAB Dashboard
     path: "#"
