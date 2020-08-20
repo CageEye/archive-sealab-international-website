@@ -167,6 +167,7 @@ export const LivestreamPageTemplate = ({
       </section>
       <SectionWith3Col
         className="has-dark-background"
+        position="left"
         heading={featuredData.heading}
         columns={featuredData.featuredDataBoxes}
       />
