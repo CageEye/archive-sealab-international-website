@@ -745,7 +745,7 @@ collections:
 
   #### TECHNOLOGIES PAGES ####
   - name: 'technologies'
-    label: 'Technologies'
+    label: 'Technologies & Products'
     description: 'These are the products. Right now it is possible to create even more pages with the template for Edge Intelligence. New pages will be added at top-level of the pages, under www.sealab.blue/products/name-of-your-page/'
     files:
       - file: 'src/pages/technologies/edge-intelligence.md'
@@ -1132,6 +1132,75 @@ collections:
                   widget: 'markdown',
                   required: false,
                 }
+      - file: 'src/pages/control-room.md'
+        label: 'BlueThink Kontrollrom'
+        name: 'bluethink'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'livestream-page',
+            }
+          - { label: 'Tittel', name: 'title', widget: 'string' }
+          - {
+              label: 'Overskrift',
+              name: 'heading',
+              widget: 'string',
+              hint: 'H1 Overskrift',
+            }
+          - {
+              label: 'Underoverskrift',
+              name: 'subheading',
+              widget: 'text',
+              hint: 'Plasseres under overskrift',
+            }
+          - label: 'Kolonner med ikon & knapp'
+            name: featuredData
+            widget: object
+            fields:
+              - { label: 'H1 Overskrift', name: heading, widget: string }
+              - label: 'Kolonner'
+                name: featuredDataBoxes
+                widget: list
+                fields:
+                  - { label: 'Ikon', name: 'icon', widget: image }
+                  - { label: 'H3 Overskrift', name: heading, widget: string }
+                  - { label: 'Beskrivelse', name: description, widget: text }
+                  - { label: 'Knapp - path', name: cta, widget: string }
+          - { label: 'Innhold', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Videobeskrivelse',
+              name: 'videoDescription',
+              widget: 'text',
+              hint: 'Hvit boks over video',
+            }
+          - label: 'Tekst og fire ikoner'
+            name: features
+            widget: object
+            fields:
+              - { label: 'Underoverskrift', name: subheading, widget: string }
+              - { label: 'H1 Overskrift', name: heading, widget: string }
+              - { label: 'Beskrivelse', name: description, widget: text }
+              - label: 'Ikoner'
+                name: featureItems
+                widget: list
+                fields:
+                  - { label: 'Ikon', name: 'icon', widget: image }
+                  - { label: 'H4 Overskrift', name: heading, widget: string }
+          - label: 'Lightbox med karusell'
+            name: lightbox
+            widget: object
+            fields:
+              - { label: 'H1 Overskrift', name: heading, widget: string }
+              - { label: 'Beskrivelse', name: description, widget: text }
+              - label: 'Karusell items'
+                name: carouselItems
+                widget: list
+                fields:
+                  - { label: 'Bilde', name: 'img', widget: image }
+                  - { label: 'Overskrift', name: heading, widget: string }
+                  - { label: 'Beskrivelse', name: description, widget: text }
 
   #### SETTINGS ####
 
