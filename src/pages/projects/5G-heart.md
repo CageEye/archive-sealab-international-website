@@ -1,7 +1,7 @@
 ---
 templateKey: project-page-primary
 title: 5G HEART
-heading: 5G HEART!
+heading: 5G HEART
 seoDescription: 5G-HEART (5G HEalth AquacultuRe and Transport validation trials)
   will deploy innovative digital use cases involving healthcare, transport and
   aquaculture industry partnerships. The overall objective is to define and
