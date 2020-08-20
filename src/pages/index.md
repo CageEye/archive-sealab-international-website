@@ -27,6 +27,15 @@ centeredSection:
   description: SEALAB provides a space for people to connect, create and communicate
   heading: The oceans affect us all, but entering the deep is not for everyone
   subheading: ''
+newsSection:
+  heading: Joining forces with Bluegrove
+  description: |-
+    SEALAB becomes part of aquatech company Bluegrove, combining sensor 
+    technologies to increase underwater understanding
+  featuredimage: /img/bluegrove-people.png
+  button:
+    url: https://bluegrove.com/
+    text: Learn more
 productSection:
   description: |-
     You've never seen camera technology for harsh environment like this. 

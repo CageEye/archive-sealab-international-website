@@ -116,11 +116,33 @@ const SuccessFactors = styled.div`
   }
 `;
 
+const StyledNewsSection = styled.section`
+  h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 2rem;
+  }
+
+  p {
+    max-width: 830px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-size: 22px;
+    color: #dbe0ea;
+    text-align: center;
+  }
+
+  a {
+    margin-top: 1.5rem !important;
+  }
+`;
+
 export const IndexPageTemplate = ({
   heading,
   bgimage,
   facts,
   centeredSection,
+  newsSection,
   productSection,
   successFactors,
   partnering,
@@ -154,6 +176,30 @@ export const IndexPageTemplate = ({
         </div>
       </section>
       <HighlightedData highlighted={facts} id="facts" />
+      {newsSection ? (
+        <StyledNewsSection className="section">
+          <div className="container">
+            <NonStretchedImage
+              fluid={newsSection.featuredimage.childImageSharp.fluid}
+              objectFit="contain"
+              alt={newsSection.heading}
+              className="image"
+            />
+          </div>
+          <div className="container centered">
+            <h2>{newsSection.heading}</h2>
+            <p>{newsSection.description}</p>
+            <Button
+              className="is-primary"
+              text={newsSection.button.text}
+              path={newsSection.button.url}
+            />
+          </div>
+        </StyledNewsSection>
+      ) : (
+        <></>
+      )}
+
       <SplittedSection
         className="section is-large has-dark-background camera-section"
         shouldReorderOnMobile
@@ -282,6 +328,7 @@ const IndexPage = ({ data }) => {
     bgimage,
     items,
     centeredSection,
+    newsSection,
     productSection,
     successFactors,
     partnering,
@@ -296,6 +343,7 @@ const IndexPage = ({ data }) => {
         bgimage={bgimage}
         facts={items}
         centeredSection={centeredSection}
+        newsSection={newsSection}
         productSection={productSection}
         successFactors={successFactors}
         partnering={partnering}
@@ -340,6 +388,23 @@ export const pageQuery = graphql`
           button {
             text
             path
+          }
+        }
+
+        newsSection {
+          heading
+          description
+          featuredimage {
+            childImageSharp {
+              fluid(maxHeight: 1180, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+                presentationWidth
+              }
+            }
+          }
+          button {
+            text
+            url
           }
         }
 

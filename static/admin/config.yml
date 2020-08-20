@@ -1405,7 +1405,34 @@ collections:
                       widget: string,
                       hint: 'Last part of url. Example: /technologies/edge-intelligence',
                     }
-
+          - label: News
+            name: newsSection
+            widget: object
+            fields:
+              - {
+                  label: 'Featured image',
+                  name: 'featuredimage',
+                  widget: image,
+                }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Description, name: description, widget: markdown }
+              - label: 'Button'
+                widget: object
+                name: button
+                required: false
+                fields:
+                  - {
+                      label: 'Button text',
+                      name: text,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Button path',
+                      name: url,
+                      widget: string,
+                      required: false,
+                    }
           - label: Product section
             widget: object
             name: productSection
