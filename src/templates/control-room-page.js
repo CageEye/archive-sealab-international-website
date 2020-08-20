@@ -11,8 +11,8 @@ import SEO from '../components/SEO';
 import SectionWith3Col from '../components/SectionWith3Col';
 import NonStretchedImage from '../components/NonStretchedImage';
 
-const StyledLivestreamPage = styled.div`
-  section.section#livestream-hero {
+const StyledControlroomPage = styled.div`
+  section.section#controlroom-hero {
     .column.children-padding {
       padding-right: 20px;
 
@@ -109,7 +109,7 @@ const StyledLivestreamPage = styled.div`
   }
 `;
 
-export const LivestreamPageTemplate = ({
+export const ControlroomPageTemplate = ({
   title,
   content,
   contentComponent,
@@ -134,10 +134,10 @@ export const LivestreamPageTemplate = ({
     },
   };
   return (
-    <StyledLivestreamPage>
+    <StyledControlroomPage>
       <SEO title={title} />
       <section
-        id="livestream-hero"
+        id="controlroom-hero"
         className="section is-medium has-dark-background"
       >
         <div className="container">
@@ -168,11 +168,8 @@ export const LivestreamPageTemplate = ({
         heading={featuredData.heading}
         columns={featuredData.featuredDataBoxes}
       />
-      <section
-        id="btgo-page-content"
-        className="section has-dark-background free-text-centered"
-      >
-        <div className="container">
+      <section id="btgo-page-content" className="section has-dark-background">
+        <div className="container centered">
           <PageContent content={content} />
         </div>
       </section>
@@ -224,16 +221,16 @@ export const LivestreamPageTemplate = ({
           <Carousel items={lightbox.carouselItems} />
         </div>
       </section>
-    </StyledLivestreamPage>
+    </StyledControlroomPage>
   );
 };
 
-const LivestreamPage = ({ data }) => {
+const ControlroomPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <LivestreamPageTemplate
+      <ControlroomPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
@@ -249,10 +246,10 @@ const LivestreamPage = ({ data }) => {
   );
 };
 
-export default LivestreamPage;
+export default ControlroomPage;
 
-export const LivestreamPageQuery = graphql`
-  query LivestreamPage($id: String!) {
+export const ControlroomPageQuery = graphql`
+  query ControlroomPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
