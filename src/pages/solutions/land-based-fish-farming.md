@@ -55,7 +55,7 @@ scamSection:
     our customers to reach their goals. SEALAB supplies both underwater and
     surface cameras.
   heading: SEALAB subsea camera
-  label: Complete surveillance systems
+  label: Complete Surveillance Systems
   sideImage: /img/render-4-pt-cam-1-.png
 middleImage: /img/BlueThink_Control_Room.png
 controlSection:
