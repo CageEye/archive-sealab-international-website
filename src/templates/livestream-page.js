@@ -16,10 +16,6 @@ const StyledLivestreamPage = styled.div`
     .column.children-padding {
       padding-right: 20px;
 
-      & > * {
-        padding: 20px 0;
-      }
-
       p {
         @include text_Light;
 
@@ -101,7 +97,8 @@ const StyledLivestreamPage = styled.div`
           }
         }
         h4 {
-          @include text_Bold;
+          font-size: 16px;
+          font-weight: bold;
         }
       }
     }

@@ -23,7 +23,7 @@ const SectionWith3Col = ({
   if (!columns || columns.length < 1) return <></>;
 
   return (
-    <section className={classNames(className)}>
+    <section className={classNames(className, 'section')}>
       <div className="container">
         {heading ? <h2 className={styles.heading}>{heading}</h2> : <></>}
         {description ? (

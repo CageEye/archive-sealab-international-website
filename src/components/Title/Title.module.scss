@@ -1,18 +1,23 @@
 @import '../_variables.scss';
 
 $spacing-between: 31px;
+
 .title {
   @include Title;
+
   padding-bottom: 32px;
   word-wrap: break-word;
   max-width: 954px;
 }
+
 .subtitle {
   @include Subtitle;
+
   font-weight: normal;
-  padding-bottom: $spacing-between;
+  padding-bottom: 5px;
   line-height: 1.6rem;
 }
+
 .description {
   font-family: $primaryFont;
   font-weight: normal;
@@ -26,6 +31,7 @@ $spacing-between: 31px;
 .titleCenter {
   text-align: center;
   margin: auto;
+
   h1,
   h2,
   h3,
