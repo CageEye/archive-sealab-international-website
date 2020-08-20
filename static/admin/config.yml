@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: SEALAB-Software/international-website
-  branch: master
+  branch: stable
 
 media_folder: static/img
 public_folder: /img
@@ -1134,7 +1134,7 @@ collections:
                 }
       - file: 'src/pages/control-room.md'
         label: 'BlueThink Kontrollrom'
-        name: 'bluethink'
+        name: 'control-room'
         fields:
           - {
               label: 'Template Key',
