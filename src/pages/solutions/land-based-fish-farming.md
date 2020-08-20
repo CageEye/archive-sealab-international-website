@@ -6,12 +6,12 @@ description: SEALAB provides leading camera technology solutions for monitoring
   and analysis in the aquaculture industry. Our solutions integrate software and
   smart IoT devices; cameras, lights and sensors to provide useful analysis and
   insight in fish farming operations.
-seoDescription: Complete surveillance and analysis systems for hatcheries and
-  land based fish farming. SEALAB underwater cameras combined with computer
-  vision and a customised software gives the fish farmer a unique insight into
-  the conditions below the surface.
+seoDescription: SEALAB provides leading camera technology solutions for
+  monitoring and analysis in the aquaculture industry. Our solutions integrate
+  software and smart IoT devices; cameras, lights and sensors to provide useful
+  analysis and insight in fish farming operations.
 priority: 2
-featuredimage: /img/landbase-fish-farming-hero.jpg
+featuredimage: /img/_DSC0761.jpg
 seaToLandSection:
   heading: From sea to land
   description: Globally land-based aquaculture facilities are increasingly being
@@ -22,10 +22,9 @@ seaToLandSection:
   label: For a sustainable future
   sideImage: /img/landbased-icon.png
 featureSection:
-  heading: SEALAB delivers surveillance and analysis systems for the aquaculture
-    industry
-  description: "Several years of experience within sea based aquaculture has made
-    us ready to supply the land based industry the following quality products:"
+  heading: Surveillance and analysis systems for the aquaculture industry
+  description: "SEALAB supplies the aquaculture industry with the following
+    quality products:"
   features:
     - Complete surveillance systems
     - SEALAB Dashboard
@@ -36,7 +35,7 @@ advantageSection:
   advantages:
     - advantage: Developed, designed & manufactured in Norway
       featuredimage: /img/norway-manufacture.png
-    - advantage: Uses BlueThink™ Software platform
+    - advantage: Uses SEALAB Software platform
       featuredimage: /img/blue-think-software-platform.png
     - advantage: Open to third parties
       featuredimage: /img/open-to-third-parties.png
@@ -48,19 +47,19 @@ advantageSection:
 scamSection:
   linkButtons:
     - path: /products/subsea-cam/
-      text: sCAM
+      text: Subsea camera
     - path: /technologies/edge-intelligence/
       text: Edge computing
   content: Companies who seek new ways to make their facility as energy-efficient
     and sustainable as possible will need real-time surveillance systems for
     monitoring fish welfare and production. SEALABs machine vision systems for
-    biomass control, respiratory rate measuring and feeding control will help
+    pellet detection, biomass control and respiratory rate measuring will help
     our customers to reach their goals. SEALAB supplies both underwater and
     surface cameras.
-  heading: sCAM
+  heading: SEALAB subsea camera
   label: Complete surveillance systems
-  sideImage: /img/sCAM-highlighted.png
-middleImage: /img/SEALAB_Control_room_indoor.png
+  sideImage: /img/render-4-pt-cam-1-.png
+middleImage: /img/BlueThink_Control_Room.png
 controlSection:
   buttons:
     - path: /technologies/software-platform/
@@ -70,33 +69,33 @@ controlSection:
     get high-quality surveillance images right into your Control Room. A crystal
     clear look at what is going on in the cages can contribute to higher
     predictability, lower mortality and better fish welfare. The control room is
-    using BlueThink™ Software Platform and is therefore open to third parties.
-  heading: BlueThink™ Control Room
+    using SEALAB Software Platform and is therefore open to third parties.
+  heading: SEALAB Control Room
   label: High-quality Livestream
   linkButtons:
     - path: /technologies/software-platform/
-      text: BlueThink™ Software Platform
+      text: SEALAB Software Platform
 imageSplitSections:
   - content: Have you ever been concerned about the conditions in the fish tanks
-      when you're not at work? BlueThink™ GO lets you access your real-time
+      when you're not at work? SEALAB Dashboard lets you access your real-time
       data, Livestream, historical data and more no matter where and when. The
-      service is using BlueThink™ Software Platform and is therefore open to
-      third parties.
+      service is using SEALAB Software Platform and is therefore open to third
+      parties.
     linkButtons:
-      - text: "BlueThink™ GO "
+      - text: SEALAB Dashboard
         path: /products/bluethink-go
     sideImage: /img/bluethink-go.png
-    label: " "
-    heading: " "
+    label: " Stay connected to your facility at all times, from anywhere!"
+    heading: " SEALAB Dashboard"
   - label: Designed for AI and computer vision
-    heading: SEALAB Quintus LED
+    heading: SEALAB Subsea Light
     content: Correct use of lighting will increase your profit. Both growth rate and
       feed utilization are depending on the lightning regime. It is also
       important considering fish maturation for example for Atlantic Salmon.
     linkButtons:
-      - text: SEALAB Quintus LED
+      - text: SEALAB Subsea Light
         path: /technologies/edge-intelligence/
-    sideImage: /img/sealab-quintus-led.png
+    sideImage: /img/SEALAB_P02-002.1_Quintus_V1.1_2020-Jun-05_07-13-58AM-000_CustomizedView6616039714.png
 middleDescription: We connect everything – people, process, data and things –
   and we use those connections to change our world for the better. We don’t just
   dream it, we do it every day at SEALAB. And we’re doing it faster than ever
