@@ -19,10 +19,10 @@ menuPaths:
           title: SEALAB Subsea Camera
         - path: /products/subsea-light-quintus/
           title: SEALAB Subsea Light
-        - path: /products/bluethink-go/
-          title: SEALAB Dashboard
         - title: SEALAB Control Room
           path: /control-room/
+        - path: /products/bluethink-go/
+          title: SEALAB Dashboard
     path: "#"
     title: Products
   - dropdown:
