@@ -44,13 +44,13 @@ features:
     short time. Happy customers are our first priority, therefore our service
     phone is open 24 hours a day.
   featureItems:
-    - heading: Driftsikkert
+    - heading: Reliable
       icon: /img/reliable.svg
-    - heading: Enkel installasjon
+    - heading: Easy installation
       icon: /img/easy-instalation.svg
-    - heading: Servicegaranti
+    - heading: Service Warranty
       icon: /img/service-warranty.svg
-    - heading: Utviklet, designet og produsert i Norge
+    - heading: Developed, designed & manufactured in Norway
       icon: /img/norway-manufacture.svg
 lightbox:
   heading: Livestream løsning
