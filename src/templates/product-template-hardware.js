@@ -144,7 +144,7 @@ export const HardwarePageQuery = graphql`
           alt
           img {
             childImageSharp {
-              fluid(maxWidth: 1180, quality: 100) {
+              fluid(maxHeight: 450, quality: 80) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
                 presentationWidth
               }
