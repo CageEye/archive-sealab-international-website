@@ -1,35 +1,28 @@
 ---
 templateKey: technology-page-secondary
-title: "Software platform for IoT integrations - BlueThink |\_SEALAB"
-seoDescription: >-
-  Our software platform, BlueThink™, supports IoT integration, video
+title: Software platform for IoT integrations - BlueThink | SEALAB
+seoDescription: "Our software platform, BlueThink™, supports IoT integration,
+  video distribution, and data handling. This enables good customer applications
+  with unlimited possibilities.  "
+heading: SEALAB Software Platform
+description: "Our software platform supports IoT integration, video
   distribution, and data handling. This enables good customer applications with
-  unlimited possibilities.  
-heading: BlueThink™ Software Platform
-description: >-
-  Our software platform, BlueThink™, supports IoT integration, video
-  distribution, and data handling. This enables good customer applications with
-  unlimited possibilities.  
+  unlimited possibilities.  "
 sectionOne:
   featuredimage: /img/Bluethink software highlight.svg
-  left: '## Solutions for the entire value chain'
-  right: >-
-    We provide solutions for the whole value chain. From physical devices like
-    our great camera to software applications like BlueThink™ GO. Our software
-    platform, BlueThink™, stores, and processes data. This enables both ours and
+  left: "## Solutions for the entire value chain"
+  right: We provide solutions for the whole value chain. From physical devices
+    like our great camera to software applications like SEALAB Dashboard. Our
+    software platform stores, and processes data. This enables both ours and
     third-party software platforms to use the data as they like. At the end of
     this value chain you’ll find our customers - happy to access their data and
     devices.
 sectionTwo: >-
-  ### BlueThink™
-
   ## Software platform for IoT integration, video distribution, and data
   handling
 
-  SEALAB has developed a software platform that supports IoT. The BlueThink™
-  platform delivers any data or video required for software applications to
-  perform their functions while allowing the results from those applications to
-  be presented back into the platform for use by other applications.
+
+  SEALAB has developed a software platform that supports IoT. The platform delivers any data or video required for software applications to perform their functions while allowing the results from those applications to be presented back into the platform for use by other applications.
 sectionThree:
   backgroundImage: /img/zigzagLines.svg
   featuredimage: /img/bluethink-software-platform-key-features-iot.svg
@@ -38,7 +31,7 @@ sectionFour:
     path: /solutions/atlantic-salmon-and-seafood/
     text: Aquaculture
   featuredimage: /img/SEALAB Feed Barge Control Room.png
-  heading: BlueThink™ and IoT in the aquaculture industry
+  heading: SEALAB Software Platform and IoT in the aquaculture industry
   right: >-
     The Internet of Things is about all the things around us being connected to
     the internet. When things are connected to the network, they can connect,
@@ -47,10 +40,7 @@ sectionFour:
     impossible.
 
 
-    SEALAB delivers complete IoT-systems to the aquaculture industry. All
-    components installed in the cages and on the feed barge are connected
-    through the Internet of Things; underwater cameras, underwater lights,
-    environmental sensors, winches, service tablets, control rooms, and more.
+    SEALAB delivers complete IoT-systems to the aquaculture industry. All components installed in the cages and on the feed barge are connected through the Internet of Things; underwater cameras, underwater lights, environmental sensors, winches, service tablets, control rooms, and more.
 alternatingSections:
   - button:
       path: /projects/5G-heart/
@@ -58,26 +48,18 @@ alternatingSections:
     description: >-
       ## We contribute to better infrastructure with 5G
 
-      The new 5G network is on everyone’s minds these days, and for good reason.
-      Not only will 5G improve how we use and communicate with technology, but
-      it will also change how various technologies communicate with one another.
+      The new 5G network is on everyone’s minds these days, and for good reason. Not only will 5G improve how we use and communicate with technology, but it will also change how various technologies communicate with one another.
 
 
-      Read more about how SEALAB contributes to developing new 5G solutions
-      through 5G-HEART, a project funded by the European Union’s Horizon 2020
-      research and innovation program.
+      Read more about how SEALAB contributes to developing new 5G solutions through 5G-HEART, a project funded by the European Union’s Horizon 2020 research and innovation program.
     featuredimage: /img/IoT5icons.svg
 centeredSection:
   featuredimage: /img/digital-twin.jpg
-  left: '### The Digital twin - A bridge between the physical and the digital world'
+  left: "### The Digital twin - A bridge between the physical and the digital world"
   right: >-
     The digitalisation of the ocean space has come so far that the living
     conditions for digital twins are present in several industries. 
 
 
-    BlueThink™ is designed to support this technology. The software platform is
-    able to store and process large amounts of data. This enables third party
-    suppliers and SEALAB to create computers that extract lessons from a large
-    amount of data through machine learning.
+    SEALAB Software Platform is designed to support this technology. It is able to store and process large amounts of data. This enables third party suppliers and SEALAB to create computers that extract lessons from a large amount of data through machine learning.
 ---
-
