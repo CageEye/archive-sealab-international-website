@@ -126,7 +126,7 @@ history:
       ### Joining forces with Bluegrove
 
       SEALAB becomes part of aquatech company Bluegrove, combining sensor technologies to increase underwater understanding
-    featuredimage: /img/bluegrove-people.png
+    featuredimage: /img/camera-background.png
     highlighted: true
     position: center
     year: '2020'

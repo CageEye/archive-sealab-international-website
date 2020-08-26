@@ -34,7 +34,7 @@ newsSection:
     technologies to increase underwater understanding
   featuredimage: /img/bluegrove-people.jpg
   button:
-    url: https://bluegrove.com/
+    url: https://bluegrove.com/newsroom/2020/08/bluegrove-acquires-sealab/
     text: Learn more
 productSection:
   description: |-
