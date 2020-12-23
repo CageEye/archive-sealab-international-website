@@ -7,7 +7,7 @@ description: "Our partnership philosophy is simple - if entering a partnership
 seoDescription: "None of us is as strong as all of us. Our partnership
   philosophy is simple - if entering a partnership creates a better and easier
   experience for our customers, we will do it! "
-featuredimage: /img/oscar_milan_biomass_estimation_cropped.jpg
+featuredimage: /img/Quintus_Testing.jpg
 featuredimageSection:
   buttons:
     - path: /contact/
