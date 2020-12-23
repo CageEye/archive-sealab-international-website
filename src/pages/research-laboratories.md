@@ -23,7 +23,7 @@ centeredSection:
   images:
     - image: /img/sealab_team_employees.JPG
     - image: /img/teknoteltet-tent.jpg
-    - /img/research_hardware.JPG
+    - /img/_DSC7473.jpg
 careers:
   buttons:
     - path: /contact/
