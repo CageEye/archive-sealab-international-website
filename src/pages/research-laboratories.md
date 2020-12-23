@@ -21,7 +21,7 @@ centeredSection:
 
     Our Research Laboratories are constantly developing and testing new technological solutions. SEALAB’s DNA is very strong when we talk about creativity and different ways of thinking. We need more Rockstars on the team. If you have X-factor and what is needed – launch your career at SEALAB.
   images:
-    - image: /img/sealab_team_employees.JPG
+    - image: /img/bluegrove-people.jpg
     - image: /img/teknoteltet-tent.jpg
     - image: /img/_DSC7473.jpg
 careers:

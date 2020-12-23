@@ -3,7 +3,7 @@ menuPaths:
   - dropdown:
       regular: []
       highlighted: []
-    path: /solutions/land-based-fish-farming/
+    path: /solutions/aquaculture/
     title: Aquaculture
   - dropdown:
       highlighted:
@@ -11,7 +11,7 @@ menuPaths:
           title: Edge intelligence
         - path: /technologies/software-platform/
           title: SEALAB Software Platform
-    path: "#"
+    path: '#'
     title: Technologies
   - dropdown:
       highlighted:
@@ -23,7 +23,7 @@ menuPaths:
           path: /control-room/
         - path: /products/bluethink-go/
           title: SEALAB Dashboard
-    path: "#"
+    path: '#'
     title: Products
   - dropdown:
       highlighted:
@@ -31,8 +31,6 @@ menuPaths:
           title: For potential partners
         - path: /press/
           title: Press
-        - path: /history/
-          title: Our history
         - path: /research-laboratories/
           title: R&D in SEALAB
       regular:
@@ -46,6 +44,6 @@ menuPaths:
           path: /about/partners/
         - title: Sustainability impact
           path: /about/social-responsibility/
-    path: "#"
+    path: '#'
     title: About
 ---
