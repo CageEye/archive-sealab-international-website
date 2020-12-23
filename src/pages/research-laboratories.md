@@ -23,7 +23,7 @@ centeredSection:
   images:
     - image: /img/sealab_team_employees.JPG
     - image: /img/teknoteltet-tent.jpg
-    - /img/_DSC7473.jpg
+    - image: /img/_DSC7473.jpg
 careers:
   buttons:
     - path: /contact/
@@ -57,10 +57,11 @@ splitSection:
 backgroundSection:
   bgimage: /img/water_dark_light_technology.jpg
   heading: Can creativity be stimulated if we do not set boundaries?
-  description: "*The founders of SEALAB are already looking at various
+  description: '*The founders of SEALAB are already looking at various
     opportunities to develop technology to do research under the ice on
-    Jupiter’s moon, Europa.*"
+    Jupiter’s moon, Europa.*'
 ---
+
 ![](/img/research_hardware.JPG)
 
 <br/>

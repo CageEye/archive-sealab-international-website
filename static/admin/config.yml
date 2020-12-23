@@ -2199,7 +2199,8 @@ collections:
                 name: images
                 widget: list
                 hint: 'Try to keep it at a maximum 6'
-                field: { label: 'Image', name: 'image', widget: image }
+                fields:
+                  - { label: 'Image', name: 'image', widget: image }
 
           - label: 'Career'
             name: careers
